@@ -182,6 +182,7 @@ if(!$page_background) {
 		}
 	}
 }
+
 ?>
 <style>
 	<?php if($page_background) { ?>

@@ -342,7 +342,7 @@ function apms_skin_options($path, $dir, $value, $opt) {
 	$options = '';
 	for ($i=0; $i<count($skin); $i++) {
 		$options .= "<option value=\"".$skin[$i]."\"".get_selected($value, $skin[$i]).">".$skin[$i]."</option>\n";
-	} 
+	}
 
 	return $options;
 }
@@ -359,5 +359,25 @@ function apms_item_type_checkbox($wset) {
 
 	return $str;
 }
+
+// pjg-page-include
+function readPagePiece($page_dir)
+  {
+    $listDir = array();
+    if($page_handler = opendir($page_dir)) {
+      while (($page_sub = readdir($page_handler)) !== FALSE) {
+        if ($page_sub != "." && $page_sub != ".." && $page_sub != "Thumb.db") {
+          if(is_file($page_dir."/".$page_sub)) {
+              $listDir[] = $page_sub;
+          }elseif(is_dir($page_dir."/".$page_sub)){
+              $listDir[$page_sub] = $this->readPagePiece($page_dir."/".$page_sub);
+          }
+        }
+      }
+      closedir($page_handler);
+    }
+    return $listDir;
+  }
+
 
 ?>

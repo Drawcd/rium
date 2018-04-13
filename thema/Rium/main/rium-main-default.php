@@ -81,9 +81,24 @@ $side = ($at_set['side']) ? 'left' : 'right';
 <!-- mainslider -->
 
 <div class="main-slider">
+
+  <div class="item video">
+    <video class="slide-video slide-media" loop muted preload="metadata" poster="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLSXZCakVGZWhOV00">
+      <source src="/video/video01.mp4" type="video/mp4" />
+    </video>
+    <p class="caption">HTML 5 Video</p>
+  </div>
+  <div class="item video">
+    <video class="slide-video slide-media" loop muted preload="metadata" poster="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLSXZCakVGZWhOV00">
+      <source src="/video/video02.mp4" type="video/mp4" />
+    </video>
+    <p class="caption">HTML 5 Video</p>
+  </div>
+
+
   <div class="item youtube">
     <!-- <span class="loading">Loading...</span> -->
-    <iframe class="embed-player slide-media" width="1920" height="1080" src="https://www.youtube.com/embed/wav98ohEEm0?enablejsapi=1&controls=0&fs=0&iv_load_policy=1&rel=0&showinfo=0&loop=1&playlist=tdwbYGe8pv8&start=0" frameborder="0" allowfullscreen></iframe>
+    <iframe class="embed-player slide-media" width="1280" height="720" src="https://www.youtube.com/embed/wav98ohEEm0?enablejsapi=1&controls=0&fs=0&iv_load_policy=1&rel=0&showinfo=0&loop=1&playlist=tdwbYGe8pv8&start=0" frameborder="0" allowfullscreen></iframe>
     <p class="caption">YouTube</p>
     <!-- <figure>
       <div class="slide-image slide-media" style="background-image:url('https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRkY4S0JDTk1BbE0');">
@@ -131,7 +146,7 @@ $side = ($at_set['side']) ? 'left' : 'right';
 
 <div class="section main01">
   <div class="widget-box">
-    <?php echo apms_widget('pjg-page-include', $wid.'-wm1'); ?>
+    <?php echo apms_widget('rium-page-include', $wid.'-wm1'); ?>
   </div>
 </div>
 

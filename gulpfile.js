@@ -12,7 +12,7 @@ var watch = require('gulp-watch');
  // gulp.task('livereload', function(){gulp.src(['html/*','css/*','js/*','*']).pipe( livereload() ); 한줄 코드를 가독성을 위해 아래와 같이 작성한다.
  gulp.task('livereload', function(){
    // gulp.src(['thema/*','adm/*','js/*','css/*','*'])
-   gulp.src(['thema/*','adm/*','js/*','css/*','*'])
+   gulp.src(['thema/*','adm/*','js/*','css/*','*','page_piece/*'])
        .pipe( livereload() );
 
    // 경로가 여러개일 경우 []를 이용하여 배열 함수 방식으로 설치한다.
@@ -22,9 +22,10 @@ var watch = require('gulp-watch');
 // 2.
  gulp.task('watch',function(){
    livereload.listen();
-   gulp.watch('thema/Rium/*/*',['livereload']);  // local folder안에 모든 파일 대상으로 수정되었을때 livereload task를 실행해라
-   gulp.watch('thema/Rium/*/*/*',['livereload']);
-   gulp.watch('thema/Rium/*',['livereload']);
+   gulp.watch('thema/rium/*/*',['livereload']);  // local folder안에 모든 파일 대상으로 수정되었을때 livereload task를 실행해라
+   gulp.watch('thema/rium/*/*/*',['livereload']);
+   gulp.watch('thema/rium/*',['livereload']);
+   gulp.watch('./page_piece/rium/*',['livereload']);
    gulp.watch('./*',['livereload']);
 
    // gulp.watch('html_src/**',['include','livereload']);

@@ -104,22 +104,6 @@ main-popup-intro : 메인페이지 오버 인트로
 }
 
 /********************************************************
-■ rium-main-default.php
-********************************************************/
-/* 공통 */
-.section-wrap { position:relative; top:0; left:50%; transform: translate(-50%, 0%); background:#ffcc00;}
-
-
-
-
-
-
-
-
-
-
-
-/********************************************************
 ■ PC Header : PC 헤더
 ********************************************************/
 .pc-header { padding:10px 0px 0px; text-align:center; }
@@ -501,45 +485,6 @@ main-popup-intro : 메인페이지 오버 인트로
   .pc-menu.bc-white { margin-top:-60px; opacity: 0; min-width:100%;}
 }
 
-
-/* 공통 컬러셋 */
-/* font */
-.f_nanum { font-family: 'Nanum Gothic' !important;}
-.fc-white { color:white;}
-.fc.black { color:black;}
-.fc-orange { color:#ffcc00;}
-
-/* element */
-
-/* background */
-.point-color01 { background:#fcfcfc;}
-.point-color02 { background:#7AB7AE;}
-.point-color03 { background:#23252B;}
-
-.bc-white { background-color:#fff;}
-.bc-black { background-color:#393939;}
-.bc-orange { background-color:#ffcc00;}
-
-
-/* 공통 폰트 사이즈 */
-.font-w700 { font-weight:700 }
-.font-w800 { font-weight:800 }
-.font-s16 { font-size:16px }
-.font-s18 { font-size:18px }
-.font-s20 { font-size:20px }
-.font-s22 { font-size:22px }
-.font-s24 { font-size:24px }
-
-/* padding */
-.padding-20 { padding: 20px;}
-
-
-
-
-
-
-
-
 /* mainslider */
 .slick-slide, .slick-slide::before, .caption {
   -webkit-backface-visibility: hidden;
@@ -560,7 +505,6 @@ main-popup-intro : 메인페이지 오버 인트로
   width: 100%;
   height: 38vw !important;
   min-height: 8vw;
-  margin-bottom: 50px;
   opacity: 0;
   visibility: hidden;
   transition: all 1.2s ease;
@@ -573,6 +517,7 @@ main-popup-intro : 메인페이지 오버 인트로
 
 .slick-slide {
   position: relative;
+  transition: height 1.2s ease;
   height: 38vw;
 }
 .slick-slide::before {
@@ -753,4 +698,181 @@ main-popup-intro : 메인페이지 오버 인트로
     -webkit-filter: blur(15px);
             filter: blur(15px);
   }
+}
+
+@media all and (max-width:991px) {
+  .main-slider { height: 66vw !important; }
+  .slick-slide { height: 66vw !important; }
+}
+
+@media all and (max-width:767px) {
+  .slick-dots { margin-top:-50px;}
+
+}
+/* main-slider {
+  position: relative;
+  width: 100%;
+  height: 38vw !important;
+  min-height: 8vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1.2s ease;
+} */
+/* .main-slider {
+  position: relative;
+  width: 100%;
+  height: 38vw !important;
+  min-height: 8vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1.2s ease;
+} */
+
+/********************************************************
+■ rium-main-default.php
+********************************************************/
+/* 공통 */
+/* .main-slider-bottom { position:relative;  top:0; left:50%; transform: translate(-50%, 0%); background:#ffcc00; padding:0;} */
+
+/********************************************************
+main-slider-bottom.php
+********************************************************/
+.main-slider-bottom {}
+.main-slider-bottom-list { margin:0;}
+.main-slider-bottom-list-item { list-style: none; height:240px; }
+.main-slider-bottom-list-item-list { position:relative; padding:20px 45px 5px; height:100%; overflow:hidden; transition:all .5s;}
+.main-slider-bottom-list-item-list h3{ margin:5px 0; }
+
+@media all and (max-width:1310px) {
+  .main-slider-bottom-list-item-list { padding:20px 45px 5px; }
+  .main-slider-bottom-list-item-list h3{ padding:10px 0px 5px; }
+  .size-four-two-two { width:50%; }
+}
+
+@media all and (max-width:991px) {
+  .main-slider-bottom-list-item-list { padding:10px 15px 5px; }
+  .main-slider-bottom-list-item-list h3{ font-size:20px; padding: 3px 0px 2px; }
+  .size-four-two-two { width:50%; }
+}
+
+@media all and (max-width:767px) {
+  .size-four-two-one { width:100%; }
+  .size-four-two-two { width:50%; }
+}
+
+/********************************************************
+section 공통
+********************************************************/
+.section-wrap { width:100%; display:block;}
+
+/* clearfix */
+.section-wrap:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.section-wrap-item {
+}
+.section-group { text-align:center;  width:100%; display:block; margin-bottom:60px;}
+.section-list-title { text-align:center; display:block; font-weight: 600; font-size:27px;}
+.section-list-sub { display:inline-block; text-align:center; margin-top:0; font-weight: 300; padding: 0 7px 7px; font-size:27px; }
+/* clearfix */
+.section-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/********************************************************
+popup
+********************************************************/
+.popup-rium01 { position:relative; text-align:center; font-family:"nanumgothic"; padding:120px 0  !important;}
+.popup-rium01 p{ font-weight:400;}
+.popup-rium01 span{ font-weight:400;}
+.popup-rium01-grep { width:300px;}
+
+/********************************************************
+performance
+********************************************************/
+#section03 { padding:50px 0;}
+
+/********************************************************
+section04
+********************************************************/
+#section04 { padding:50px 0;}
+
+
+
+/********************************************************
+공통 컬러셋
+********************************************************/
+.button01 {display:inline-block; position:absolute; right:40px; bottom:20px; width:160px; }
+.button01 .button-link { font-family: "nanumgothic"; font-size:15px; color:#fff; display:inline-block; position:absolute; left:20px; bottom:0px; width:140px; height:40px; line-height:30px; background:#333; padding:5px; text-align: center; transition:all .5s;}
+.button01 .button-link:after { font-family: "FontAwesome"; color:#fff; content:"\f054"; display:inline-block; position:relative; right:0px; bottom:0px; width:20px; height:30px; margin-left:10px; transition:all .5s;}
+.button01 .button-link:hover { background:#ffcc00; color:#333; font-weight: 600;}
+.button01 .button-link:hover:after { color:#333; transform: rotate(180deg); }
+
+@media all and (max-width:1310px) {
+  .button01 { right:10px; bottom:15px; }
+}
+
+
+/* font */
+.f_nanum { font-family: 'Nanum Gothic' !important;}
+.fc-white { color:white;}
+.fc.black { color:black;}
+.fc-orange { color:#ffcc00;}
+.fc01 { color:#8CC63F; }
+.fc02 { color:#534741; }
+
+/* element */
+
+
+
+
+/* background */
+.point-color01 { background:#fcfcfc;}
+.point-color02 { background:#7AB7AE;}
+.point-color03 { background:#607d8b;}
+.point-color10 { background:#23252B;}
+
+
+.point-background { }
+
+
+.bc-white { background-color:#fff;}
+.bc-black { background-color:#393939;}
+.bc-orange { background-color:#ffcc00;}
+
+
+/* 공통 폰트 사이즈 */
+.font-w700 { font-weight:700 !important;}
+.font-w800 { font-weight:800 !important;}
+.font-s16 { font-size:16px }
+.font-s18 { font-size:18px }
+.font-s20 { font-size:20px }
+.font-s22 { font-size:22px }
+.font-s24 { font-size:24px }
+
+/* padding */
+.padding-20 { padding: 20px;}
+
+
+/* size reaction */
+.size-four-two-one { float:left; box-sizing:border-box; display:block; padding:0; margin:0; width:25%;}
+.size-four-two-two { float:left; box-sizing:border-box; display:block; padding:0; margin:0; width:25%;}
+
+
+
+
+
+@media all and (max-width:1310px) {
+  .size-four-two-one { width:50%; }
+  .size-four-two-two { width:50%; }
+}
+
+@media all and (max-width:767px) {
+  .size-four-two-one { width:100%; }
+  .size-four-two-two { width:50%; }
 }

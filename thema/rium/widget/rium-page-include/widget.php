@@ -1,6 +1,6 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
-
+apms_script('masonry');
 
 $pagePieceFileName = $wset['pagepiece'];
 $page_piece_file = G5_PATH.'/'.page_piece.'/'.THEMA.'/'.$pagePieceFileName ;

@@ -95,7 +95,6 @@ $side = ($at_set['side']) ? 'left' : 'right';
     <p class="caption">HTML 5 Video</p>
   </div>
 
-
   <div class="item youtube">
     <!-- <span class="loading">Loading...</span> -->
     <iframe class="embed-player slide-media" width="1280" height="720" src="https://www.youtube.com/embed/wav98ohEEm0?enablejsapi=1&controls=0&fs=0&iv_load_policy=1&rel=0&showinfo=0&loop=1&playlist=tdwbYGe8pv8&start=0" frameborder="0" allowfullscreen></iframe>
@@ -138,22 +137,68 @@ $side = ($at_set['side']) ? 'left' : 'right';
     <p class="caption">HTML 5 Video</p>
   </div>
 </div>
-
 <script src='http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js'></script>
 
 
 <!-- mainslider End-->
-
-<div class="section main01">
+<!-- main-popup 1,2 Start -->
+<div id="section01" class="section">
   <div class="widget-box">
-    <?php echo apms_widget('rium-page-include', $wid.'-wm1'); ?>
+    <?php echo apms_widget('rium-page-include', $wid.'-main-slider-bottom'); ?>
   </div>
 </div>
 
+<div id="section02" class="section">
+  <div class="widget-box">
+    <?php echo apms_widget('rium-page-include', $wid.'-main-slider-bottom-image'); ?>
+  </div>
+</div>
+<!-- main-popup 1,2 End -->
+
+<!-- company performance Start -->
+<div id="section03" class="point-color02 performance">
+  <div class="at-container widget-index">
+    <div class="section">
+      <div class="section-item" >
+        <h3 class="section-list-title animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">건설사례 및 예정</h3>
+        <div class="section-group animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.3s" data-offset="100">
+          <span class="">
+            <h3 class="fc-orange section-list-sub">COMPANY</h3>
+          </span>
+          <span class="">
+            <h3 class="section-list-sub">PERFORMANCE</h3>
+          </span>
+        </div>
+      </div>
+      <div class="widget-box animate main-rium-post-slider" data-animate="fadeIn" data-duration="1.5s" data-delay="0.1s" data-offset="100">
+        <?php echo apms_widget('rium-post-slider', $wid.'-company-performance'); ?>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- company performance End -->
 
 
-
-
+<!-- main-popup 3 Start -->
+<div id="section04" class="point-color03 business-area-wrap">
+  <div class="at-container widget-index" >
+    <div class="section-item" >
+      <h3 class="section-list-title animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">건설사례 및 예정</h3>
+      <div class="section-group animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">
+        <span class="">
+          <h3 class="fc-orange section-list-sub">COMPANY</h3>
+        </span>
+        <span class="">
+          <h3 class="section-list-sub">PERFORMANCE</h3>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class=" at-container widget-box">
+    <?php echo apms_widget('rium-page-include', $wid.'-business-area'); ?>
+  </div>
+</div>
+<!-- main-popup 3 End -->
 
 
 

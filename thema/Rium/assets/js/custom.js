@@ -364,3 +364,14 @@ $(function() {
 $(window).on("resize.slickVideoPlayer", function(){
   resizePlayer(iframes, 16/9);
 });
+
+
+
+
+
+
+// masonry
+$('.section-wrap').masonry({
+  itemSelector: '.size-four-two-one',
+  columnWidth: 0
+});

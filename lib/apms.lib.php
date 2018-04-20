@@ -52,7 +52,7 @@ function apms_content_widget($html, $opt='') {
 		$html = preg_replace_callback("/{(지도|map)\:([^}]*)}/is", "apms_callback_map", $html); // Google Map
 		$html = preg_replace_callback("/{(동영상|video)\:([^}]*)}/is", "apms_callback_video", $html); // Video
 		$html = preg_replace_callback("/{(아이콘|icon)\:([^}]*)}/is", "apms_callback_icon", $html); // FA Icon
-		$html = preg_replace_callback("/{(이모티콘|emo)\:([^}]*)}/is", "apms_callback_emoticon", $html); // Emoticon 
+		$html = preg_replace_callback("/{(이모티콘|emo)\:([^}]*)}/is", "apms_callback_emoticon", $html); // Emoticon
 		$html = preg_replace_callback("/\[soundcloud([^\]]*)\]/is", "apms_callback_soundcloud", $html); // SoundCloud
 		$html = preg_replace_callback("/(\[code\]|\[code=(.*)\])(.*)\[\/code\]/iUs", "apms_syntaxhighlighter", $html); // SyntaxHighlighter
 	}
@@ -94,7 +94,7 @@ function apms_fa($str){
 
 // Emoticon Icon
 function apms_emo($str){
-	$str = preg_replace_callback("/{(이모티콘|emo)\:([^}]*)}/is", "apms_callback_emoticon", $str); // Emoticon 
+	$str = preg_replace_callback("/{(이모티콘|emo)\:([^}]*)}/is", "apms_callback_emoticon", $str); // Emoticon
 	return $str;
 }
 
@@ -107,7 +107,7 @@ function apms_content($explan) {
 	//$explan = preg_replace_callback("/{(사이트|site)\:([^}]*)}/is", "apms_callback_site", $explan); // Site
 	$explan = preg_replace_callback("/{(동영상|video)\:([^}]*)}/is", "apms_callback_video", $explan); // Video
 	$explan = preg_replace_callback("/{(아이콘|icon)\:([^}]*)}/is", "apms_callback_icon", $explan); // FA Icon
-	$explan = preg_replace_callback("/{(이모티콘|emo)\:([^}]*)}/is", "apms_callback_emoticon", $explan); // Emoticon 
+	$explan = preg_replace_callback("/{(이모티콘|emo)\:([^}]*)}/is", "apms_callback_emoticon", $explan); // Emoticon
 	$explan = preg_replace_callback("/\[soundcloud([^\]]*)\]/is", "apms_callback_soundcloud", $explan); // SoundCloud
 	$explan = preg_replace_callback("/(\[code\]|\[code=(.*)\])(.*)\[\/code\]/iUs", "apms_syntaxhighlighter", $explan); // SyntaxHighlighter
 
@@ -277,7 +277,7 @@ function apms_member($mb_id, $lvl='yes', $realname='') {
 			$now_exp = $info['exp'] - $info['exp_min'];
 			$info['exp_per'] = ($total_exp > 0) ? floor(($now_exp / $total_exp) * 1000) / 10 : 0;
 			$info['exp_up'] = $total_exp - $now_exp;
-		}	
+		}
 	}
 
 	return $info;
@@ -365,7 +365,7 @@ function apms_check_tag($tag) {
 	$tag = str_replace(array("\"", "'"), array("", ""), apms_get_text($tag));
 
 	if(!$tag) return;
-	
+
 	$list = array();
 	$arr = explode(',', $tag);
 	foreach($arr as $tmp) {
@@ -433,7 +433,7 @@ function apms_add_tag($it_id, $it_tag, $it_time, $bo_table='', $wr_id='', $mb_id
 			list($type, $idx) = apms_chosung($tag);
 			sql_query("insert into {$g5['apms_tag']} set type = '{$type}', idx = '{$idx}', tag='".addslashes($tag)."', cnt=1, regdate='".G5_TIME_YMDHIS."', lastdate='".G5_TIME_YMDHIS."'");
 			$tag_id = sql_insert_id();
-		} 
+		}
 
 		sql_query("insert into {$g5['apms_tag_log']} set it_id = '{$it_id}', bo_table = '{$bo_table}', wr_id = '{$wr_id}', tag_id = '{$tag_id}', tag = '".addslashes($tag)."', mb_id = '{$mb_id}', regdate = '".G5_TIME_YMDHIS."', it_time = '$it_time'");
 	}
@@ -451,7 +451,7 @@ function apms_get_tag($it_tag, $opt='') {
 
 	if($opt) { //해시태그
 		$hash1 = '<span class="hash-tag">#';
-		$hash2 = '</span>';	
+		$hash2 = '</span>';
 	} else {
 		$hash1 = '';
 		$hash2 = '';
@@ -474,7 +474,7 @@ function apms_get_star($avg, $opt='') {
 
 	$star = '';
 	list($star_s, $star_m) = explode(".", $avg);
-	$star_e = ($star_m) ? 4 - $star_s : 5 - $star_s; 
+	$star_e = ($star_m) ? 4 - $star_s : 5 - $star_s;
 	for($j=0; $j < $star_s; $j++) {
 		$star .= '<i class="fa fa-star '.$opt.'"></i>';
 	}
@@ -540,7 +540,7 @@ function apms_get_filename($str) {
 		$file['name'] = $str;
 	}
 
-	return $file;	
+	return $file;
 }
 
 // 확장자 종류체크
@@ -610,7 +610,7 @@ function apms_get_torrent($attach, $path='') {
 		$torrent_file = file_get_contents($arr[$i]);
 		$torrent_array = BDecode($torrent_file);
 		$torrent_hash=sha1(BEncode($torrent_array['info']));
-		
+
 		$torrent[$i]['name'] = $torrent_array['info']['name'];
 		$torrent[$i]['magnet'] = 'magnet:?xt=urn:btih:'.$torrent_hash;
 		for($k=0; $k < count($torrent_array['announce-list']); $k++) {
@@ -689,14 +689,14 @@ function apms_paging($write_pages, $cur_page, $total_page, $url, $add='', $first
 	$start_page = (((int)(($cur_page - 1 ) / $write_pages)) * $write_pages) + 1;
 	$end_page = $start_page + $write_pages - 1;
 
-	if ($end_page >= $total_page) { 
+	if ($end_page >= $total_page) {
 		$end_page = $total_page;
 	}
 
-	if ($start_page > 1) { 
+	if ($start_page > 1) {
 		$str .= '<li><a href="'.$url.($start_page-1).$add.'">'.$prev.'</a></li>';
 	} else {
-		$str .= '<li class="disabled"><a>'.$prev.'</a></li>'; 
+		$str .= '<li class="disabled"><a>'.$prev.'</a></li>';
 	}
 
 	if ($total_page > 0){
@@ -745,14 +745,14 @@ function apms_ajax_paging($id, $write_pages, $cur_page, $total_page, $url, $add=
 	$start_page = (((int)(($cur_page - 1 ) / $write_pages)) * $write_pages) + 1;
 	$end_page = $start_page + $write_pages - 1;
 
-	if ($end_page >= $total_page) { 
+	if ($end_page >= $total_page) {
 		$end_page = $total_page;
 	}
 
-	if ($start_page > 1) { 
+	if ($start_page > 1) {
 		$str .= '<li><a href="javascript:;" onclick="apms_page(\''.$id.'\', \''.$url.($start_page-1).$add.'\', \'1\');">'.$prev.'</a></li>';
 	} else {
-		$str .= '<li class="disabled"><a>'.$prev.'</a></li>'; 
+		$str .= '<li class="disabled"><a>'.$prev.'</a></li>';
 	}
 
 	if ($total_page > 0){
@@ -798,16 +798,16 @@ function apms_cache($c_name, $seconds=300, $c_code) {
     $sec_diff = G5_SERVER_TIME - strtotime($result['c_datetime']);
     if ($sec_diff > $seconds) {
 
-        // $c_code () 안에 내용만 살림 
+        // $c_code () 안에 내용만 살림
         $pattern = "/[()]/";
         $tmp_c_code = preg_split($pattern, $c_code);
-        
+
         // 수행할 함수의 이름
         $func_name = $tmp_c_code[0];
 
         // 수행할 함수의 인자
 		$tmp_array = explode(",", $tmp_c_code[1]);
-        
+
         if ($func_name == "include_once" || $func_name == "include") {
 
             ob_start();
@@ -816,7 +816,7 @@ function apms_cache($c_name, $seconds=300, $c_code) {
             ob_end_clean();
 
         } else {
-        
+
         // 수행할 함수의 인자를 담아둘 변수
         $func_args = array();
 
@@ -838,7 +838,7 @@ function apms_cache($c_name, $seconds=300, $c_code) {
 
         // db에 넣기전에 slashes들을 앞에 싹 붙여 주시고
         $c_text1 = addslashes($c_text);
-        
+
         // 새로운 캐쉬값을 업데이트 하고
         sql_query(" update {$g5['apms_cache']} set c_text = '$c_text1', c_datetime='".G5_TIME_YMDHIS."' where c_name = '$c_name' ", false);
 
@@ -985,7 +985,7 @@ function apms_video_imgurl($url, $vid, $type) {
 		curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 		$output = json_decode(curl_exec($ch));
 		curl_close($ch);
-		
+
 		$imgurl = $output->picture;
 
 	} else if($type == "naver" || $type == "tvcast"){ //라니안님 코드 반영
@@ -996,10 +996,10 @@ function apms_video_imgurl($url, $vid, $type) {
 			;
 		} else {
 			$url_type = ($type == "naver") ? "nmv" : "rmcnmv"; // 네이버 블로그 영상과 tvcast 영상 구분
-			parse_str($info['query'], $query); 
+			parse_str($info['query'], $query);
 
 			$vid .= "&outKey=".$query['outKey'];
-		
+
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, "https://serviceapi.{$url_type}.naver.com/flash/videoInfo.nhn?vid=".$vid);
 			curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -1014,11 +1014,11 @@ function apms_video_imgurl($url, $vid, $type) {
 		}
 
 	}
-	
+
 	if(!$imgurl) {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
-		@curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);    
+		@curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -1082,17 +1082,17 @@ function apms_video_img($url, $vid, $type, $fimg='') {
 		if($imgurl) {
 			$ch = curl_init ($imgurl);
 			curl_setopt($ch, CURLOPT_HEADER, 0);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-			curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1); 
+			curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1);
 			curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 			$err = curl_error($ch);
 			if(!$err) $rawdata=curl_exec($ch);
 			curl_close ($ch);
 			if($rawdata) {
-				$fp = fopen($img,'w'); 
-				fwrite($fp, $rawdata); 
-				fclose($fp); 
+				$fp = fopen($img,'w');
+				fwrite($fp, $rawdata);
+				fclose($fp);
 
 				@chmod($img, G5_FILE_PERMISSION);
 
@@ -1107,7 +1107,7 @@ function apms_video_img($url, $vid, $type, $fimg='') {
 
 				return 'none';
 			}
-		} 
+		}
 
 		if(!is_file($no_img)) {
 			@copy($no_image, $no_img);
@@ -1115,7 +1115,7 @@ function apms_video_img($url, $vid, $type, $fimg='') {
 		}
 
 		return 'none';
-	} 
+	}
 
 	return 'none';
 }
@@ -1181,7 +1181,7 @@ function apms_video_id($url, $vid, $type) {
 			if($content) {
 				$info = @parse_url($content);
 				if($type == 'tvcast') {
-					@parse_str($info['query'], $query); 
+					@parse_str($info['query'], $query);
 					$play['vid'] = $query['vid'];
 					$play['outKey']= $query['outKey'];
 				} else if($type == 'daum' || $type == 'tvcast') {
@@ -1190,7 +1190,7 @@ function apms_video_id($url, $vid, $type) {
 					list($play['userid'], $play['prgid']) = explode("/", trim(str_replace("/view/","",$info['path'])));
 				} else if($type == 'slideshare') {
 					$play['play_url'] = $content;
-					$play['vid'] = trim(str_replace("/slideshow/embed_code/","",$info['path'])); 
+					$play['vid'] = trim(str_replace("/slideshow/embed_code/","",$info['path']));
 				}
 			}
 		}
@@ -1209,7 +1209,7 @@ function apms_video_info($video_url) {
 	$video_url = trim(strip_tags($video_url));
 
 	list($url, $opt) = explode("|", $video_url);
-	
+
 	$url = trim($url);
 
 	if($url) {
@@ -1231,8 +1231,8 @@ function apms_video_info($video_url) {
 		$video['img'] = (isset($option['img']) && $option['img']) ? str_replace(array("&nbsp;", " "), array("", ""), trim(strip_tags($option['img']))) : '';
 		$video['caption'] = (isset($option['caption']) && $option['caption']) ? str_replace(array("&nbsp;", " "), array("", ""), trim(strip_tags($option['caption']))) : '';
 	} else {
-		$info = @parse_url($video['video_url']); 
-		if(isset($info['query']) && $info['query']) parse_str($info['query'], $query); 
+		$info = @parse_url($video['video_url']);
+		if(isset($info['query']) && $info['query']) parse_str($info['query'], $query);
 
 		if($info['host'] == "youtu.be") { //유튜브
 			$video['type'] = 'youtube';
@@ -1295,7 +1295,7 @@ function apms_video_info($video_url) {
 			$video['vid'] = $video['ch_userid'].'_'.$video['prgid'];
 		} else if($info['host'] == "pann.nate.com") { //네이트tv
 			$video['type'] = 'nate';
-			$video['vid'] = trim(str_replace("/video/","",$info['path'])); 
+			$video['vid'] = trim(str_replace("/video/","",$info['path']));
 			$play = apms_video_id($video['video_url'], $video['vid'], $video['type']);
 			$video['mov_id'] = (isset($play['mov_id']) && $play['mov_id']) ? $play['mov_id'] : '';
 			$video['vs_keys'] = (isset($play['vs_keys']) && $play['vs_keys']) ? $play['vs_keys'] : '';
@@ -1336,7 +1336,7 @@ function apms_video_info($video_url) {
 			$video['outKey'] = (isset($query['outKey']) && $query['outKey']) ? $query['outKey'] : '';
 		} else if($info['host'] == "tvcast.naver.com" || $info['host'] == "tv.naver.com") { // 네이버 tvcast 단축주소 - 라니안님 코드 반영
 			$video['type'] = 'tvcast';
-			$video['clipNo'] = trim(str_replace("/v/","",$info['path'])); 
+			$video['clipNo'] = trim(str_replace("/v/","",$info['path']));
 			$play = apms_video_id($video['video_url'], $video['clipNo'], $video['type']);
 			$video['vid'] = (isset($play['vid']) && $play['vid']) ? $play['vid'] : '';
 			$video['outKey'] = (isset($play['outKey']) && $play['outKey']) ? $play['outKey'] : '';
@@ -1446,7 +1446,7 @@ function apms_jwplayer_list($url) {
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
-	@curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);    
+	@curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
@@ -1489,7 +1489,7 @@ function apms_jwplayer($file, $img='', $caption='', $title=''){
 	if($img == 'check') return $is_type;
 
 	$jw_id = apms_id();
-	$jwplayer_script = '';	
+	$jwplayer_script = '';
 	if($is_type == 'audio' && !$img && !$caption) {
 		$jwplayer_script .= '<script type="text/javascript">
 					    jwplayer("'.$jw_id.'").setup({
@@ -1721,7 +1721,7 @@ function apms_google_map($geo_data) {
 		$map['geo'] = (isset($map['geo']) && $map['geo']) ? $map['geo'] : '';
 		list($lat, $lng, $zoom) = explode(",", $map['geo']);
 	}
-	
+
 	if(!$lat || !$lng) return;
 
 	//Map
@@ -1763,7 +1763,7 @@ function apms_datetime($date, $type='m.d') {
 		$time = astxt($aslang['dt_day'], array(round($diff/$d))); //일전
 	} else {
 		$time = date($type, $date);
-	} 
+	}
 
 	return $time;
 }
@@ -1773,7 +1773,7 @@ function apms_photo_url($mb_id='') {
 	global $xp;
 
 	if(!$mb_id) return $xp['xp_photo_url'];
-	
+
 	$mb_dir = substr($mb_id,0,2);
 
 	$photo_url = G5_DATA_URL.'/apms/photo/'.$mb_dir.'/'.$mb_id.'.jpg';
@@ -1784,7 +1784,7 @@ function apms_photo_url($mb_id='') {
 	return $photo_url;
 }
 
-// Check XP 
+// Check XP
 function check_xp($mb_id) {
 	global $g5, $xp;
 
@@ -1844,7 +1844,7 @@ function check_xp($mb_id) {
 	return $info;
 }
 
-// Change XP 
+// Change XP
 function change_xp($mb_id, $level) {
 	global $g5, $xp;
 
@@ -1859,7 +1859,7 @@ function change_xp($mb_id, $level) {
     }
 
 	// 상품댓글
-	if(IS_YC) {	
+	if(IS_YC) {
 		sql_query(" update `{$g5['apms_comment']}` set wr_level = '$level' where mb_id = '$mb_id' and wr_level <> '$level' ", false); // 상품댓글
 	}
 
@@ -1964,16 +1964,16 @@ function apms_auth($auth_grade, $auth_equal, $auth_min, $auth_max, $opt='') {
 	if($auth_grade > 1) {
 		$mg = 'xp_grade'.$auth_grade;
 		switch($auth_equal) {
-			case '1'	: 
+			case '1'	:
 				if($member['mb_level'] != $auth_grade) {
-					$auth = aslang('alert', 'is_grade_equal', array($xp[$mg], $auth_grade)); //등급만 접근가능합니다. 
+					$auth = aslang('alert', 'is_grade_equal', array($xp[$mg], $auth_grade)); //등급만 접근가능합니다.
 				}
-				break; 
-			default		: 
-				if($member['mb_level'] < $auth_grade) { 
+				break;
+			default		:
+				if($member['mb_level'] < $auth_grade) {
 					$auth = aslang('alert', 'is_grade_over', array($xp[$mg], $auth_grade)); //등급이상 접근가능합니다.
 				}
-				break; 
+				break;
 		}
 	}
 
@@ -2011,7 +2011,7 @@ function apms_page_thema($id, $type=0) {
 	if(!$id) return;
 
 	$type_sql = ($type) ? "as_html <> '0'" : "as_html = '0'";
-	
+
 	$row = sql_fetch(" select * from {$g5['apms_page']} where html_id = '{$id}' and $type_sql order by as_html desc ", false);
 
 	if($row['gr_id']) {
@@ -2146,14 +2146,14 @@ function apms_response($use, $flag, $it_id, $bo_table, $wr_id, $subject, $mb_id,
 
     if(!$use || !$flag || !$mb_id || ($mb_id && $mb_id == $my_id)) return;
 
-	// 비추천 제외 - case 'nogood' : $field = 'nogood'; break; 
+	// 비추천 제외 - case 'nogood' : $field = 'nogood'; break;
 	switch($flag) {
 		case 'choice'			: $field = 'good'; break;
 		case 'reply'			: $field = 'reply'; break;
 		case 'new'				: $field = 'comment'; break;
 		case 'comment'			: $field = 'comment'; break;
 		case 'comment_reply'	: $field = 'comment_reply'; break;
-		case 'good'				: $field = 'good'; break;	
+		case 'good'				: $field = 'good'; break;
 		case 'use'				: $field = 'use'; break;
 		case 'qa'				: $field = 'qa'; break;
 		default					: return; break;
@@ -2188,7 +2188,7 @@ function apms_response($use, $flag, $it_id, $bo_table, $wr_id, $subject, $mb_id,
 	} else {
 		return;
 	}
-	
+
 	$row = sql_fetch(" select id from {$g5['apms_response']} where $where and confirm <> '1' ", false);
 	$is_update = ($row['id']) ? true : false;
 
@@ -2202,7 +2202,7 @@ function apms_response($use, $flag, $it_id, $bo_table, $wr_id, $subject, $mb_id,
 		$re_id = $row['id'];
 
 	} else {
-		$set .= " mb_id = '$mb_id', my_id = '$my_id', my_name = '$my_name', subject = '".addslashes($subject)."',"; 
+		$set .= " mb_id = '$mb_id', my_id = '$my_id', my_name = '$my_name', subject = '".addslashes($subject)."',";
 		sql_query(" insert into {$g5['apms_response']} set $set {$field}_cnt = '1', regdate = '".G5_TIME_YMDHIS."' $co_sql ", false);
 
 		$re_id = sql_insert_id();
@@ -2492,10 +2492,10 @@ function apms_wr_thumbnail($bo_table, $write, $thumb_width, $thumb_height, $is_c
 			if($row['bf_file']) {
 				$img[$z]['alt'] = get_text($row['bf_content']);
 				$img[$z]['img'] = G5_DATA_URL.'/file/'.$bo_table.'/'.$row['bf_file'];
-			
+
 				$z++;
 				if($z == $rows) break;
-			} 
+			}
 		}
 
 		if($z != $rows) {
@@ -2669,7 +2669,7 @@ function apms_link_video($link, $one='', $img='') {
 		if (!$link[$i]) continue;
 
 		list($link_video) = explode("|", $link[$i]);
-		
+
 		$file = apms_get_filename($link_video);
 
 		if(isset($file['ext']) && $file['ext'] && in_array($file['ext'], $vext)) {
@@ -2704,7 +2704,7 @@ function new_menu($bo_list, $list) {
 	$list_cnt = count($list);
 	$arr_bo_cnt = count($arr_bo);
 
-	for ($i=0; $i < $list_cnt; $i++) { 
+	for ($i=0; $i < $list_cnt; $i++) {
 		for ($j=0; $j < $arr_bo_cnt; $j++) {
 			if ($list[$i] == $arr_bo[$j]) return $new_icon;
 		}
@@ -2724,7 +2724,7 @@ function sel_menu($bo_list='', $page_list='', $gr_list='') {
 	if($gr_id && $gr_list) {
 		$chk_gr = explode("|", trim($gr_list));
 		$chk_cnt = count($chk_gr);
-		for ($i=0; $i < $chk_cnt; $i++) { 
+		for ($i=0; $i < $chk_cnt; $i++) {
 			if ($gr_id == $chk_gr[$i]) return $sel_icon;
 		}
 	}
@@ -2732,7 +2732,7 @@ function sel_menu($bo_list='', $page_list='', $gr_list='') {
 	if($page_id && $page_list) {
 		$chk_page = explode("|", trim($page_list));
 		$chk_cnt = count($chk_page);
-		for ($i=0; $i < $chk_cnt; $i++) { 
+		for ($i=0; $i < $chk_cnt; $i++) {
 			if ($page_id == $chk_page[$i]) return $sel_icon;
 		}
 	}
@@ -2740,7 +2740,7 @@ function sel_menu($bo_list='', $page_list='', $gr_list='') {
 	if($bo_table && $bo_list) {
 		$chk_bo = explode("|", trim($bo_list));
 		$chk_cnt = count($chk_bo);
-		for ($i=0; $i < $chk_cnt; $i++) { 
+		for ($i=0; $i < $chk_cnt; $i++) {
 			if ($bo_table == $chk_bo[$i]) return $sel_icon;
 		}
 	}
@@ -2785,7 +2785,7 @@ function new_post($update='24', $bo_table='') {
 	global $g5;
 
 	if($update > 0) {
-		;	
+		;
 	} else {
 		return;
 	}
@@ -2839,7 +2839,7 @@ function apms_chk_stats($s='') {
 
 	//오늘 가입자
 	$tday = date("Y-m-d", G5_SERVER_TIME);
-	$row = sql_fetch(" select count(*) as cnt from {$g5['member_table']} where mb_datetime between '{$tday} 00:00:00' and '{$tday} 23:59:59' ", false); 
+	$row = sql_fetch(" select count(*) as cnt from {$g5['member_table']} where mb_datetime between '{$tday} 00:00:00' and '{$tday} 23:59:59' ", false);
 	$lnb['join_today'] = $row['cnt'];
 
 	//어제 가입자
@@ -2848,7 +2848,7 @@ function apms_chk_stats($s='') {
 	$lnb['join_yesterday'] = $row['cnt'];
 
 	//전체회원
-	$row = sql_fetch(" select count(*) as cnt from {$g5['member_table']} ", false); 
+	$row = sql_fetch(" select count(*) as cnt from {$g5['member_table']} ", false);
 	$lnb['join_total'] = $row['cnt'];
 
 	if($s) $lnb = serialize($lnb);
@@ -2867,7 +2867,7 @@ function apms_stats() {
 }
 
 // Check Memo
-function apms_memo_cnt() {	
+function apms_memo_cnt() {
 	global $g5, $member, $is_member;
 
 	$cnt = 0;
@@ -2876,7 +2876,7 @@ function apms_memo_cnt() {
         $row = sql_fetch($sql);
         $cnt = $row['cnt'];
 
-		if($cnt != $member['as_memo']) {	
+		if($cnt != $member['as_memo']) {
 			sql_query(" update {$g5['member_table']} set as_memo = '$cnt' where mb_id = '{$member['mb_id']}' ", false);
 		}
 	}
@@ -2894,7 +2894,7 @@ function thema_member($opt=''){
 		$member['admin'] = $is_admin;
 	} else if(!$opt) {
 		$auth = sql_fetch(" select count(*) as cnt from {$g5['auth_table']} where mb_id = '{$member['mb_id']}' ", false);
-		if($auth['cnt']) 
+		if($auth['cnt'])
 			$member['admin'] = true;
 	}
 
@@ -2923,7 +2923,7 @@ function thema_member($opt=''){
 				$is_chk_cart = false;
 			}
 		}
-		
+
 		if($is_chk_cart) {
 			cart_item_clean(); // 보관기간이 지난 상품 삭제
 			set_cart_id(''); // cart id 설정
@@ -3196,6 +3196,11 @@ function apms_script($name){
 			define('APMS_ANIMATE', true);
 			add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/animate.min.css">', -1);
 		}
+  } else if($name == 'scrolla') {
+    if(!defined('APMS_SCROLLA')) {
+      define('APMS_SCROLLA', true);
+			add_javascript('<script src="'.APMS_PLUGIN_URL.'/js/scrolla.jquery.min.js"></script>', 0);
+    }
 	} else if($name == 'imagesloaded') {
 		if(!defined('APMS_IMAGESLOADED')) {
 			define('APMS_IMAGESLOADED', true);
@@ -3451,7 +3456,7 @@ function apms_chk_auto_menu($s='', $mobile='', $type='') {
 		$is_on = false;
 		for ($k=0; $k < $bo_cnt; $k++) {
 
-			//문서아이디			
+			//문서아이디
 			$bo[$k]['html_id'] = (isset($bo[$k]['html_id'])) ? $bo[$k]['html_id'] : '' ;
 
 			$list[$z]['sub'][$k]['show'] = $bo[$k]['as_menu_show'];
@@ -3513,7 +3518,7 @@ function apms_chk_auto_menu($s='', $mobile='', $type='') {
 					$cate = explode("|", $bo[$k]['bo_category_list']);
 					$j = 0;
 					for ($l=0; $l<count($cate); $l++) {
-						
+
 						if(!trim($cate[$l])) continue;
 
 						$list[$z]['sub'][$k]['sub'][$j]['gr_id'] = $row['gr_id'];
@@ -3528,7 +3533,7 @@ function apms_chk_auto_menu($s='', $mobile='', $type='') {
 					$list[$z]['sub'][$k]['cnt'] = $j;
 					$list[$z]['sub'][$k]['is_sub'] = ($j > 0) ? true : false;
 				}
-			}	
+			}
 			$gr_count_write = $gr_count_write + $bo[$k]['bo_count_write'];
 			$gr_count_comment = $gr_count_comment + $bo[$k]['bo_count_comment'];
 			$n++;
@@ -3614,7 +3619,7 @@ function apms_chk_auto_menu($s='', $mobile='', $type='') {
 			// 2단계 분류 판매 가능한 것만
 			$j = 0;
 			$is_submenu = (!$row['as_menu'] || (!$mobile && $row['as_menu'] == "2")) ? true : false; // 2차 출력
-			if($is_submenu) { 
+			if($is_submenu) {
 				$result2 = sql_query(" select $sql_select from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '4' and SUBSTRING(ca_id,1,2) = '{$row['ca_id']}' and ca_use = '1' and as_show <> '0' order by as_order, ca_id ", false);
 				for ($j=0; $row2=sql_fetch_array($result2); $j++) {
 
@@ -3649,7 +3654,7 @@ function apms_chk_auto_menu($s='', $mobile='', $type='') {
 
 					$k = 0;
 					$is_submenu2 = (!$row2['as_menu'] || (!$mobile && $row2['as_menu'] == "2")) ? true : false; // 3차 출력
-					if($is_submenu2) { 
+					if($is_submenu2) {
 						// 3단계 분류 판매 가능한 것만
 						$result3 = sql_query(" select $sql_select from {$g5['g5_shop_category_table']} where LENGTH(ca_id) = '6' and SUBSTRING(ca_id,1,4) = '{$row2['ca_id']}' and ca_use = '1' and as_show <> '0' order by as_order, ca_id ", false);
 						for ($k=0; $row3=sql_fetch_array($result3); $k++) {
@@ -3843,7 +3848,7 @@ function apms_auto_menu($mode='') {
 		} else {
 			$tmp[$i]['on'] = ($it_ca && $tmp[$i]['gr_id'] === $it_ca) ? 'on' : 'off';
 
-			if($tmp[$i]['is_sub']) { 
+			if($tmp[$i]['is_sub']) {
 				$m = 0;
 				for($j=0; $j < count($tmp[$i]['sub']); $j++) {
 
@@ -3882,7 +3887,7 @@ function apms_auto_menu($mode='') {
 
 				$tmp[$i]['sub'] = $sub;
 				unset($sub);
-			} 
+			}
 		}
 		$menu[$l] = $tmp[$i];
 		$l++;
@@ -4045,8 +4050,8 @@ function apms_save_image($url, $path) {
 
 	$ch = curl_init ($url);
 	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_BINARYTRANSFER,1); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
 	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 	$err = curl_error($ch);
 	if(!$err) $rawdata=curl_exec($ch);
@@ -4067,16 +4072,16 @@ function apms_save_image($url, $path) {
 		$save_dir = sprintf('%s/%s', $data_dir, $file_name);
         $save_url = sprintf('%s/%s', $data_url, $file_name);
 
-		$fp = fopen($save_dir,'w'); 
-		fwrite($fp, $rawdata); 
-		fclose($fp); 
-		
+		$fp = fopen($save_dir,'w');
+		fwrite($fp, $rawdata);
+		fclose($fp);
+
 		if(is_file($save_dir)) {
 			@chmod($save_dir, G5_FILE_PERMISSION);
 			return $save_url;
 		}
-	} 
-	
+	}
+
 	return;
 }
 
@@ -4181,7 +4186,7 @@ function apms_escape($s, $opt='0') {
         //$str = preg_replace("/[\<\>\'\"\\\'\\\"\%\=\(\)\/\^\*]/", "", $str);
         $str = preg_replace("/[\<\>\'\"\\\'\\\"\%\=\(\)\^\*]/", "", $str);
 
-		if($opt && $str) 
+		if($opt && $str)
 			$qstr .= '&amp;'.$s.'='.urlencode($str);
 	} else {
 		$str = '';
@@ -4284,7 +4289,7 @@ function apms_sns_share_icon($url, $title, $img='', $icon='', $eol='') {
 	$sns_img = ($icon) ? $icon : G5_IMG_URL.'/sns';
 
 	$eol = ($eol) ? '' : PHP_EOL;
-	
+
 	$is_kakao = false;
 	if($config['cf_kakao_js_apikey'] && IS_MOBILE_DEVICE) {
 		if(!defined('APMS_KAKAO')) {
@@ -4353,7 +4358,7 @@ function apms_options($pc, $mobile=''){
 		}
 	}
 
-	if(isset($wos['slide']) && $wos['slide']) 
+	if(isset($wos['slide']) && $wos['slide'])
 		list($wos['slide'], $wos['slide_garo'], $wos['slide_sero']) = explode(",", $wos['slide']);
 
 	if(isset($wos['carousel']) && $wos['carousel'])
@@ -4438,10 +4443,10 @@ function apms_widget_config($wid, $opt='', $mopt='', $addon=''){
 		case '99'	: $type = 99; break; // 아이템 목록
 		default		: $type = 100; break;
 	}
-	
+
 	$row = sql_fetch("select id, data_set, data_1 from {$g5['apms_data']} where type = '$type' and data_q = '$wid' ", false);
 
-	if($row['data_set']) { 
+	if($row['data_set']) {
 		$wtmp = apms_unpack($row['data_set']);
 		if(G5_IS_MOBILE && $wtmp && $row['data_1']) {
 			$wtmp = array_merge($wtmp, apms_unpack($row['data_1']));
@@ -4600,7 +4605,7 @@ function apms_board_rows($arr) {
 		$mode = 'comment';
 		$sql_mode1 = 1;
 		$sql_mode2 = "wr_parent <> wr_id";
-	} 
+	}
 
 	$rows = (isset($arr['rows']) && $arr['rows'] > 0) ? $arr['rows'] : 7;
 	$page = (isset($arr['page']) && $arr['page'] > 1) ? $arr['page'] : 1;
@@ -4661,7 +4666,7 @@ function apms_board_rows($arr) {
 	}
 
 	// 정렬(asc,hit,comment,good,nogood,poll,download,lucky,rdm)
-	switch($sort) { 
+	switch($sort) {
 		case 'asc'			: $orderby1 = 'bn_id'; $orderby2 = 'wr_id'; break;
 		case 'date'			: $orderby1 = 'bn_datetime desc'; $orderby2 = 'wr_datetime desc'; break;
 		case 'hit'			: $orderby1 = 'as_hit desc'; $orderby2 = 'wr_hit desc'; break;
@@ -4716,7 +4721,7 @@ function apms_board_rows($arr) {
 		$result = sql_query(" select *  $sql_common order by $sql_orderby $orderby1 limit $start_rows, $rows ", false);
 		for ($i=0; $row=sql_fetch_array($result); $i++) {
 
-			$tmp_write_table = $g5['write_prefix'] . $row['bo_table']; 
+			$tmp_write_table = $g5['write_prefix'] . $row['bo_table'];
 
 			$post = sql_fetch(" select * from $tmp_write_table where wr_id = '{$row['wr_id']}' ", false);
 
@@ -4754,7 +4759,7 @@ function apms_board_rows($arr) {
 			$start_rows = ($page - 1) * $rows; // 시작 열을 구함
 		}
 		$result = sql_query(" select * $sql_common order by $sql_orderby $orderby2 limit $start_rows, $rows ", false);
-		for ($i=0; $post=sql_fetch_array($result); $i++) { 
+		for ($i=0; $post=sql_fetch_array($result); $i++) {
 
 			$post['is_thumb_no'] = $thumb_no;
 			$post['img_rows'] = $img_rows;
@@ -4788,12 +4793,12 @@ function apms_member_rows($arr) {
 		case 'level'	: $orderby = 'as_exp desc';  $mb_cnt = 'as_exp'; break;
 		case 'follow'	: $orderby = 'as_followed desc, as_exp desc';  $mb_cnt = 'as_followed'; break;
 		case 'like'		: $orderby = 'as_liked desc, as_exp desc';  $mb_cnt = 'as_liked'; break;
-		case 'new'		: $orderby = 'mb_datetime desc'; break; 
-		case 'recent'	: $orderby = 'mb_today_login desc'; break; 
-		case 'post'		: $field = 'bn_datetime'; break; 
-		case 'comment'	: $field = 'bn_datetime'; break; 
+		case 'new'		: $orderby = 'mb_datetime desc'; break;
+		case 'recent'	: $orderby = 'mb_today_login desc'; break;
+		case 'post'		: $field = 'bn_datetime'; break;
+		case 'comment'	: $field = 'bn_datetime'; break;
 		case 'chulsuk'	: $field = 'wr_datetime'; break;
-		case 'connect'	: break; 
+		case 'connect'	: break;
 		default			: return; break;
 	}
 
@@ -4825,7 +4830,7 @@ function apms_member_rows($arr) {
 				$sql_board = (isset($arr['except']) && $arr['except']) ? "and find_in_set(po_rel_table, '{$bo_table}')=0" : "and find_in_set(po_rel_table, '{$bo_table}')";
 			}
 			$po_sort = ($mode == 'up') ? "and po_point < 0" : "and po_point > 0";
-			$sql = " select mb_id, sum(po_point) as cnt from {$g5['point_table']} 
+			$sql = " select mb_id, sum(po_point) as cnt from {$g5['point_table']}
 						where find_in_set(mb_id, '{$ex_mb}')=0 $po_sort $sql_term $sql_board
 						group by mb_id order by $orderby limit 0, $rows ";
 
@@ -4834,9 +4839,9 @@ function apms_member_rows($arr) {
 				$sql_board = (isset($arr['except']) && $arr['except']) ? "and find_in_set(bo_table, '{$bo_table}')=0" : "and find_in_set(bo_table, '{$bo_table}')";
 			}
 			$sql_mode = ($mode == 'comment') ? "and wr_parent <> wr_id" : "and wr_parent = wr_id";
-			$sql = " select mb_id, count(mb_id) as cnt 
-						from {$g5['board_new_table']} 
-						where mb_id <> '' and find_in_set(mb_id, '{$ex_mb}')=0 $sql_mode $sql_term $sql_board group by mb_id 
+			$sql = " select mb_id, count(mb_id) as cnt
+						from {$g5['board_new_table']}
+						where mb_id <> '' and find_in_set(mb_id, '{$ex_mb}')=0 $sql_mode $sql_term $sql_board group by mb_id
 						order by cnt desc limit 0, $rows ";
 		}
 	} else if($mode == 'chulsuk') { //출석
@@ -4844,12 +4849,12 @@ function apms_member_rows($arr) {
 		$term = (isset($arr['term']) && $arr['term']) ? $arr['term'] : '';
 		$term = ($term == 'day' && $dayterm > 0) ? $dayterm : $term;
 		$sql_term = apms_sql_term($term, $field); // 기간(일수,today,yesterday,month,prev)
-		$sql = " select mb_id, count(mb_id) as cnt from {$g5['write_prefix']}{$arr['bo_table']} 
-					where wr_is_comment = '0' and mb_id <> '' and find_in_set(mb_id, '{$ex_mb}')=0 $sql_term group by mb_id 
+		$sql = " select mb_id, count(mb_id) as cnt from {$g5['write_prefix']}{$arr['bo_table']}
+					where wr_is_comment = '0' and mb_id <> '' and find_in_set(mb_id, '{$ex_mb}')=0 $sql_term group by mb_id
 					order by cnt desc limit 0, $rows ";
 	} else if($mode == 'recent') { //최근 접속회원
 		$sql_photo = (isset($arr['photo']) && $arr['photo']) ? "and as_photo = '1'" : "";
-		$sql = "select * from {$g5['member_table']} 
+		$sql = "select * from {$g5['member_table']}
 					where find_in_set(mb_id, '{$ex_mb}')=0 $sql_photo $sql_ex
 					order by $orderby limit 0, $rows ";
 
@@ -4857,7 +4862,7 @@ function apms_member_rows($arr) {
 		$ex_grade = (isset($arr['ex_grade']) && $arr['ex_grade']) ? apms_escape_string($arr['ex_grade']) : '';
 		$sql_grade = ($ex_grade) ? "and find_in_set(mb_level, '{$ex_grade}')=0" : "";
 		$sql_photo = (isset($arr['photo']) && $arr['photo']) ? "and as_photo = '1'" : "";
-		$sql = " select *, $mb_cnt as cnt from {$g5['member_table']} 
+		$sql = " select *, $mb_cnt as cnt from {$g5['member_table']}
 					where find_in_set(mb_id, '{$ex_mb}')=0 $sql_ex $sql_photo $sql_grade
 					order by $orderby limit 0, $rows ";
 	}
@@ -4895,7 +4900,7 @@ function apms_response_rows($sort='') {
 			$list[$i] = apms_response_row($row);
 		}
 
-		if($i != $member['as_response']) {	
+		if($i != $member['as_response']) {
 			sql_query(" update {$g5['member_table']} set as_response = '$i' where mb_id = '{$member['mb_id']}' ", false);
 		}
 	}
@@ -4924,7 +4929,7 @@ function apms_memo_rows($sort='') {
 			$list[$i]['date'] = strtotime($row['me_send_datetime']);
 		}
 
-		if($i != $member['as_memo']) {	
+		if($i != $member['as_memo']) {
 			sql_query(" update {$g5['member_table']} set as_memo = '$i' where mb_id = '{$member['mb_id']}' ", false);
 		}
 	}
@@ -4954,7 +4959,7 @@ function apms_tag_post_rows($arr) {
 	$list = array();
 	$tag = (isset($arr['tag']) && $arr['tag']) ? apms_escape_string($arr['tag']) : '';
 	if(!$tag) {
-		return $list;	
+		return $list;
 	}
 	$rows = (isset($arr['rows']) && $arr['rows'] > 0) ? $arr['rows'] : 7;
 	$page = (isset($arr['page']) && $arr['page'] > 1) ? $arr['page'] : 1;
@@ -4991,7 +4996,7 @@ function apms_tag_post_rows($arr) {
 	$result = sql_query(" select bo_table, wr_id $sql_common order by regdate desc limit $start_rows, $rows ", false);
 	for ($i=0; $row=sql_fetch_array($result); $i++) {
 
-		$tmp_write_table = $g5['write_prefix'] . $row['bo_table']; 
+		$tmp_write_table = $g5['write_prefix'] . $row['bo_table'];
 
 		$post = sql_fetch(" select * from $tmp_write_table where wr_id = '{$row['wr_id']}' ", false);
 
@@ -5017,7 +5022,7 @@ function apms_popular_rows($arr) {
 	$sql_term = apms_sql_term($term, 'pp_date'); // 기간(일수,today,yesterday,month,prev)
 	$sql = " select pp_word, count(pp_word) as cnt from {$g5['popular_table']} where 1 $sql_term group by pp_word order by cnt desc limit 0, $rows ";
 	$result = sql_query($sql, false);
-	for ($i=0; $row=sql_fetch_array($result); $i++) { 
+	for ($i=0; $row=sql_fetch_array($result); $i++) {
 		$list[$i] = $row;
 		$list[$i]['cnt'] = $row['cnt'];
 		$list[$i]['word'] = get_text($row['pp_word']);
@@ -5035,10 +5040,10 @@ function apms_poll_rows($arr) {
 	$sql_po = '';
 	if(isset($arr['po_list']) && $arr['po_list']) {
 		$sql_po = (isset($arr['except']) && $arr['except']) ? "and find_in_set(po_id, '{$arr['po_list']}')=0" : "and find_in_set(po_id, '{$arr['po_list']}')";
-	} 
+	}
 
 	$result = sql_query(" select * from {$g5['poll_table']} where 1 $sql_po order by po_id desc limit 0, $rows ", false);
-	for ($i=0; $row=sql_fetch_array($result); $i++) { 
+	for ($i=0; $row=sql_fetch_array($result); $i++) {
 		$list[$i] = $row;
 	}
 
@@ -5054,9 +5059,9 @@ function apms_faq_rows($arr) {
 	$sql_fa = '';
 	if(isset($arr['fa_list']) && $arr['fa_list']) {
 		$sql_fa = (isset($arr['except']) && $arr['except']) ? "and find_in_set(fm_id, '{$arr['fa_list']}')=0" : "and find_in_set(fa_id, '{$arr['fa_list']}')";
-	} 
+	}
     $result = sql_query(" select * from {$g5['faq_table']} where 1 $sql_fa order by fa_order, fa_id limit 0, $rows ", false);
-	for ($i=0; $row=sql_fetch_array($result); $i++) { 
+	for ($i=0; $row=sql_fetch_array($result); $i++) {
 		$list[$i] = $row;
 		$list[$i]['subject'] = apms_get_text($list[$i]['fa_subject']);
 		$list[$i]['content'] = conv_content($list[$i]['fa_content'], 1);
@@ -5076,12 +5081,12 @@ function apms_extra_rows($arr) {
 	$sql_po = '';
 	if(isset($arr['bo_list']) && $arr['bo_list']) {
 		$sql_po = (isset($arr['except']) && $arr['except']) ? "and find_in_set(bo_table, '{$arr['bo_list']}')=0" : "and find_in_set(bo_table, '{$arr['bo_list']}')";
-	} 
+	}
 
 	$sql_type = (isset($arr['po_type']) && $arr['po_type'] > 0) ? "and po_type = '{$arr['po_type']}'" : "";
 
 	$result = sql_query(" select * from {$g5['apms_poll']} where po_use = '1' $sql_po $sql_type order by po_id desc limit 0, $rows ", false);
-	for ($i=0; $row=sql_fetch_array($result); $i++) { 
+	for ($i=0; $row=sql_fetch_array($result); $i++) {
 		$list[$i] = $row;
 	}
 
@@ -5119,7 +5124,7 @@ function apms_label_icon($label, $labels, $cnt, $name, $color) {
 	for ($i=0; $i < $cnt; $i++) {
 
 		if(!$labels[$i]['cnt']) continue;
-		
+
 		if($label && in_array($label, $labels[$i]['name'])) {
 			$sel_name = $labels[$i]['txt'];
 			$sel_color = $labels[$i]['color'];
@@ -5358,7 +5363,7 @@ function apms_date($date, $class='', $day='H:i', $month='m.d H:i', $year='Y.m.d 
 
 	$today = date('Y-m-d', $date);
 
-	if (G5_TIME_YMD == $today) { 
+	if (G5_TIME_YMD == $today) {
 		$time = ($day == 'before') ? apms_datetime($date) : date($day, $date);
 		if($class) {
 			$time = '<span class="'.$class.'">'.$time.'</span>';
@@ -5367,7 +5372,7 @@ function apms_date($date, $class='', $day='H:i', $month='m.d H:i', $year='Y.m.d 
 		$time = date($month, $date);
 	} else {
 		$time = date($year, $date);
-	} 
+	}
 
 	return $time;
 }
@@ -5425,7 +5430,7 @@ function apms_site($url) {
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
-	@curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);    
+	@curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -5506,7 +5511,7 @@ function apms_wr_type($bo_table, $write) {
 	$p_image = true;
 	$p_thumb = apms_wr_thumbnail($bo_table, $write, 0, 0);
 	if(!$p_thumb) {
-		$p_image = false;	
+		$p_image = false;
 		$p_thumb = 1;
 	}
 

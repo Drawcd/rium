@@ -21,8 +21,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<nav class="at-links">
 				<div class="at-container">
 					<ul class="pull-left">
-						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=intro">사이트 소개</a></li> 
-						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=provision">이용약관</a></li> 
+						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=intro">사이트 소개</a></li>
+						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=provision">이용약관</a></li>
 						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=privacy">개인정보처리방침</a></li>
 						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=noemail">이메일 무단수집거부</a></li>
 						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=disclaimer">책임의 한계와 법적고지</a></li>
@@ -47,7 +47,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 								<i class="fa fa-leaf"></i>
 							</div>
 							<div class="media-body">
-						
+
 								<ul class="at-about hidden-xs">
 									<li><b><?php echo $default['de_admin_company_name']; ?></b></li>
 									<li>대표 : <?php echo $default['de_admin_company_owner']; ?></li>
@@ -59,7 +59,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 									<li>개인정보관리책임자 : <?php echo $default['de_admin_info_name']; ?></li>
 									<li>이메일 : <span><?php echo $default['de_admin_info_email']; ?></span></li>
 								</ul>
-								
+
 								<div class="clearfix"></div>
 
 								<div class="copyright">
@@ -112,3 +112,11 @@ var menu_subAt = "<?php echo ($m_subsat) ? $m_subsat : 0;?>";
 <?php echo apms_widget('basic-sidebar'); //사이드바 및 모바일 메뉴(UI) ?>
 
 <?php if($is_designer || $is_demo) include_once(THEMA_PATH.'/assets/switcher.php'); //Style Switcher ?>
+
+
+<script>
+$('.animate').scrolla({
+  mobile: false,
+  once: false
+});
+</script>

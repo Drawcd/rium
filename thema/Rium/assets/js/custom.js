@@ -372,6 +372,6 @@ $(window).on("resize.slickVideoPlayer", function(){
 
 // masonry
 $('.section-wrap').masonry({
-  itemSelector: '.size-four-two-one',
+  itemSelector: '.size-four-two-one , .size-two-two-one ,.size-three-one-one',
   columnWidth: 0
 });

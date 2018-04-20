@@ -473,6 +473,7 @@ main-popup-intro : 메인페이지 오버 인트로
 
 
 /* 공통 */
+.padding-zero { padding:0px !important;}
 .nav-logo { padding: 6px 0 6px 30px; width:150px; float:left;}
 .nav-logo img{ width:87px; height:48px; }
 .nav-logo-mobile img{ width:67px; height:37px; }
@@ -739,7 +740,7 @@ main-slider-bottom.php
 ********************************************************/
 .main-slider-bottom {}
 .main-slider-bottom-list { margin:0;}
-.main-slider-bottom-list-item { list-style: none; height:240px; }
+.main-slider-bottom-list-item { list-style:none; height:240px; }
 .main-slider-bottom-list-item-list { position:relative; padding:20px 45px 5px; height:100%; overflow:hidden; transition:all .5s;}
 .main-slider-bottom-list-item-list h3{ margin:5px 0; }
 
@@ -763,7 +764,8 @@ main-slider-bottom.php
 /********************************************************
 section 공통
 ********************************************************/
-.section-wrap { width:100%; display:block;}
+.section-wrap { width:100%; display:block; }
+
 
 /* clearfix */
 .section-wrap:after {
@@ -772,8 +774,6 @@ section 공통
   clear: both;
 }
 
-.section-wrap-item {
-}
 .section-group { text-align:center;  width:100%; display:block; margin-bottom:60px;}
 .section-list-title { text-align:center; display:block; font-weight: 600; font-size:27px;}
 .section-list-sub { display:inline-block; text-align:center; margin-top:0; font-weight: 300; padding: 0 7px 7px; font-size:27px; }
@@ -801,17 +801,25 @@ performance
 section04
 ********************************************************/
 #section04 { padding:50px 0;}
-
+#section04 .section-wrap { }
+#section04 .section-wrap .section-wrap-item { position:relative; height:360px; padding:65px;}
+#section04 .section-wrap .section-wrap-item .section-wrap-list p{ white-space:pre-line; }
 
 
 /********************************************************
-공통 컬러셋
+공통 버튼
 ********************************************************/
 .button01 {display:inline-block; position:absolute; right:40px; bottom:20px; width:160px; }
 .button01 .button-link { font-family: "nanumgothic"; font-size:15px; color:#fff; display:inline-block; position:absolute; left:20px; bottom:0px; width:140px; height:40px; line-height:30px; background:#333; padding:5px; text-align: center; transition:all .5s;}
 .button01 .button-link:after { font-family: "FontAwesome"; color:#fff; content:"\f054"; display:inline-block; position:relative; right:0px; bottom:0px; width:20px; height:30px; margin-left:10px; transition:all .5s;}
 .button01 .button-link:hover { background:#ffcc00; color:#333; font-weight: 600;}
 .button01 .button-link:hover:after { color:#333; transform: rotate(180deg); }
+
+.button02 {display:inline-block; position:relative; left:50%; width:160px; transform: translate(-50%, 0); }
+.button02 .button-link { font-family: "nanumgothic"; font-size:15px; color:#fff; display:inline-block; position:absolute; left:20px; bottom:0px; width:140px; height:40px; line-height:30px; background:#333; padding:5px; text-align: center; transition:all .5s;}
+.button02 .button-link:after { font-family: "FontAwesome"; color:#fff; content:"\f054"; display:inline-block; position:relative; right:0px; bottom:0px; width:20px; height:30px; margin-left:10px; transition:all .5s;}
+.button02 .button-link:hover { background:#ffcc00; color:#333; font-weight: 600;}
+.button02 .button-link:hover:after { color:#333; transform: rotate(180deg); }
 
 @media all and (max-width:1310px) {
   .button01 { right:10px; bottom:15px; }
@@ -860,6 +868,8 @@ section04
 
 
 /* size reaction */
+.size-two-two-one { float:left; box-sizing:border-box; display:block; padding:0; margin:0; width:50%;}
+.size-three-one-one { float:left; box-sizing:border-box; display:block; padding:0; margin:0; width:33.333%;}
 .size-four-two-one { float:left; box-sizing:border-box; display:block; padding:0; margin:0; width:25%;}
 .size-four-two-two { float:left; box-sizing:border-box; display:block; padding:0; margin:0; width:25%;}
 
@@ -867,12 +877,22 @@ section04
 
 
 
+
 @media all and (max-width:1310px) {
+  .size-two-two-one { width:50%; }
+  .size-three-one-one { width:33.333%; }
   .size-four-two-one { width:50%; }
   .size-four-two-two { width:50%; }
 }
 
+@media all and (max-width:991px) {
+  .size-two-two-one { width:50%; }
+  .size-three-one-one { width:33.333%; }
+}
+
 @media all and (max-width:767px) {
+  .size-two-two-one { width:100%; }
+  .size-three-one-one { width:100%; }
   .size-four-two-one { width:100%; }
   .size-four-two-two { width:50%; }
 }

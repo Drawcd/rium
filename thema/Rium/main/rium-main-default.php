@@ -181,20 +181,20 @@ $side = ($at_set['side']) ? 'left' : 'right';
 
 <!-- main-popup 3 Start -->
 <div id="section04" class="point-color03 business-area-wrap">
-  <div class="at-container widget-index" >
+  <div class="widget-index" >
     <div class="section-item" >
-      <h3 class="section-list-title animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">건설사례 및 예정</h3>
+      <h3 class="section-list-title animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">사업영역</h3>
       <div class="section-group animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">
         <span class="">
-          <h3 class="fc-orange section-list-sub">COMPANY</h3>
+          <h3 class="fc-orange section-list-sub">BUSINESS</h3>
         </span>
         <span class="">
-          <h3 class="section-list-sub">PERFORMANCE</h3>
+          <h3 class="section-list-sub">AREA</h3>
         </span>
       </div>
     </div>
   </div>
-  <div class=" at-container widget-box">
+  <div class="widget-box">
     <?php echo apms_widget('rium-page-include', $wid.'-business-area'); ?>
   </div>
 </div>

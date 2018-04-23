@@ -178,9 +178,17 @@ $side = ($at_set['side']) ? 'left' : 'right';
 </div>
 <!-- company performance End -->
 
+<!-- popup-customer -->
+<div id="section04" class="section">
+  <div class="widget-box">
+    <?php echo apms_widget('rium-page-include', $wid.'-popup-customer'); ?>
+  </div>
+</div>
+<!-- popup-customer End-->
+
 
 <!-- main-popup 3 Start -->
-<div id="section04" class="point-color03 business-area-wrap">
+<div id="section05" class="point-color03 business-area-wrap">
   <div class="widget-index" >
     <div class="section-item" >
       <h3 class="section-list-title animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">사업영역</h3>
@@ -191,6 +199,9 @@ $side = ($at_set['side']) ? 'left' : 'right';
         <span class="">
           <h3 class="section-list-sub">AREA</h3>
         </span>
+        <p>
+          안정적인 사업 수립을 위하여 사업에 필요한 전반적인 요소를 갖추고 있습니다.
+        </p>
       </div>
     </div>
   </div>

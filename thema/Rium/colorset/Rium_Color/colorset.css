@@ -5,6 +5,7 @@
 ********************************************************/
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500,500italic,700,900,400italic,700italic');
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 body { font-family: dotum; line-height: 22px; font-size: 14px; color: rgb(51, 51, 51); background-color:#fff; background-repeat: no-repeat; background-attachment:fixed; background-size:cover; }
 body.is-pc .ko { font-size:12px; }
@@ -15,7 +16,7 @@ label { font-weight:normal; }
 label.checkbox, label.radio { line-height:12px; font-size: 12px; font-weight: normal; cursor: pointer; }
 hr { margin-top: 20px; margin-bottom:20px; border:0; border-top:1px solid #eee; display:block; }
 blockquote { font-size: 12px; margin:0px 0px 20px; }
-.en, h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a { font-family: "Roboto", sans-serif; }
+.en, h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a,p { font-family: "Noto Sans KR", "Roboto", sans-serif; }
 .ko, .ko small { font-family:dotum, sans-serif; }
 .sns-share-icon img { width:20%; max-width:34px; border-radius:50%; }
 
@@ -470,10 +471,12 @@ main-popup-intro : 메인페이지 오버 인트로
 /* Misc */
 .form-control, .well, .btn, .alert, .input-group-addon, .label { border-radius:0 !important; }
 
+/* 공통 padding*/
+.padding-zero { padding:0px !important;}
+.padding-left-right-15 { padding-left:15px; padding-right:15px;}
 
 
 /* 공통 */
-.padding-zero { padding:0px !important;}
 .nav-logo { padding: 6px 0 6px 30px; width:150px; float:left;}
 .nav-logo img{ width:87px; height:48px; }
 .nav-logo-mobile img{ width:67px; height:37px; }
@@ -800,11 +803,27 @@ performance
 /********************************************************
 section04
 ********************************************************/
-#section04 { padding:50px 0;}
-#section04 .section-wrap { }
-#section04 .section-wrap .section-wrap-item { position:relative; height:360px; padding:65px;}
-#section04 .section-wrap .section-wrap-item .section-wrap-list p{ white-space:pre-line; }
+#section04 .widget-box { margin:0; }
+#section04 .section h1{ font-size:42px; font-weight:500; color:#fff; text-align:center; padding-top:150px; margin:0;}
+#section04 .section h3{ font-size:18px; font-weight:300; color:#fff; text-align:center;}
+#section04 .section h3:nth-child(4){ padding-bottom:150px;}
 
+/********************************************************
+section05
+********************************************************/
+#section05 { padding:50px 0;}
+#section05 .section-wrap { }
+#section05 .section-group>p {font-size: 16px; font-weight: 400;}
+#section05 .section-wrap .section-wrap-item { position:relative; height:360px; padding:15px; overflow: hidden;}
+#section05 .section-wrap .section-wrap-item:nth-child(2) .section-wrap-list{ background: url('/img/business.jpg') no-repeat scroll center; background-size:100%; transition: background-size .5s ease-in;}
+#section05 .section-wrap .section-wrap-item .section-wrap-list:hover{ background-size: 120%;}
+#section05 .section-wrap .section-wrap-item .section-wrap-list:hover:before{ background-color: rgba(33,33,33,0.1);}
+#section05 .section-wrap .section-wrap-item .section-wrap-list { height:100%; border: 1px solid #333; position:relative;}
+#section05 .section-wrap .section-wrap-item .section-wrap-list:before{ content: ''; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(33,33,33,.3); transition: background-color .5s ease-in;}
+#section05 .section-wrap .section-wrap-item .section-wrap-list h3{ text-align: center;}
+#section05 .section-wrap .section-wrap-item .section-wrap-list h3:nth-child(2){ margin-top:10px;}
+#section05 .section-wrap .section-wrap-item .section-wrap-list p{ white-space:pre-line; font-size:18px; font-weight:300; margin-top:20px;}
+#section05 .section-wrap-list-text { padding:25px; height:240px;}
 
 /********************************************************
 공통 버튼
@@ -815,11 +834,11 @@ section04
 .button01 .button-link:hover { background:#ffcc00; color:#333; font-weight: 600;}
 .button01 .button-link:hover:after { color:#333; transform: rotate(180deg); }
 
-.button02 {display:inline-block; position:relative; left:50%; width:160px; transform: translate(-50%, 0); }
-.button02 .button-link { font-family: "nanumgothic"; font-size:15px; color:#fff; display:inline-block; position:absolute; left:20px; bottom:0px; width:140px; height:40px; line-height:30px; background:#333; padding:5px; text-align: center; transition:all .5s;}
+.button02 {display:inline-block; position:relative; left:50%; width:160px; height:40px; transform: translate(-50%, 0); }
+.button02 .button-link { font-family: "nanumgothic"; font-size:15px; color:#fff; font-weight: 400; display:inline-block; position:absolute; width:140px; height:40px; line-height:30px; background:none; border: 1px solid #fff; border-radius: 7px; padding:5px; text-align: center; transition:all .5s;}
 .button02 .button-link:after { font-family: "FontAwesome"; color:#fff; content:"\f054"; display:inline-block; position:relative; right:0px; bottom:0px; width:20px; height:30px; margin-left:10px; transition:all .5s;}
-.button02 .button-link:hover { background:#ffcc00; color:#333; font-weight: 600;}
-.button02 .button-link:hover:after { color:#333; transform: rotate(180deg); }
+.button02 .button-link:hover { background:rgba(33,33,33,.5); color:#fff; text-shadow:0px 0px 2px #333; }
+.button02 .button-link:hover:after { color:#ffcc00; transform: rotate(180deg); }
 
 @media all and (max-width:1310px) {
   .button01 { right:10px; bottom:15px; }
@@ -839,16 +858,14 @@ section04
 
 
 
-/* background */
+/* 공통 bottom */
+.bottom-10 { bottom:10px;}
+
+/* 공통 background */
 .point-color01 { background:#fcfcfc;}
 .point-color02 { background:#7AB7AE;}
 .point-color03 { background:#607d8b;}
 .point-color10 { background:#23252B;}
-
-
-.point-background { }
-
-
 .bc-white { background-color:#fff;}
 .bc-black { background-color:#393939;}
 .bc-orange { background-color:#ffcc00;}
@@ -865,6 +882,7 @@ section04
 
 /* padding */
 .padding-20 { padding: 20px;}
+.padding-bottom-150 { padding-bottom:150px;}
 
 
 /* size reaction */
@@ -895,4 +913,14 @@ section04
   .size-three-one-one { width:100%; }
   .size-four-two-one { width:100%; }
   .size-four-two-two { width:50%; }
+}
+
+
+/* bg */
+.fixed-bg01 {
+  background-image : url('/img/popup-customer.jpg') ;
+  background-repeat: no-repeat;
+  background-size : cover;
+  background-position : center;
+  background-attachment: fixed;
 }

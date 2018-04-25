@@ -1,5 +1,5 @@
 <ul class="section-wrap padding-zero">
-  <li class="size-three-one-one section-wrap-item">
+  <li class="size-three-two-one section-wrap-item animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="100">
     <div class="section-wrap-list ">
       <div class="section-wrap-list-text">
         <h3>THE RIUM</h3>
@@ -7,7 +7,7 @@
       </div>
     </div>
   </li>
-  <li class="size-three-one-one section-wrap-item">
+  <li class="size-three-two-one section-wrap-item animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="100">
     <div class="section-wrap-list">
       <div class="section-wrap-list-text">
         <h3>Architectural design</h3>
@@ -19,7 +19,7 @@
       </div>
     </div>
   </li>
-  <li class="size-three-one-one section-wrap-item">
+  <li class="size-three-two-one section-wrap-item animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="100">
     <div class="section-wrap-list">
         <div class="section-wrap-list-text">
           <h3>Execution of Building Works</h3>
@@ -31,7 +31,7 @@
         </div>
     </div>
   </li>
-  <li class="size-three-one-one section-wrap-item">
+  <li class="size-three-two-one section-wrap-item animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="100">
     <div class="section-wrap-list ">
       <div class="section-wrap-list-text">
         <h3>부동산 자산관리</h3>
@@ -43,7 +43,7 @@
         </div>
     </div>
   </li>
-  <li class="size-three-one-one section-wrap-item">
+  <li class="size-three-two-one section-wrap-item animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="100">
     <div class="section-wrap-list ">
       <div class="section-wrap-list-text">
         <h3>A Property Developer</h3>
@@ -55,7 +55,7 @@
         </div>
     </div>
   </li>
-  <li class="size-three-one-one section-wrap-item">
+  <li class="size-three-two-one section-wrap-item animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="100">
     <div class="section-wrap-list ">
       <div class="section-wrap-list-text">
         <h3>Housing PreSale</h3>

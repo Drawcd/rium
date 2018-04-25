@@ -74,7 +74,7 @@ include_once(THEMA_PATH.'/assets/thema.php');
 			<div id="mobile-menu" class="">
 				<div class="mobile-container mobile-menu-responsive">
 					<div class="mobile-menu">
-							<ul class="dept1-wrap f_nanum">
+							<ul class="dept1-wrap">
 								<li class="menu-all-btn">
 									<div class="padding-20 menu-a">
 										<ul>
@@ -142,11 +142,11 @@ include_once(THEMA_PATH.'/assets/thema.php');
 							<li class="menu-all-bottom-btn ">
 								<div class="">
 									<a href="javascript:;" class="mobile-menu-close-btn menu-a point-color03" data-toggle="collapse" data-target="#menu-all"><i class="fa fa-times"> </i>
-										<span class="mobile-menu-close f_nanum font-w700 font-s22">메뉴 닫기</span>
+										<span class="mobile-menu-close font-w700 font-s22">메뉴 닫기</span>
 									</a>
 								</div>
 								<div class="">
-									<h4 class="f_nanum font-s16">상담문의 : 031-962-8070</h4>
+									<h4 class="font-s16">상담문의 : 031-962-8070</h4>
 								</div>
 							</li>
 						</ul>

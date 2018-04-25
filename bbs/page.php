@@ -115,7 +115,7 @@ if($is_content) {
 
 	$page_content .= apms_content($page_html);
 
-	if(is_file(G5_DATA_PATH.'/content/'.$co_id.'_t')) 
+	if(is_file(G5_DATA_PATH.'/content/'.$co_id.'_t'))
 		$page_content .= '<div id="ctt_timg" class="ctt_img"><img src="'.G5_DATA_URL.'/content/'.$co_id.'_t" alt=""></div>'.PHP_EOL;
 
 	if ($is_designer)

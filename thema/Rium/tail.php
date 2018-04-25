@@ -113,10 +113,11 @@ var menu_subAt = "<?php echo ($m_subsat) ? $m_subsat : 0;?>";
 
 <?php if($is_designer || $is_demo) include_once(THEMA_PATH.'/assets/switcher.php'); //Style Switcher ?>
 
-
+<!-- animate Start -->
 <script>
 $('.animate').scrolla({
   mobile: false,
   once: false
 });
 </script>
+<!-- animate End -->

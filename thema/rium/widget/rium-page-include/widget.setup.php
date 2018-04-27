@@ -1,11 +1,6 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
-
-// include_once(G5_ADMIN_PATH.'/thema/pjg/assets/thema.php');
-// pjg-page-include
-// pjg-page-include
 $page_dir = G5_PATH.'/'.page_piece.'/'.THEMA;
-
 $pagePiece = readPagePiece($page_dir);
 ?>
 

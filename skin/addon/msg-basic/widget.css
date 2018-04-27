@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+.widget-msg-basic { margin-bottom:15px !important; }
+.widget-msg-basic.is-tab .tab-head { border-right:1px solid #ddd; border-top:1px solid #ddd; }
+.widget-msg-basic.is-tab .tab-head .nav { margin-top:-1px !important; }
+.widget-msg-basic .tab-content img { max-width:100%; }
+.widget-msg-basic .tab-content p { padding:0px; margin:0px; }

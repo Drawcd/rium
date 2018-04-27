@@ -1,3 +1,19 @@
+<?php
+// 소셜아이콘
+$sns_share_url  = (IS_YC && IS_SHOP) ? G5_SHOP_URL : G5_URL;
+$sns_share_title = get_text($config['cf_title']);
+$sns_share_img = G5_URL.'/img/sns';
+$sns_share_icon = '<div class="sns-share-icon">'.PHP_EOL;
+$sns_share_icon .= get_sns_share_link('facebook', $sns_share_url, $sns_share_title, $sns_share_img.'/facebook.png').PHP_EOL;
+$sns_share_icon .= get_sns_share_link('twitter', $sns_share_url, $sns_share_title, $sns_share_img.'/twitter.png').PHP_EOL;
+$sns_share_icon .= get_sns_share_link('googleplus', $sns_share_url, $sns_share_title, $sns_share_img.'/googleplus.png').PHP_EOL;
+$sns_share_icon .= get_sns_share_link('kakaostory', $sns_share_url, $sns_share_title, $sns_share_img.'/kakaostory.png').PHP_EOL;
+$sns_share_icon .= get_sns_share_link('kakaotalk', $sns_share_url, $sns_share_title, $sns_share_img.'/kakaotalk.png').PHP_EOL;
+$sns_share_icon .= get_sns_share_link('naverband', $sns_share_url, $sns_share_title, $sns_share_img.'/naverband.png').PHP_EOL;
+$sns_share_icon .= '</div>';
+?>
+
+
 <div  class="widget-box">
   <div class="row at-row">
     <!-- 메인 영역 -->
@@ -13,14 +29,19 @@
               <h4>전화문의</h4>
               <h3>031)962-8070</h3>
             </div>
-            <div class="sns">
+            <!-- <div class="sns">
               <a href="" class="border-radius-10"><img src="/img/sns/facebook.png" alt=""></a>
               <a href="" class="border-radius-10"><img src="/img/sns/kakaostory.png" alt=""></a>
               <a href="" class="border-radius-10"><img src="/img/sns/naverband.png" alt=""></a>
               <a href="" class="border-radius-10"><img src="/img/sns/twitter.png" alt=""></a>
               <a href="" class="border-radius-10"><img src="/img/sns/googleplus.png" alt=""></a>
-            </div>
+            </div> -->
           </div>
+          <!-- SNS아이콘 시작 -->
+          <div class="widget-box text-left">
+            <?php echo $sns_share_icon; ?>
+          </div>
+          <!-- SNS아이콘 끝 -->
         </div>
         <div class="col-sm-6">
           <div class="tail-request-wrap">

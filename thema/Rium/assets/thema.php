@@ -49,6 +49,19 @@ $is_content_style = ($at_set['content']) ? '-wide' : '';
 $is_sticky_nav = $at_set['sticky'];
 $is_top_nav = ($at_set['nav']) ? $at_set['nav'] : 'both';
 
+
+// 하단표시 정보
+$is_hide_intro = ($at_set['intro-hide']) ? $at_set['intro-hide'] : '';
+$is_hide_provision = ($at_set['provision-hide']) ? $at_set['provision-hide'] : '';
+$is_hide_privacy = ($at_set['privacy-hide']) ? $at_set['privacy-hide'] : '';
+$is_hide_noemail = ($at_set['noemail-hide']) ? $at_set['noemail-hide'] : '';
+$is_hide_disclaimer = ($at_set['disclaimer-hide']) ? $at_set['disclaimer-hide'] : '';
+$is_hide_admin_info = ($at_set['admin-info-hide']) ? $at_set['admin-info-hide'] : '';
+$is_hide_qalist = ($at_set['qalist-hide']) ? $at_set['qalist-hide'] : '';
+$is_hide_mailbusiness = ($at_set['mailbusiness-hide']) ? $at_set['mailbusiness-hide'] : '';
+$is_hide_contactus = ($at_set['contactus-hide']) ? $at_set['contactus-hide'] : '';
+$is_hide_tel = ($at_set['tel-hide']) ? $at_set['tel-hide'] : '';
+
 $is_fixed_content = false;
 if(IS_YC && isset($ca_id) && $ca_id && !$pid) {
 	$page_chk = explode(",", $page_list['ca_id']);

@@ -22,53 +22,6 @@ $list_cnt = count($list);
 
 ?>
 
-<section class="board-list<?php echo (G5_IS_MOBILE) ? ' font-14' : '';?>"> 
-	<?php if($boset['tsearch']) { ?>
-		<div class="list-tsearch">
-			<form name="fhsearch" method="get" role="form" class="form">
-				<input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
-				<input type="hidden" name="sca" value="<?php echo $sca ?>">
-				<div class="row row-15">
-					<div class="col-sm-2 col-sm-offset-1 col-xs-5 col-15">
-						<div class="form-group">
-							<label for="sfl" class="sound_only">검색조건</label>
-							<select name="sfl" id="sfl" class="form-control input-sm">
-								<option value="wr_subject"<?php echo get_selected($sfl, 'wr_subject', true); ?>>제목</option>
-								<option value="wr_content"<?php echo get_selected($sfl, 'wr_content'); ?>>내용</option>
-								<option value="wr_subject||wr_content"<?php echo get_selected($sfl, 'wr_subject||wr_content'); ?>>제목+내용</option>
-								<option value="mb_id,1"<?php echo get_selected($sfl, 'mb_id,1'); ?>>회원아이디</option>
-								<option value="mb_id,0"<?php echo get_selected($sfl, 'mb_id,0'); ?>>회원아이디(코)</option>
-								<option value="wr_name,1"<?php echo get_selected($sfl, 'wr_name,1'); ?>>글쓴이</option>
-								<option value="wr_name,0"<?php echo get_selected($sfl, 'wr_name,0'); ?>>글쓴이(코)</option>
-							</select>
-						</div>
-					</div>
-					<div class="col-sm-4 col-xs-7 col-15">
-						<div class="form-group">
-							<div class="form-group">
-								<label for="stx" class="sound_only">검색어</label>
-								<input type="text" name="stx" value="<?php echo stripslashes($stx) ?>" id="stx" class="form-control input-sm" maxlength="20" placeholder="검색어">
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-2 col-xs-5 col-15">
-						<div class="form-group">
-							<select name="sop" id="sop" class="form-control input-sm">
-								<option value="or"<?php echo get_selected($sop, "or") ?>>또는</option>
-								<option value="and"<?php echo get_selected($sop, "and") ?>>그리고</option>
-							</select>	
-						</div>
-					</div>
-					<div class="col-sm-2 col-xs-7 col-15">
-						<div class="form-group">
-							<button type="submit" class="btn btn-<?php echo $boset['tsearch'];?> btn-sm btn-block"><i class="fa fa-search"></i> 검색</button>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-	<?php } ?>
-
 	<?php @include_once($list_skin_path.'/list.head.skin.php'); // 헤드영역 ?>
 
 	<div class="list-wrap">
@@ -82,7 +35,7 @@ $list_cnt = count($list);
 			<input type="hidden" name="sod" value="<?php echo $sod ?>">
 			<input type="hidden" name="page" value="<?php echo $page ?>">
 			<input type="hidden" name="sw" value="">
-			<?php 
+			<?php
 				// 목록스킨
 				if(is_file($list_skin_path.'/list.skin.php')) {
 					include_once($list_skin_path.'/list.skin.php');
@@ -167,7 +120,7 @@ $list_cnt = count($list);
 							<?php } ?>
 						</ul>
 						<a id="sortLabel" role="button" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-<?php echo $btn1;?> btn-sm">
-							<?php 
+							<?php
 								switch($sst) {
 									case 'wr_datetime'	: echo '<i class="fa fa-clock-o"></i> 날짜순'; break;
 									case 'wr_hit'		: echo '<i class="fa fa-eye"></i> 조회순'; break;
@@ -187,6 +140,7 @@ $list_cnt = count($list);
 						<?php if ($write_href) { ?><a role="button" href="<?php echo $write_href ?>" class="btn btn-<?php echo $btn2;?> btn-sm"><i class="fa fa-pencil"></i> 글쓰기</a><?php } ?>
 					</div>
 				</div>
+
 				<div class="form-group pull-left">
 					<div class="btn-group" role="group">
 						<?php if ($rss_href) { ?>
@@ -197,7 +151,6 @@ $list_cnt = count($list);
 				</div>
 				<div class="clearfix"></div>
 			</div>
-
 			<div class="list-page text-center">
 				<ul class="pagination en no-margin">
 					<?php if($prev_part_href) { ?>
@@ -262,7 +215,7 @@ $list_cnt = count($list);
 										<select name="sop" id="sop" class="form-control input-sm">
 											<option value="or"<?php echo get_selected($sop, "or") ?>>또는</option>
 											<option value="and"<?php echo get_selected($sop, "and") ?>>그리고</option>
-										</select>	
+										</select>
 									</div>
 								</div>
 							</div>
@@ -284,6 +237,48 @@ $list_cnt = count($list);
 			</div>
 		</div>
 	</div>
+
+
+	<!-- 하단검색 시작 -->
+	<section class="board-list<?php echo (G5_IS_MOBILE) ? ' font-14' : '';?>">
+		<?php if($boset['tsearch']) { ?>
+			<div class="list-tsearch">
+				<form name="fhsearch" method="get" role="form" class="form">
+					<input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
+					<input type="hidden" name="sca" value="<?php echo $sca ?>">
+					<div class="row row-15">
+						<div class="col-sm-2 col-sm-offset-2 col-xs-5 col-15">
+							<div class="form-group">
+								<label for="sfl" class="sound_only">검색조건</label>
+								<select name="sfl" id="sfl" class="form-control input-sm">
+									<option value="wr_subject"<?php echo get_selected($sfl, 'wr_subject', true); ?>>제목</option>
+									<option value="wr_content"<?php echo get_selected($sfl, 'wr_content'); ?>>내용</option>
+									<option value="wr_subject||wr_content"<?php echo get_selected($sfl, 'wr_subject||wr_content'); ?>>제목+내용</option>
+									<option value="mb_id,1"<?php echo get_selected($sfl, 'mb_id,1'); ?>>회원아이디</option>
+									<option value="mb_id,0"<?php echo get_selected($sfl, 'mb_id,0'); ?>>회원아이디(코)</option>
+									<option value="wr_name,1"<?php echo get_selected($sfl, 'wr_name,1'); ?>>글쓴이</option>
+									<option value="wr_name,0"<?php echo get_selected($sfl, 'wr_name,0'); ?>>글쓴이(코)</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-4 col-xs-7 col-15">
+							<div class="form-group">
+								<div class="form-group">
+									<label for="stx" class="sound_only">검색어</label>
+									<input type="text" name="stx" value="<?php echo stripslashes($stx) ?>" id="stx" class="form-control input-sm" maxlength="20" placeholder="검색어">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-2 col-xs-12 col-15">
+							<div class="form-group">
+								<button type="submit" class="btn btn-<?php echo $boset['tsearch'];?> btn-sm btn-block"><i class="fa fa-search"></i> 검색</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		<?php } ?>
+		<!-- 하단검색 끝 -->
 
 	<?php @include_once($list_skin_path.'/list.tail.skin.php'); // 테일영역 ?>
 

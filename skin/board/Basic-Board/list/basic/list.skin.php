@@ -43,13 +43,13 @@ $num_notice = ($is_thumb) ? '*' : '<span class="wr-icon wr-notice"></span>';
 <?php if($is_thumb || $is_mode == "1") { ?>
 	<style>
 	<?php if($is_thumb) { ?>
-	.list-board .list-body .thumb-icon a { 
-		<?php echo (isset($boset['ibg']) && $boset['ibg']) ? 'background:'.apms_color($boset['icolor']).'; color:#fff' : 'color:'.apms_color($boset['icolor']);?>; 
+	.list-board .list-body .thumb-icon a {
+		<?php echo (isset($boset['ibg']) && $boset['ibg']) ? 'background:'.apms_color($boset['icolor']).'; color:#fff' : 'color:'.apms_color($boset['icolor']);?>;
 	}
 	<?php } ?>
 	<?php if($is_mode == "1") { ?>
-	.list-board .list-more a:hover { 
-		color:<?php echo (isset($boset['moreb']) && $boset['moreb']) ? apms_color($boset['moreb']) : 'orangered';?>; 
+	.list-board .list-more a:hover {
+		color:<?php echo (isset($boset['moreb']) && $boset['moreb']) ? apms_color($boset['moreb']) : 'orangered';?>;
 	}
 	<?php } ?>
 	</style>
@@ -67,13 +67,13 @@ $num_notice = ($is_thumb) ? '*' : '<span class="wr-icon wr-notice"></span>';
 		<?php } ?>
 		<span class="wr-subject">제목</span>
 		<?php if($is_name) { ?>
-			<span class="wr-name hidden-xs">이름</span>
+			<span class="wr-name hidden-xs">작성자</span>
 		<?php } ?>
 		<?php if($is_date) { ?>
-			<span class="wr-date hidden-xs"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>날짜</a></span>
+			<span class="wr-date hidden-xs"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>작성일</a></span>
 		<?php } ?>
 		<?php if($is_hit) { ?>
-			<span class="wr-hit hidden-xs"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>조회</a></span>
+			<span class="wr-hit hidden-xs"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>조회수</a></span>
 		<?php } ?>
 		<?php if($is_down) { ?>
 			<span class="wr-down hidden-xs"><?php echo subject_sort_link('as_download', $qstr2, 1) ?>다운</a></span>
@@ -95,9 +95,9 @@ $num_notice = ($is_thumb) ? '*' : '<span class="wr-icon wr-notice"></span>';
 		<?php } ?>
 	</div>
 	<ul id="list-body" class="list-body">
-	<?php 
+	<?php
 		$is_ajax = false;
-		include_once($list_skin_path.'/list.rows.php'); 
+		include_once($list_skin_path.'/list.rows.php');
 	?>
 	</ul>
 	<div class="clearfix"></div>

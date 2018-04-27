@@ -3196,11 +3196,11 @@ function apms_script($name){
 			define('APMS_ANIMATE', true);
 			add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/animate.min.css">', -1);
 		}
-  } else if($name == 'scrolla') {
-    if(!defined('APMS_SCROLLA')) {
-      define('APMS_SCROLLA', true);
+	} else if($name == 'scrolla') {
+		if(!defined('APMS_SCROLLA')) {
+			define('APMS_SCROLLA', true);
 			add_javascript('<script src="'.APMS_PLUGIN_URL.'/js/scrolla.jquery.min.js"></script>', 0);
-    }
+		}
 	} else if($name == 'imagesloaded') {
 		if(!defined('APMS_IMAGESLOADED')) {
 			define('APMS_IMAGESLOADED', true);

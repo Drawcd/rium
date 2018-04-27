@@ -5,6 +5,11 @@
 .list-category .div-tab.tabs { margin-bottom:0px; }
 
 .list-board { margin-bottom:15px; }
+.list-board .list-head span,.list-board .list-head span a{ font-size:14px; font-weight:400; color:#fff;}
+
+/* List head */
+.list-head.div-head.border-color { border:none; background:#607d8b; }
+
 .list-board #infscr-loading { background: rgb(0, 0, 0); margin:0px; padding: 10px; border-radius: 10px; left: 50%; width: 200px; margin-left:-110px; text-align: center; bottom: 50px; color: rgb(255, 255, 255); position: fixed; z-index: 100; opacity: 0.8; -webkit-border-radius: 10px; -moz-border-radius: 10px; }
 .list-board .list-more { text-align:center; margin-top:15px; }
 .list-board .list-more a { color:#ddd; font-size:60px; }
@@ -43,10 +48,10 @@
 .list-board .wr-hidden { display:none; }
 
 /* List */
-.list-board .list-body { list-style:none; padding:0px; margin:0px; }
+.list-board .list-body { list-style:none; padding:0px; margin:0px; font-size: 14px;}
 .list-board .list-body li { border-bottom:1px solid #ddd; display:table; width:100%; table-layout:fixed; }
 .list-board .list-body li:hover { color:#000; background-color:#F8F8F8; }
-.list-board .list-body li > div { display:table-cell; height:34px; line-height:22px; padding:6px 0px; text-align:center; color:#666; vertical-align:middle; }
+.list-board .list-body li > div { display:table-cell; height:34px; line-height:28px; padding:6px 0px; text-align:center; color:#666; vertical-align:middle; }
 .list-board .list-body .wr-subject { padding-left:10px; text-align:left; }
 .list-board .list-body .wr-subject .item-subject { display:block; word-break:break-all; }
 .list-board .list-body .wr-name { text-align:left; padding-left:10px; font-weight:bold; }
@@ -56,6 +61,8 @@
 .list-board .list-body .thumb-icon a { display:table-cell; width:1%; background:#eee; color:#fff; vertical-align:middle; font-size:30px; }
 .list-board .list-body .thumb-icon img { width:46px; height:46px; margin:0px auto; }
 .list-board .list-body .wr-reply span { font-size:11px; letter-spacing:-1px; padding:3px 5px; line-height:11px; }
+/* .list-board .list-body . */
+
 
 @media all and (max-width:768px) {
 	.responsive .list-board .wr-hidden { display:inline-block !important; }

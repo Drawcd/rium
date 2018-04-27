@@ -137,8 +137,9 @@ $side = ($at_set['side']) ? 'left' : 'right';
     <p class="caption">HTML 5 Video</p>
   </div>
 </div>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js'></script>
 
+<!-- main-slider  -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js'></script>
 
 <!-- mainslider End-->
 <!-- main-popup 1,2 Start -->

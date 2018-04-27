@@ -43,13 +43,13 @@ $num_notice = ($is_thumb) ? '*' : '<span class="wr-icon wr-notice"></span>';
 <?php if($is_thumb || $is_mode == "1") { ?>
 	<style>
 	<?php if($is_thumb) { ?>
-	.list-board .list-body .thumb-icon a { 
-		<?php echo (isset($boset['ibg']) && $boset['ibg']) ? 'background:'.apms_color($boset['icolor']).'; color:#fff' : 'color:'.apms_color($boset['icolor']);?>; 
+	.list-board .list-body .thumb-icon a {
+		<?php echo (isset($boset['ibg']) && $boset['ibg']) ? 'background:'.apms_color($boset['icolor']).'; color:#fff' : 'color:'.apms_color($boset['icolor']);?>;
 	}
 	<?php } ?>
 	<?php if($is_mode == "1") { ?>
-	.list-board .list-more a:hover { 
-		color:<?php echo (isset($boset['moreb']) && $boset['moreb']) ? apms_color($boset['moreb']) : 'orangered';?>; 
+	.list-board .list-more a:hover {
+		color:<?php echo (isset($boset['moreb']) && $boset['moreb']) ? apms_color($boset['moreb']) : 'orangered';?>;
 	}
 	<?php } ?>
 	</style>
@@ -95,9 +95,9 @@ $num_notice = ($is_thumb) ? '*' : '<span class="wr-icon wr-notice"></span>';
 		<?php } ?>
 	</div>
 	<ul id="list-body" class="list-body">
-	<?php 
+	<?php
 		$is_ajax = false;
-		include_once($list_skin_path.'/list.rows.php'); 
+		include_once($list_skin_path.'/list.rows.php');
 	?>
 	</ul>
 	<div class="clearfix"></div>

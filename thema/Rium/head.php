@@ -162,15 +162,18 @@ include_once(THEMA_PATH.'/assets/thema.php');
 
 	<?php if($page_title) { // 페이지 타이틀 ?>
 		<div class="at-title">
+			<!-- <div class="pc-menu"></div> -->
 			<div class="at-container">
 				<div class="page-title en">
-					<strong<?php echo ($bo_table) ? " class=\"cursor\" onclick=\"go_page('".G5_BBS_URL."/board.php?bo_table=".$bo_table."');\"" : "";?>>
+					<span<?php echo ($bo_table) ? " class=\"cursor\" onclick=\"go_page('".G5_BBS_URL."/board.php?bo_table=".$bo_table."');\"" : "";?>>
 						<?php echo $page_title;?>
-					</strong>
+					</span>
 				</div>
 				<?php if($page_desc) { // 페이지 설명글 ?>
-					<div class="page-desc hidden-xs">
+					<div class="page-desc">
+						<p>
 						<?php echo $page_desc;?>
+						</p>
 					</div>
 				<?php } ?>
 				<div class="clearfix"></div>

@@ -57,11 +57,11 @@ if (!defined('_GNUBOARD_')) {
 	$num_notice = ($is_thumb) ? '*' : '<span class="wr-icon wr-notice"></span>';
 }
 
-for ($i=0; $i < $list_cnt; $i++) { 
+for ($i=0; $i < $list_cnt; $i++) {
 
 	// 라벨
 	$wr_label = '';
-	if($label_cnt) { 
+	if($label_cnt) {
 		list($label_name, $label_color) = apms_label_icon($list[$i]['ca_name'], $labels, $label_cnt, $boset['label_name'], $boset['label_color']);
 		$wr_label = ($label_name) ? '<span class="tack-icon bg-'.$label_color.'">'.$label_name.'</span>' : '';
 	}
@@ -127,7 +127,7 @@ for ($i=0; $i < $list_cnt; $i++) {
 				<?php } else {
 					$wr_vicon = ($is_vicon && ($list[$i]['as_list'] == "2" || $list[$i]['as_list'] == "3")) ? '<i class="fa fa-play-circle-o wr-vicon"></i>' : ''; // 비디오 아이콘
 					$img = apms_wr_thumbnail($bo_table, $list[$i], 50, 50, false, true); // 썸네일
-					if($img['src']) { 
+					if($img['src']) {
 				?>
 						<div class="thumb-img">
 							<div class="img-wrap" style="padding-bottom:100%;">
@@ -179,7 +179,7 @@ for ($i=0; $i < $list_cnt; $i++) {
 					<?php if($is_name) { ?>
 						<span><?php echo $list[$i]['name']; ?></span>
 					<?php } ?>
-					<?php if($is_star) { 
+					<?php if($is_star) {
 						$lvstar = apms_post_star($list[$i], $is_star);
 					?>
 						<span><?php echo $lvstar['star'];?></span>
@@ -244,7 +244,7 @@ for ($i=0; $i < $list_cnt; $i++) {
 				<?php echo $lvstar['star'];?>
 			</div>
 		<?php } ?>
-		<?php if($is_reply) { ?> 
+		<?php if($is_reply) { ?>
 			<div class="wr-reply">
 				<span class="wr-icon reply-<?php echo ($list[$i]['wr_comment']) ? 'end' : 'wait';?>"></span>
 			</div>

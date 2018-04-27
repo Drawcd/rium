@@ -34,7 +34,7 @@
 
 	<div class="ileft">상담내용</div>
 	<div class="icenter">
-		<textarea name="wr_content" required class="input4" id="wr_content" itemname="내용" placeholder="상담하고자 하시는 내용을 간략하게 적어주시면 관련 담당자가 연락를 통하여 빠르게 연락드리겠습니다."></textarea>
+		<textarea name="wr_content" required class="input4" id="wr_content" itemname="내용" placeholder="상담하고자 하시는 내용을 간략하게 적어주시면 관련 담당자를 통하여 빠르게 연락드리겠습니다."></textarea>
 	</div>
 	<div class="iright"></div>
 
@@ -44,12 +44,6 @@
 
 	<div class="iclear"></div>
 </div>
-
-
-
-</form>
-
-
 
 <script language="javascript">
   function submitChk(f)

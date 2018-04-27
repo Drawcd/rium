@@ -13,7 +13,7 @@ if($is_mode) {
 if($is_mode == "2")
 	include_once($list_skin_path.'/list.top.skin.php');
 
-if($is_category) 
+if($is_category)
 	include_once($board_skin_path.'/category.skin.php'); // 카테고리
 
 ?>

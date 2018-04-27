@@ -375,3 +375,12 @@ $('.section-wrap').masonry({
   itemSelector: '.size-four-two-one , .size-two-two-one ,.size-three-one-one',
   columnWidth: 0
 });
+
+
+// 인터넷익스프롤러 스크롤 filcker 현상 방지
+$('body').on("mousewheel",function() {
+  event.preventDefault();
+  var wheelDelta = event.wheelDelta;
+  var currentscrollPosition = window.pageYOffset;
+  window.scrollTo(0, currentscrollPosition - wheelDelta);
+});

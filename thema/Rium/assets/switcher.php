@@ -270,8 +270,103 @@ $tside = apms_file_list('thema/'.THEMA.'/side', 'php');
 						</div>
 					</div>
 
+          <!-- Top & Bottom 설정 Start -->
+				  <div class="panel">
+					  <div class="panel-heading" role="tab" id="swHead<?php $toggle++; echo $toggle;?>" aria-expanded="true" aria-controls="swSet<?php echo $toggle;?>">
+  					  <a data-toggle="collapse" data-parent="#switcherSet" href="#swSet<?php echo $toggle;?>">
+  			  			<i class="fa fa-caret-right"></i> Top & Bottom 설정
+  					  </a>
+			  		</div>
+  					<div id="swSet<?php echo $toggle;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="swHead<?php echo $toggle;?>">
+  					  <div class="panel-body">
+    						<div class="text-muted ko-11">
+  	  					  BOTTOM NAVIGATION 고정
+    						</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="input-group-addon">Bottom</span>
+									<select id="bottom-style" name="at_set[bottom-style]" class="form-control">
+										<option value="">유동</option>
+										<option value="bottom-style-f" <?php echo get_selected($at_set['bottom-style'],'bottom-style-f');?>>고정</option>
+									</select>
+								</div>
+    						<div class="text-muted ko-11">
+		    				  nav color
+    						</div>
+    						<div class="input-group input-group-sm input-bottom">
+    						  <span class="input-group-addon">Bottom</span>
+    						  <select id="navi-color" name="at_set[navi_bg_color]" class="form-control">
+    							<option value="white" <?php echo get_selected($at_set['navi_bg_color'],'white');?>>white</option>
+    							<option value="black" <?php echo get_selected($at_set['navi_bg_color'],'black');?>>black</option>
+    						  </select>
+    						</div>
+								<div class="text-muted ko-11">
+									 하단 표시내용 (체크시 숨김)
+						    </div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">사이트소개</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="intro-hide" name="at_set[intro-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['intro-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">이용약관</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="provision-hide" name="at_set[provision-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['provision-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">개인정보처리방침</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="privacy-hide" name="at_set[privacy-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['privacy-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">메일수집거부</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="noemail-hide" name="at_set[noemail-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['noemail-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">책임법적고지</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="disclaimer-hide" name="at_set[disclaimer-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['disclaimer-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">정보책임자정보</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="admin-info-hide" name="at_set[admin-info-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['admin-info-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">문의하기</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="qalist-hide" name="at_set[qalist-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['qalist-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">전화번호</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="tel-hide" name="at_set[tel-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['tel-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">사업자정보확인</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="mailbusiness-hide" name="at_set[mailbusiness-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['mailbusiness-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">통신판매업신고</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="contactus-hide" name="at_set[contactus-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['contactus-hide']);?>>
+									</span>
+								</div>
+              </div>
+            </div>
+          </div>
+					<!-- Top & Bottom 설정 End -->
 				</div>
-
 				<button type="submit" class="btn btn-color btn-sm btn-block">
 					<i class="fa fa-check"></i> <?php echo ($is_demo) ? '데모적용' : '저장하기';?>
 				</button>

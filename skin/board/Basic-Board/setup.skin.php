@@ -49,7 +49,7 @@ $(function(){
 					$skinlist = get_skin_dir('header');
 					for ($k=0; $k<count($skinlist); $k++) {
 						echo "<option value=\"".$skinlist[$k]."\"".get_selected($skinlist[$k], $boset['header_skin']).">".$skinlist[$k]."</option>\n";
-					} 
+					}
 				?>
 			</select>
 			&nbsp;
@@ -69,7 +69,7 @@ $(function(){
 		</td>
 	</tr>
 	<tr>
-		<td align="center">상단검색</td>
+		<td align="center">하단검색</td>
 		<td>
 			<select name="boset[tsearch]">
 				<option value="">사용안함</option>
@@ -148,7 +148,7 @@ $(function(){
 	<tr>
 		<td align="center">대표포토</td>
 		<td>
-			<input type="text" name="boset[ficon]" id="ficon" value="<?php echo ($boset['ficon']);?>" size="30" class="frm_input"> 
+			<input type="text" name="boset[ficon]" id="ficon" value="<?php echo ($boset['ficon']);?>" size="30" class="frm_input">
 			<a href="<?php echo G5_BBS_URL;?>/ficon.php?fid=ficon" class="btn_frmline win_scrap">아이콘 선택</a>
 		</td>
 	</tr>
@@ -208,7 +208,7 @@ $(function(){
 			$boset['list_skin'] = (is_dir($board_skin_path.'/list/'.$boset['list_skin'])) ? $boset['list_skin'] : $skinlist[0];
 			for ($k=0; $k<count($skinlist); $k++) {
 				echo "<option value=\"".$skinlist[$k]."\"".get_selected($skinlist[$k], $boset['list_skin']).">".$skinlist[$k]."</option>\n";
-			} 
+			}
 		?>
 		</select>
 	</p>
@@ -228,7 +228,7 @@ $(function(){
 			$boset['view_skin'] = (is_dir($board_skin_path.'/view/'.$boset['view_skin'])) ? $boset['view_skin'] : $skinlist[0];
 			for ($k=0; $k<count($skinlist); $k++) {
 				echo "<option value=\"".$skinlist[$k]."\"".get_selected($skinlist[$k], $boset['view_skin']).">".$skinlist[$k]."</option>\n";
-			} 
+			}
 		?>
 		</select>
 	</p>
@@ -248,7 +248,7 @@ $(function(){
 			$boset['write_skin'] = (is_dir($board_skin_path.'/write/'.$boset['write_skin'])) ? $boset['write_skin'] : $skinlist[0];
 			for ($k=0; $k<count($skinlist); $k++) {
 				echo "<option value=\"".$skinlist[$k]."\"".get_selected($skinlist[$k], $boset['write_skin']).">".$skinlist[$k]."</option>\n";
-			} 
+			}
 		?>
 		</select>
 	</p>

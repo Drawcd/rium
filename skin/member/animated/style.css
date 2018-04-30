@@ -498,12 +498,13 @@ input[id="login_auto_login"] + label{
   cursor: pointer;
 }
 input[id="login_auto_login"]:checked + label:after {
+  color:#fff;
   font-family: "FontAwesome";
   content: '\2714';
   font-size: 22px;
   position:absolute;
-  left:-2px;
-  top:-15px
+  left:-1px;
+  top:-14px
 }
 
 input[id="login_auto_login"] {

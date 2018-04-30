@@ -477,6 +477,32 @@ main-popup-intro : 메인페이지 오버 인트로
 /* Misc */
 .form-control, .well, .btn, .alert, .input-group-addon, .label { border-radius:0 !important; }
 
+/* 공통 gradient */
+.gradient-bg {
+  background: #282828;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: GradientBg 15s ease infinite;
+	-moz-animation: GradientBg 15s ease infinite;
+	animation: GradientBg 15s ease infinite;
+}
+
+@-webkit-keyframes GradientBg {
+	0% { background-position: 0% 50% }
+	50% { background-position: 100% 50%	}
+	100% { background-position: 0% 50% }
+}
+@-moz-keyframes GradientBg {
+	0% { background-position: 0% 50% }
+	50% {	background-position: 100% 50%	}
+	100% { background-position: 0% 50% }
+}
+@keyframes GradientBg {
+	0% { background-position: 0% 50% }
+	50% {	background-position: 100% 50%	}
+	100% { background-position: 0% 50% }
+}
+
 /* 공통 padding*/
 .padding-zero { padding:0px !important;}
 .padding-left-right-15 { padding-left:15px; padding-right:15px;}
@@ -655,7 +681,7 @@ main-popup-intro : 메인페이지 오버 인트로
 }
 
 .container {
-  background-color: #f2f2f2;
+  background-color: none;
   color: #444;
   line-height: 1.6;
   padding: 40px 0;

@@ -9,10 +9,10 @@ echo $page_content;
 
 ?>
 <style>
-.page-icon { 
-	padding:0px 20px; 
+.page-icon {
+	padding:0px 20px;
 }
-.page-icon img { 
+.page-icon img {
 	width:34px; border-radius:50%; margin-bottom:5px;
 }
 @media all and (max-width:480px) {

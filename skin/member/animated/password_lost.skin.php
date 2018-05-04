@@ -22,7 +22,7 @@ body {
 <!-- 회원정보 찾기 시작 { -->
 <div class="container">
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
+		<div class="col-md-6 col-md-offset-3">
 
 			<!-- Start Sign In Form -->
 			<form name="fpasswordlost" action="<?php echo $action_url ?>" onsubmit="return fpasswordlost_submit(this);" method="post" autocomplete="off" class="mem-form animate-box" data-animate-effect="fadeIn">

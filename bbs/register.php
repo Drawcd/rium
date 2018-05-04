@@ -15,7 +15,7 @@ $at = apms_page_thema($pid);
 include_once(G5_LIB_PATH.'/apms.thema.lib.php');
 
 // 스킨 체크
-list($member_skin_path, $member_skin_url) = apms_skin_thema('member', $member_skin_path, $member_skin_url); 
+list($member_skin_path, $member_skin_url) = apms_skin_thema('member', $member_skin_path, $member_skin_url);
 
 // 설정값 불러오기
 $is_reg_sub = false;
@@ -28,7 +28,7 @@ if($is_reg_sub) {
 	include_once(G5_PATH.'/head.sub.php');
 	if(!USE_G5_THEME) @include_once(THEMA_PATH.'/head.sub.php');
 } else {
-	include_once('./_head.php');
+	include_once('./_head.page.bbs.php');
 }
 
 // 약관 등
@@ -83,6 +83,6 @@ if($is_reg_sub) {
 	if(!USE_G5_THEME) @include_once(THEMA_PATH.'/tail.sub.php');
 	include_once(G5_PATH.'/tail.sub.php');
 } else {
-	include_once('./_tail.php');
+	include_once('./_tail.page.bbc.php');
 }
 ?>

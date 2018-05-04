@@ -40,10 +40,10 @@ body {
 				</div>
 				<div class="form-group">
 					<!--p>Not registered? <a href="javascript:register_check();">Sign Up</a> | <a href="<?php echo G5_BBS_URL ?>/password_lost.php">Forgot Password?</a></p-->
-					<p><a class="col-md-5" href="javascript:register_check();">회원 가입</a><a class="col-md-7" href="<?php echo G5_BBS_URL ?>/password_lost.php">아이디 비밀번호 찾기</a></p>
+					<p><a class="col-md-5 col-xs-5" href="javascript:register_check();">회원 가입</a><a class="col-md-7 col-xs-7" href="<?php echo G5_BBS_URL ?>/password_lost.php">아이디 비밀번호 찾기</a></p>
 				</div>
 				<div class="form-group">
-					<input type="submit" value="로그인" class="col-md-12">
+					<input type="submit" value="로그인" class="col-md-12 col-xs-12">
 				</div>
 			</form>
 			<!-- END Sign In Form -->

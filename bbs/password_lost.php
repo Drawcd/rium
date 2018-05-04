@@ -12,7 +12,7 @@ $at = apms_page_thema($pid);
 include_once(G5_LIB_PATH.'/apms.thema.lib.php');
 
 // 스킨 체크
-list($member_skin_path, $member_skin_url) = apms_skin_thema('member', $member_skin_path, $member_skin_url); 
+list($member_skin_path, $member_skin_url) = apms_skin_thema('member', $member_skin_path, $member_skin_url);
 
 // 설정값 불러오기
 $is_lost_sub = true;
@@ -21,10 +21,10 @@ $is_lost_sub = true;
 $g5['title'] = '회원정보 찾기';
 
 if($is_lost_sub) {
-	include_once(G5_PATH.'/head.sub.php');
-	if(!USE_G5_THEME) @include_once(THEMA_PATH.'/head.sub.php');
+	include_once(G5_PATH.'/head.sub.page.g5_path.php');
+	if(!USE_G5_THEME) @include_once('./_head.page.bbs.php');
 } else {
-	include_once('./_head.php');
+	include_once('./_head.page.bbs.php');
 }
 
 $skin_path = $member_skin_path;
@@ -43,9 +43,9 @@ if(is_file($skin_path.'/setup.skin.php') && ($is_demo || $is_designer)) {
 include_once($skin_path.'/password_lost.skin.php');
 
 if($is_lost_sub) {
-	if(!USE_G5_THEME) @include_once(THEMA_PATH.'/tail.sub.php');
-	include_once(G5_PATH.'/tail.sub.php');
+	if(!USE_G5_THEME) @include_once(THEMA_PATH.'/tail.page.thema.php');
+	include_once(G5_PATH.'/tail.sub.page.g5_path.php');
 } else {
-	include_once('./_tail.php');
+	include_once('_tail.page.bbc.php');
 }
 ?>

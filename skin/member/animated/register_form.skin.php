@@ -8,7 +8,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 body {
 	background-color: #f0f0f0;
 }
-.required, textarea.required {background:url('../img/wrest.gif') #fff top right no-repeat !important}
+.required, textarea.required {background:none !important;}
 </style>
 
 <script src="<?php echo G5_JS_URL ?>/jquery.register_form.js"></script>
@@ -27,7 +27,7 @@ body {
 <!-- 회원정보 입력/수정 시작 { -->
 <div class="container">
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
+		<div class="col-md-6 col-md-offset-3">
 
 			<!-- Start Sign In Form -->
 			<form id="fregisterform" name="fregisterform" action="<?php echo $register_action_url ?>" onsubmit="return fregisterform_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off" class="mem-form animate-box" data-animate-effect="fadeIn">
@@ -44,12 +44,13 @@ body {
 			<?php }  ?>
 			<input type="hidden" name="mb_open_default" value="<?php echo $member['mb_open'] ?>">
 			<input type="hidden" name="mb_open" value="<?php echo $member['mb_open'] ?>">
-				<h2>Sign Up</h2>
+			<h2><?php echo $page_title;?></h2>
+			<p><?php echo $page_desc;?></p>
 				<!--div class="form-group">
 					<div class="alert alert-success" role="alert">Your info has been saved.</div>
 				</div-->
 				<div class="form-group">
-					<label for="reg_mb_name" class="sr-only">이름</label>
+					<label for="reg_mb_name" class="form-icon sr-only"><i class="fa fa-address-card"></i></label>
 					<?php if ($config['cf_cert_use']) { ?>
 					<span class="frm_info">아이핀 본인확인 후에는 이름이 자동 입력되고 휴대폰 본인확인 후에는 이름과 휴대폰번호가 자동 입력되어 수동으로 입력할수 없게 됩니다.</span>
 					<?php } ?>
@@ -77,27 +78,27 @@ body {
 					<?php } ?>
 				</div>
 				<div class="form-group">
-					<label for="mb_id" class="sr-only">아이디</label>
+					<label for="mb_id" class="form-icon sr-only"><i class="fa fa-user-circle"></i></label></label>
 					<input type="text" class="form-control <?php echo $required ?> <?php echo $readonly ?>" name="mb_id" value="<?php echo $member['mb_id'] ?>" id="reg_mb_id" <?php echo $required ?> <?php echo $readonly ?> placeholder="아이디" autocomplete="off">
 				</div>
 				<div class="form-group">
-					<label for="reg_mb_password" class="sr-only">비밀번호</label>
+					<label for="reg_mb_password" class="form-icon sr-only"><i class="fa fa-key"></i></label></label>
 					<input type="password" class="form-control <?php echo $required ?>" name="mb_password" id="reg_mb_password" <?php echo $required ?> placeholder="비밀번호" autocomplete="off">
 				</div>
 				<div class="form-group">
-					<label for="reg_mb_password_re" class="sr-only">비밀번호 확인</label>
+					<label for="reg_mb_password_re" class="form-icon sr-only"></label></label>
 					<input type="password" class="form-control <?php echo $required ?>" name="mb_password_re" id="reg_mb_password_re" <?php echo $required ?> placeholder="비밀번호 확인" autocomplete="off">
 				</div>
 				<?php if ($req_nick) {  ?>
 				<div class="form-group">
-					<label for="reg_mb_nick" class="sr-only">닉네임</label>
+					<label for="reg_mb_nick" class="form-icon sr-only"><i class="fa fa-user-plus"></i></label></label>
 					<input type="text" class="form-control required nospace" name="mb_nick" value="<?php echo isset($member['mb_nick'])?get_text($member['mb_nick']):''; ?>" id="reg_mb_nick" required placeholder="닉네임" autocomplete="off">
 					<span id="msg_mb_nick"></span>
 					<input type="hidden" name="mb_nick_default" value="<?php echo isset($member['mb_nick'])?get_text($member['mb_nick']):''; ?>">
 				</div>
 				<?php }  ?>
 				<div class="form-group">
-					<label for="reg_mb_email" class="sr-only">Email</label>
+					<label for="reg_mb_email" class="form-icon sr-only"><i class="fa fa-at"></i></label></label>
 					<?php if ($config['cf_use_email_certify']) {  ?>
 					<span class="frm_info">
 						<?php if ($w=='') { echo "E-mail 로 발송된 내용을 확인한 후 인증하셔야 회원가입이 완료됩니다."; }  ?>
@@ -109,19 +110,19 @@ body {
 				</div>
 				<?php if ($config['cf_use_homepage']) {  ?>
 				<div class="form-group">
-					<label for="reg_mb_homepage" class="sr-only">홈페이지</label>
+					<label for="reg_mb_homepage" class="form-icon sr-only"><i class="fa fa-home"></i></label></label>
 					<input type="text" class="form-control <?php echo $config['cf_req_homepage']?"required":""; ?>" name="mb_homepage" value="<?php echo get_text($member['mb_homepage']) ?>" id="reg_mb_homepage" <?php echo $config['cf_req_homepage']?"required":""; ?> placeholder="홈페이지" autocomplete="off">
 				</div>
 				<?php }  ?>
 				<?php if ($config['cf_use_tel']) {  ?>
 				<div class="form-group">
-					<label for="reg_mb_tel" class="sr-only">전화번호</label>
+					<label for="reg_mb_tel" class="form-icon sr-only"><i class="fa fa-phone"></i></label></label>
 					<input type="text" class="form-control <?php echo $config['cf_req_tel']?"required":""; ?>" name="mb_tel" value="<?php echo get_text($member['mb_tel']) ?>" id="reg_mb_tel" <?php echo $config['cf_req_tel']?"required":""; ?> placeholder="전화번호" autocomplete="off">
 				</div>
 				<?php }  ?>
 				<?php if ($config['cf_use_hp'] || $config['cf_cert_hp']) {  ?>
 				<div class="form-group">
-					<label for="reg_mb_hp" class="sr-only">휴대폰번호</label>
+					<label for="reg_mb_hp" class="form-icon sr-only"><i class="fa fa-mobile"></i></label></label>
 					<input type="text" class="form-control <?php echo ($config['cf_req_hp'])?"required":""; ?>" name="mb_hp" value="<?php echo get_text($member['mb_hp']) ?>" id="reg_mb_hp" <?php echo ($config['cf_req_hp'])?"required":""; ?> placeholder="휴대폰번호" autocomplete="off">
 					<?php if ($config['cf_cert_use'] && $config['cf_cert_hp']) { ?>
 					<input type="hidden" name="old_mb_hp" value="<?php echo get_text($member['mb_hp']) ?>">
@@ -130,7 +131,7 @@ body {
 				<?php }  ?>
 				<?php if ($config['cf_use_addr']) { ?>
 				<div class="form-group">
-					<label for="name" class="sr-only">우편번호</label>
+					<label for="name" class="form-icon sr-only"><i class="fa fa-home"></i></label></label>
 					<input type="text" class="form-control <?php echo $config['cf_req_addr']?"required":""; ?>" name="mb_zip" value="<?php echo $member['mb_zip1'].$member['mb_zip2']; ?>" id="reg_mb_zip" <?php echo $config['cf_req_addr']?"required":""; ?> placeholder="우편번호" autocomplete="off" onclick="win_zip('fregisterform', 'mb_zip', 'mb_addr1', 'mb_addr2', 'mb_addr3', 'mb_addr_jibeon');">
 					<input type="text" class="form-control frm_address <?php echo $config['cf_req_addr']?"required":""; ?>" name="mb_addr1" value="<?php echo get_text($member['mb_addr1']) ?>" id="reg_mb_addr1" <?php echo $config['cf_req_addr']?"required":""; ?> placeholder="기본주소" autocomplete="off">
 					<input type="text" class="form-control frm_address" name="mb_addr2" value="<?php echo get_text($member['mb_addr2']) ?>" id="reg_mb_addr2" placeholder="상세주소" autocomplete="off">
@@ -140,19 +141,19 @@ body {
 				<?php }  ?>
 				<?php if ($config['cf_use_signature']) {  ?>
 				<div class="form-group">
-					<label for="reg_mb_signature" class="sr-only">서명</label>
+					<label for="reg_mb_signature" class="form-icon sr-only"><i class="fa fa-user-circle"></i></label></label>
 					<input type="text" class="form-control <?php echo $config['cf_req_signature']?"required":""; ?>" name="mb_signature" value="<?php echo $member['mb_signature'] ?>" id="reg_mb_signature" <?php echo $config['cf_req_signature']?"required":""; ?> placeholder="서명" autocomplete="off">
 				</div>
 				<?php }  ?>
 				<?php if ($config['cf_use_profile']) {  ?>
 				<div class="form-group">
-					<label for="reg_mb_profile" class="sr-only">자기소개</label>
+					<label for="reg_mb_profile" class="form-icon sr-only"><i class="fa fa-user-circle"></i></label></label>
 					<input type="text" class="form-control <?php echo $config['cf_req_profile']?"required":""; ?>" name="mb_profile" value="<?php echo $member['mb_profile'] ?>" id="reg_mb_profile" <?php echo $config['cf_req_profile']?"required":""; ?> placeholder="자기소개" autocomplete="off">
 				</div>
 				<?php }  ?>
 				<?php if ($config['cf_use_member_icon'] && $member['mb_level'] >= $config['cf_icon_level']) {  ?>
 				<div class="form-group">
-					<label for="reg_mb_icon" class="sr-only">회원아이콘</label>
+					<label for="reg_mb_icon" class="form-icon sr-only"><i class="fa fa-user-circle"></i></label></label>
 					<span class="frm_info">
 						이미지 크기는 가로 <?php echo $config['cf_member_icon_width'] ?>픽셀, 세로 <?php echo $config['cf_member_icon_height'] ?>픽셀 이하로 해주세요.<br>
 						gif만 가능하며 용량 <?php echo number_format($config['cf_member_icon_size']) ?>바이트 이하만 등록됩니다.
@@ -166,7 +167,9 @@ body {
 				</div>
 				<?php }  ?>
 				<div class="form-group">
-					<label for="reg_mb_mailling"><input type="checkbox" name="mb_mailling" value="1" id="reg_mb_mailling" <?php echo ($w=='' || $member['mb_mailling'])?'checked':''; ?>> 정보 메일을 받겠습니다.</label>
+					<input type="checkbox" name="mb_mailling" value="1" id="reg_mb_mailling" <?php echo ($w=='' || $member['mb_mailling'])?'checked':''; ?>>
+					<label for="reg_mb_mailling" id="reg_mb_mailling" class="auto_login_text"></label>
+					<span class="auto_login_text">정보 메일을 받겠습니다.</span>
 				</div>
 				<?php if ($config['cf_use_hp']) {  ?>
 				<div class="form-group">
@@ -175,7 +178,7 @@ body {
 				<?php }  ?>
 				<?php if ($w == "" && $config['cf_use_recommend']) {  ?>
 				<div class="form-group">
-					<label for="reg_mb_recommend" class="sr-only">추천인아이디</label>
+					<label for="reg_mb_recommend" class="form-icon sr-only"><i class="fa fa-user-circle"></i></label></label>
 					<input type="text" class="form-control" name="mb_recommend" id="reg_mb_recommend" placeholder="추천인아이디" autocomplete="off">
 				</div>
 				<?php }  ?>
@@ -184,17 +187,17 @@ body {
 					<?php echo captcha_html(); ?>
 				</div>
 				<div class="form-group">
-					<p>Already registered? <a href="<?php echo G5_BBS_URL ?>/login.php">Sign In</a></p>
+					<p class="font-s16">이미가입하셨나요? <a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></p>
 				</div>
 				<div class="form-group">
-					<input type="submit" value="<?php echo $w==''?'회원가입':'정보수정'; ?>" id="btn_submit" class="btn btn-primary">
+					<input type="submit" value="<?php echo $w==''?'회원가입':'정보수정'; ?>" id="btn_submit" class="col-md-12 col-xs-12">
 				</div>
 			</form>
 			<!-- END Sign In Form -->
 
 		</div>
 	</div>
-	<div class="row" style="padding-top: 20px; clear: both;">
+	<div class="row animate-box" data-animate-effect="fadeIn" style="padding-top: 20px; clear: both;">
 		<div class="col-md-12 text-center"><p><a href="<?php echo G5_URL ?>">메인으로 돌아가기</a></p></div>
 	</div>
 </div>

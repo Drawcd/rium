@@ -429,6 +429,20 @@
   text-align: center;
   letter-spacing: 8px;
   color:#fff;
+  margin-bottom:0px;
+  white-space:nowrap;
+  overflow: hidden;
+}
+@media screen and (max-width: 1310px) {
+  .mem-form p{
+    letter-spacing: 6px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mem-form p{
+    letter-spacing: 2px;
+  }
 }
 
 
@@ -478,6 +492,31 @@
   border:1px solid rgba(255, 255, 255, 0);
 }
 
+.captcha_box {
+  border:1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+#captcha {
+  width:100%;
+  color:#fff;
+  font-size: 16px;
+}
+
+#captcha #captcha_mp3,#captcha #captcha_reload {
+  color:#fff;
+  width: 29px;
+  height: 29px;
+  left: 162px;
+}
+#captcha_info{
+  font-weight:300;
+}
+#captcha #captcha_key {
+  padding:0px;
+  margin: 0 0 0 29px;
+  width: calc( 100% - 195px) !important;
+}
+
 .auto_login_text{
   padding-left:8px;
   color:#fff;
@@ -489,7 +528,7 @@ input[type=radio], input[type=checkbox] {
   margin:0px;
   border:none;
 }
-input[id="login_auto_login"] + label{
+input[id="login_auto_login"] + label , input[id="reg_mb_mailling"] + label{
   position:relative;
   display: inline-block;
   width: 16px;
@@ -497,7 +536,7 @@ input[id="login_auto_login"] + label{
   border: 1px solid #fff;
   cursor: pointer;
 }
-input[id="login_auto_login"]:checked + label:after {
+input[id="login_auto_login"]:checked + label:after , input[id="reg_mb_mailling"]:checked + label:after{
   color:#fff;
   font-family: "FontAwesome";
   content: '\2714';
@@ -507,7 +546,7 @@ input[id="login_auto_login"]:checked + label:after {
   top:-14px
 }
 
-input[id="login_auto_login"] {
+input[id="login_auto_login"],input[id="reg_mb_mailling"] {
   display: none;
 }
 
@@ -590,7 +629,10 @@ form :focus {
 }
 
 input, textarea {
-  color: #000;
+  font-size:
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
 }
 
 .placeholder {

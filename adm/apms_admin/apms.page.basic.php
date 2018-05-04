@@ -1,5 +1,5 @@
 <?php
-if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가 
+if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 if($mode == 'bpage') {
 	//HTML
@@ -14,17 +14,17 @@ if($mode == 'bpage') {
 
 			if(!$_POST['as_file'] || $_POST['as_shop']) $_POST['html_gr_id'] = '';
 
-			$sql = " insert {$g5['apms_page']} 
-						set gr_id					= '{$_POST['html_gr_id']}', 
-							html_id					= '{$_POST['html_id']}', 
-							as_file					= '{$_POST['as_file']}', 
-							as_title				= '{$_POST['as_title']}', 
-							as_desc					= '{$_POST['as_desc']}', 
-							as_head					= '{$_POST['as_head']}', 
-							as_hcolor				= '{$_POST['as_hcolor']}', 
-							bo_subject				= '{$_POST['bo_subject']}', 
-							as_wide					= '{$_POST['as_wide']}', 
-							as_partner				= '{$_POST['as_partner']}', 
+			$sql = " insert {$g5['apms_page']}
+						set gr_id					= '{$_POST['html_gr_id']}',
+							html_id					= '{$_POST['html_id']}',
+							as_file					= '{$_POST['as_file']}',
+							as_title				= '{$_POST['as_title']}',
+							as_desc					= '{$_POST['as_desc']}',
+							as_head					= '{$_POST['as_head']}',
+							as_hcolor				= '{$_POST['as_hcolor']}',
+							bo_subject				= '{$_POST['bo_subject']}',
+							as_wide					= '{$_POST['as_wide']}',
+							as_partner				= '{$_POST['as_partner']}',
 							as_html					= '0' ";
 
 			sql_query($sql, false);
@@ -131,7 +131,7 @@ $row_cnt = @sql_num_rows($result);
 			<?php
 			for ($k=0; $k<count($headskin); $k++) {
 				echo "<option value=\"".$headskin[$k]."\">".$headskin[$k]."</option>\n";
-			} 
+			}
 			?>
 		</select>
 	</td>
@@ -189,8 +189,8 @@ $row_cnt = @sql_num_rows($result);
 	</tr>
 	</thead>
 	<tbody>
-	<?php for ($z=0; $row=sql_fetch_array($result); $z++) {	
-			$bg = ($z%2 == 0) ? '' : ' bgcolor="#fafafa"';		
+	<?php for ($z=0; $row=sql_fetch_array($result); $z++) {
+			$bg = ($z%2 == 0) ? '' : ' bgcolor="#fafafa"';
 	?>
 		<tr<?php echo $bg; ?>>
 		<td align="center">
@@ -221,7 +221,7 @@ $row_cnt = @sql_num_rows($result);
 				<?php
 				for ($k=0; $k<count($headskin); $k++) {
 					echo "<option value=\"".$headskin[$k]."\"".get_selected($row['as_head'], $headskin[$k]).">".$headskin[$k]."</option>\n";
-				} 
+				}
 				?>
 			</select>
 		</td>

@@ -811,6 +811,7 @@ section 공통
 }
 
 .section-group { text-align:center;  width:100%; display:block; }
+.section-list { padding:0;}
 .section-list-title { text-align:center; display:block; font-weight: 600; font-size:27px;}
 .section-list-sub { display:inline-block; text-align:center; margin-top:0; font-weight: 300; padding: 0 7px 7px; font-size:27px; }
 /* clearfix */
@@ -937,10 +938,10 @@ tail
 .button01 .button-link:hover:after { color:#333; transform: rotate(180deg); }
 
 .button02 {display:inline-block; position:relative; left:50%; width:160px; height:40px; transform: translate(-50%, 0); }
-.button02 .button-link { font-family: "nanumgothic"; font-size:15px; color:#fff; font-weight: 400; display:inline-block; position:absolute; width:140px; height:40px; line-height:30px; background:rgba(83,71,65,0.2); border: 1.5px solid rgba(255,255,255,1); border-radius: 5px; padding:5px; text-align: center; transition:all .5s;}
-.button02 .button-link:after { font-family: "FontAwesome"; color:#fff; content:"\f054"; display:inline-block; position:relative; right:0px; bottom:0px; width:20px; height:30px; margin-left:10px; transition:all .5s;}
-.button02 .button-link:hover { background:rgba(83,71,65,0.7); color:#fff; text-shadow:0px 0px 2px #333; border: 1.5px solid rgba(255,255,255,0);}
-.button02 .button-link:hover:after { color:#ffcc00; transform: rotate(180deg); }
+.button-link { font-family: "nanumgothic"; font-size:15px; color:#fff; font-weight: 400; display:inline-block; position:absolute; width:140px; height:40px; line-height:30px; background:rgba(83,71,65,0.2); border: 1.5px solid rgba(255,255,255,1); border-radius: 5px; padding:5px; text-align: center; transition:all .5s;}
+.button-link:after { font-family: "FontAwesome"; color:#fff; content:"\f054"; display:inline-block; position:relative; right:0px; bottom:0px; width:20px; height:30px; margin-left:10px; transition:all .5s;}
+.button-link:hover { background:rgba(83,71,65,0.7); color:#fff; text-shadow:0px 0px 2px #333; border: 1.5px solid rgba(255,255,255,0);}
+.button-link:hover:after { color:#ffcc00; transform: rotate(180deg); }
 
 @media all and (max-width:1310px) {
   .button01 { right:10px; bottom:15px; }
@@ -980,12 +981,25 @@ tail
 .point-color01 { background:#fcfcfc;}
 .point-color02 { background:#7AB7AE;}
 .point-color03 { background:#607d8b;}
-.point-color04 { background:#607d8b;}
-.point-color05 { background:#ffcc00;}
+.point-color04 { background:#ffcc00;}
+.point-color05 { background:#cddc39;}
 .point-color10 { background:#23252B;}
 .bc-white { background-color:#fff;}
 .bc-black { background-color:#393939;}
 .bc-orange { background-color:#ffcc00;}
+
+
+.pb-color11 { background-color:rgba(237,237,237,0.8);}
+.pb-color12 { background-color:rgba(163,192,214,0.8);}
+.pb-color13 { background-color:rgba(90,155,179,0.8);}
+.pb-color14 { background-color:rgba(53,97,122,0.8);}
+.pb-color15 { background-color:rgba(122,183,174,0.8);}
+.pb-color16 { background-color:rgba(139,195,74,0.8);}
+.pb-color17 { background-color:rgba(96,125,139,0.8);}
+.pb-color18 { background-color:rgba(55,79,97,0.8);}
+.pb-color19 { background-color:rgba(118,118,118,0.8);}
+.pb-color20 { background-color:rgba(255,87,87,0.8);}
+.pb-color21 { background-color:rgba(244,67,54,0.8);}
 
 
 /* 공통 폰트 사이즈 */
@@ -999,8 +1013,9 @@ tail
 
 
 /* 공통 폰트 칼라 */
+.font-c00 { color:#fcfcfc; }
 .font-c01 { color:#8cbf59;}
-.font-c02 { color:#534741 }
+.font-c02 { color:#534741; }
 
 /* padding */
 .padding-20 { padding: 20px;}
@@ -1056,17 +1071,58 @@ tail
 
 
 /* Rium_noside_color 전용 */
+
+
+/* 공통 margin */
+.margin-top80 { margin-top:80px; }
+.padding-tb-80 {padding:80px 0;}
 .list-style-none ul{ list-style:none;}
-.margin-top80 { margin-top: 120px;}
-.about01 { padding:50px 0; background: url("/img/about/about01.jpg") no-repeat; background-size: cover; }
-.about01-title-list h2,.about01-title-list h3{ padding:20px 0 0 0; font-weight: 500; background:rgba(237,237,237,0.5); max-width: 991px; margin:20px auto 0; border-radius: 10px; padding:15px; transition: background .5s;}
-.about01-title-list h4{ line-height:1.5em; padding:15px; background:rgba(237,237,237,0.5); border-radius: 10px; max-width: 991px; margin:20px auto 0; font-weight: 350; transition: background .5s;}
+.mobile-img { display:none;}
+.section-title { padding-top:150px; font-size:32px; font-weight:450;}
 
+
+/*  aboutus */
+.aboutus { padding:0px 20px 200px 20px; background: url("/img/aboutus/aboutus.jpg") no-repeat; background-size: cover; background-attachment: fixed;}
+.aboutus .section-title-item { padding:0px;}
+.aboutus .section-title-item h2,.aboutus .section-title-item h3{ display: inline-block;  font-weight: 500; background:rgba(237,237,237,0.5); max-width: 991px; margin:35px auto 0; border-radius: 10px; padding:15px; transition: background .5s;}
+.aboutus .section-title-item h4{ display: inline-block; line-height:1.5em; padding:15px; background:rgba(237,237,237,0.5); border-radius: 10px; max-width: 991px; margin:20px auto 0; font-weight: 350; transition: background .5s;}
 .emphasize { font-size:22px; font-weight:600;}
-.ab-content { max-width:1310px; margin:0 auto; position: relative; left:50%; transform: translateX(-50%);}
 
+/* greeting */
+.ab-content { max-width:1310px; margin:0 auto; position: relative; padding: 80px 0 50px; background: url("/img/aboutus/ceo.png"); background-size:auto; background-position: bottom right; background-repeat: no-repeat; }
+.greeting { height:100vh; min-height:650px;}
+.greeting h3, .greeting h2{ padding:10px 0;}
+.greeting h4 {line-height: 32px;}
+.greeting h5 { font-size:16px; line-height:28px;}
+
+.rium-concept { max-width:1310px; position: relative; left: 50%; transform:translateX(-50%);}
+.rium-concept-list { padding:2px; }
+.rium-concept-list-title { background: #00bcd4; font-size:18px; font-weight:400; width:100%; padding:15px 15px 0px 15px; border-top-left-radius: 15px; border-top-right-radius: 15px;}
+.rium-concept-list-title-sub { background: #00bcd4; padding-bottom:12px; font-weight:300;}
+.rium-concept-list-text { background:rgba(237,237,237,0.8); padding:15px 15px 15px 15px; min-height:120px; font-weight:400; font-size:16px;}
+
+/* businessarea */
+.businessarea-list { max-width:1310px; position:relative; left:50%; transform: translateX(-50%);}
+.businessarea-list-item {padding:25px 25px;}
+.businessarea-list-item-wrap { min-height:210px; padding:25px 25px; }
+.businessarea-list-item-wrap:after { content: ""; position:absolute; width:calc( 100% - 50px ) ; left:25px; top:25px; min-height:210px; border:1px solid rgba(57,57,57,0.5); padding:20px 10px; transition: border .5s; box-sizing:border-box; z-index: -1; }
+.businessarea-list-item-wrap:hover:after { border: 10px solid rgba(255,193,7,0.5);}
+.businessarea-list-item-wrap-left {  height:150px; padding:0px;}
+.businessarea-list-item-wrap-left h1{  line-height: 150px; font-weight:500; font-size:60px; color:#fff; }
+.businessarea-list-item-wrap-left h1::after { content: "background"; position:absolute; top:50%; left:50%; transform: translate(-30% , -50%); background:#333; border-radius: 50%; width:75px; height:75px; text-indent: -999999px; z-index: -1;}
+.businessarea-list-item-wrap-right h3:nth-child(1){ color:#00bcd4; font-weight:500; padding:5px 0 ;}
+.businessarea-list-item-wrap-right h5{ color:#00bcd4; font-weight:250; padding:5px 0 10px; letter-spacing:5px;}
+.businessarea-list-item-wrap-right h4{ color:#333; font-weight:500; padding:5px 0 ; font-size:16px; }
+.businessarea-list-item-wrap-right button{ right:20px;}
 
 
 @media all and (max-width:1310px) {
-  .about01-title-list h2,.about01-title-list h3,.about01-title-list h4 { background:rgba(237,237,237,0.8); }
+  .aboutus-title-list h2,.aboutus-title-list h3,.aboutus-title-list h4 { background:rgba(237,237,237,0.8); }
+  .greeting { height:100%; min-height:100%;}
+}
+@media all and (max-width:992px) {
+.aboutus { padding:0px 20px 100px 20px; }
+.mobile-img { display:block;}
+.ab-content {background:none;}
+.section-title { padding-top:60px;}
 }

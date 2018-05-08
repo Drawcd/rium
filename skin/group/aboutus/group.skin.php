@@ -85,20 +85,40 @@ for ($i=0; $row=sql_fetch_array($result); $i++) { ?>
 <?php } ?>
 </div>
 
-<!-- popup-customer -->
+<!-- php-include -->
 <div class="widget-box section-group">
-  <?php echo apms_widget('rium-page-include', $wid.'-about-top'); ?>
+  <?php echo apms_widget('rium-page-include', $wid.'-aboutus01'); ?>
 </div>
-<!-- popup-customer End-->
+<!-- php-include End-->
 
-<!-- popup-customer -->
+<!-- php-include -->
 <div class="widget-box section-group">
-  <?php echo apms_widget('rium-page-include', $wid.'-about-content'); ?>
+  <?php echo apms_widget('rium-page-include', $wid.'-aboutus02'); ?>
 </div>
-<!-- popup-customer End-->
+<!-- php-include End-->
 
+<!-- php-include -->
+<div class="widget-box section-group">
+  <?php echo apms_widget('rium-page-include', $wid.'-aboutus03'); ?>
+</div>
+<!-- php-include End-->
 
+<!-- php-include -->
+<div class="widget-box section-group">
+  <?php echo apms_widget('rium-page-include', $wid.'-aboutuspopup01'); ?>
+</div>
+<!-- php-include End-->
 
+<!-- php-include -->
+<div class="widget-box section-group">
+  <?php echo apms_widget('rium-page-include', $wid.'-aboutus04'); ?>
+</div>
+<!-- php-include End-->
+<!-- php-include -->
+<div class="widget-box section-group">
+  <?php echo apms_widget('rium-page-include', $wid.'-aboutus05'); ?>
+</div>
+<!-- php-include End-->
 
 
 

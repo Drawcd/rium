@@ -410,3 +410,6 @@ $('.section-wrap').masonry({
  	 });
 	});
 });
+
+
+// other

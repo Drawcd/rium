@@ -9,16 +9,14 @@ ob_end_clean();
 
 
 
-$wr_1 = "$hp1-$hp2-$hp3";
 
-
-$bo_table = "1q1a";
+$bo_table = "sub_05_02";
 $write_table = $g5['write_prefix'] . $bo_table;
 
 $wr_num = get_next_num($write_table);
 $wr_reply = "";
 
-$wr_subject = "{$_POST[wr_name]}님의 {$_POST[wr_2]}요청 글입니다";
+$wr_subject = "{$_POST[wr_name]}님의 빠른상담요청 글입니다";
 
 //$secret = "secret";
 

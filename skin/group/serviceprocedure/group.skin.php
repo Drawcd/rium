@@ -121,8 +121,6 @@ for ($i=0; $row=sql_fetch_array($result); $i++) { ?>
 <!-- php-include End-->
 
 <script>
-<!-- php-include End-->
-
 jQuery(function($) {
 
   var html = $('html');

@@ -20,7 +20,7 @@ echo $page_content;
 	.responsive .page-icon .pull-right { float:none !important; }
 }
 </style>
-<div class="print-hide page-icon">
+<div class="print-hide page-icon <?php echo $is_hide_page_print;?>">
 	<?php echo apms_sns_share_icon($sns_url, $sns_title, $seometa['img']['src']); //SNS 아이콘 ?>
 	<span class="pull-right">
 		<?php if($scrap_href) { ?>

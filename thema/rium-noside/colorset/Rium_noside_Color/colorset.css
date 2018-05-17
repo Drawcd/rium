@@ -1177,7 +1177,8 @@ tail
 
 /* service infomation */
 
-.service-infomation { background: rgb(237,237,237); background-image:url("/img/serviceinfo/service-design.jpg"); background-attachment: fixed; background-position: center;}
+.service-infomation { background: rgb(237,237,237); background-image:url("/img/serviceinfo/service-design.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover;}
+.service-infomation .page-top-title-text { padding-left: 0px !important;}
 .service-infomation .page-top-title-text h1 { color:#607d8b; text-align: left; padding-left:20px; }
 .service-infomation .page-top-title-text h5 { color:#7B8CA0; text-align: left; padding-left:20px;}
 .service-infomation .page-top-title-subtext h4 { color:#C1B997; text-align: left; padding-left:20px;}
@@ -1202,8 +1203,8 @@ tail
 .page-top-title.procedure .page-top-title-bg { background: url("/img/title/service_pro.jpg") no-repeat; background-size:cover; width:100%; background-attachment: fixed;}
 .page-top-title-bg { padding: 80px 0px; }
 .page-top-title-text h1{ color:#fff; text-align: left; padding-left:20px; }
-.page-top-title-text h5{ color:#fff; text-align: left; padding-left:20px;letter-spacing: 5px;}
-.page-top-title-subtext { padding:30px 0 0; text-align: left; padding-left:20px;}
+.page-top-title-text h5{ color:#fff; text-align: left; padding-left:20px; letter-spacing: 5px;}
+.page-top-title-subtext { padding:30px 0 0;}
 .page-top-title-subtext h2{  }
 .page-top-title-subtext h3{  }
 .page-top-title-subtext h4{  }
@@ -1211,7 +1212,7 @@ tail
 /* page-top-title End */
 
 /* page-title-header-bar */
-.page-title-header-bar { background:#ffcc00; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
+.page-title-header-bar { background:#fff; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
 .page-title-header-bar  .at-container { border-left: 1px solid #ccc; border-right: 1px solid #ccc; }
 
 

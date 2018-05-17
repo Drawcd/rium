@@ -160,7 +160,20 @@ jQuery(document).ready(function($) {
 					$('#bottom-openmenu-contact li:nth-child(7)').removeClass("bottom-li-hide");
 				}
 			});
-
+      $("#page-title-hide").change(function(){
+				if($(this).is(':checked') == true){
+					$('.at-title').addClass("bottom-li-hide");
+				} else{
+					$('.at-title ').removeClass("bottom-li-hide");
+				}
+			});
+      $("#page-print-hide").change(function(){
+				if($(this).is(':checked') == true){
+					$('.print-hide.page-icon').addClass("bottom-li-hide");
+				} else{
+					$('.print-hide.page-icon ').removeClass("bottom-li-hide");
+				}
+			});
 
 
   		$(".input-group").on('click',function(){

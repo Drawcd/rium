@@ -323,6 +323,36 @@ $tside = apms_file_list('thema/'.THEMA.'/side', 'php');
             </div>
           </div>
 					<!-- Top & Bottom 설정 End -->
+
+          <!-- 페이지 내용 숨김 설정 Start -->
+				  <div class="panel">
+					  <div class="panel-heading" role="tab" id="swHead<?php $toggle++; echo $toggle;?>" aria-expanded="true" aria-controls="swSet<?php echo $toggle;?>">
+  					  <a data-toggle="collapse" data-parent="#switcherSet" href="#swSet<?php echo $toggle;?>">
+  			  			<i class="fa fa-caret-right"></i> 페이지 숨김 설정
+  					  </a>
+			  		</div>
+  					<div id="swSet<?php echo $toggle;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="swHead<?php echo $toggle;?>">
+  					  <div class="panel-body">
+								<div class="text-muted ko-11">
+									 하단 표시내용 (체크시 숨김)
+						    </div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">페이지 타이틀 숨김</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="page-title-hide" name="at_set[page-title-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['page-title-hide']);?>>
+									</span>
+								</div>
+								<div class="input-group input-group-sm input-bottom">
+									<span class="form-control">페이지 sns 프린트 숨김</span>
+									<span class="input-group-addon">
+										<input type="checkbox" id="page-print-hide" name="at_set[page-print-hide]" value="bottom-li-hide"<?php echo get_checked('bottom-li-hide', $at_set['page-print-hide']);?>>
+									</span>
+								</div>
+              </div>
+            </div>
+          </div>
+					<!-- 페이지 내용 숨김 설정 End -->
+
 				</div>
 				<button type="submit" class="btn btn-color btn-sm btn-block">
 					<i class="fa fa-check"></i> <?php echo ($is_demo) ? '데모적용' : '저장하기';?>

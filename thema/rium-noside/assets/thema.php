@@ -61,6 +61,9 @@ $is_hide_qalist = ($at_set['qalist-hide']) ? $at_set['qalist-hide'] : '';
 $is_hide_mailbusiness = ($at_set['mailbusiness-hide']) ? $at_set['mailbusiness-hide'] : '';
 $is_hide_contactus = ($at_set['contactus-hide']) ? $at_set['contactus-hide'] : '';
 $is_hide_tel = ($at_set['tel-hide']) ? $at_set['tel-hide'] : '';
+// 타이틀 숨김
+$is_hide_page_title = ($at_set['page-title-hide']) ? $at_set['page-title-hide'] : '';
+$is_hide_page_print = ($at_set['page-print-hide']) ? $at_set['page-print-hide'] : '';
 
 $is_fixed_content = false;
 if(IS_YC && isset($ca_id) && $ca_id && !$pid) {

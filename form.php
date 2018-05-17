@@ -49,7 +49,7 @@
 <script language="javascript">
   function submitChk(f)
   {
-	  f.action = "form_ok.php";
+	  f.action = "/form_ok.php";
 	  return true;
   }
 </script>

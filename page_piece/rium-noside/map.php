@@ -1,5 +1,4 @@
 <div class="list-style-none section-group aboutmap">
-  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=GrnFH8SQKkoAdRhgyRP0&submodules=geocoder"></script>
   <div class="aboutmap-wrap">
     <!-- section-title start -->
     <div class="section-title">
@@ -12,19 +11,92 @@
       <h4>언제나 자신의 자리에서 최선을 다하고 있습니다.</h4>
     </div>
     <!-- section-title End -->
-    <div class="map_wrap">
-    	<div id="map_v3" class="map_div"></div>
-    	<div class="map_tit">map v3</div>
+    <div class="aboutmap-list section-group" >
+      <div class="aboutmap-item">
+        <div class="aboutmap-item-wrap">
+          <h3>지도확대축소</h3>
+          <div class="aboutmap-item-button switch-on">
+            <div class="aboutmap-item-button-switch"></div>
+          </div>
+        </div>
+      </div>
+      <div class="aboutmap-item aboutmap-item-button-bg"></div>
+
+      <!-- 다음지도 시작 -->
+      <div id="map" style="width:100%;height:550px;"></div>
+
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c32e30749f5bf06bb7e7bc550ff43092&libraries=services"></script>
+      <script>
+      // $('.aboutmap-item-button.switch-off').on("click", function(){
+      //   $('.aboutmap-item-button').addClass("switch-on");
+      //   $('.aboutmap-item-button').removeClass("switch-off");
+      //   $('.aboutmap-item-button-bg').fadeOut();
+      // });
+      // $('.aboutmap-item-button.switch-on').on("click", function(){
+      //   $('.aboutmap-item-button').addClass("switch-off");
+      //   $('.aboutmap-item-button').removClass("switch-on");
+      //   $('.aboutmap-item-button-bg').fadeIn();
+      // });
+
+      $('.aboutmap-item-button').data({
+        'switch-on': false
+      }).on('click', function() {
+        if ($(this).data('switch-on') == false) {
+          $(this).addClass("switch-off");
+          $('.aboutmap-item-button-bg').fadeOut();
+          $(this).data({
+            'switch-on': true
+          });
+        } else {
+          $(this).removeClass("switch-off");
+          $('.aboutmap-item-button-bg').fadeIn();
+          $(this).data({
+            'switch-on': false
+          });
+        }
+      });
+
+
+
+
+      var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+          mapOption = {
+              center: new daum.maps.LatLng(466436.0, 1172906.0), // 지도의 중심좌표
+              level: 3 // 지도의 확대 레벨
+          };
+
+      // 지도를 생성합니다
+      var map = new daum.maps.Map(mapContainer, mapOption);
+
+      // 주소-좌표 변환 객체를 생성합니다
+      var geocoder = new daum.maps.services.Geocoder();
+
+      // 주소로 좌표를 검색합니다
+      geocoder.addressSearch('경기도 덕양구 내유동 586-1', function(result, status) {
+
+          // 정상적으로 검색이 완료됐으면
+           if (status === daum.maps.services.Status.OK) {
+
+              var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+
+              // 결과값으로 받은 위치를 마커로 표시합니다
+              var marker = new daum.maps.Marker({
+                  map: map,
+                  position: coords
+              });
+
+              // 인포윈도우로 장소에 대한 설명을 표시합니다
+              var infowindow = new daum.maps.InfoWindow({
+                  content: '<div style="width:150px;text-align:center;padding:6px 0;">더케이종합건설</div>'
+              });
+              infowindow.open(map, marker);
+
+              // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+              map.setCenter(coords);
+          }
+      });
+      </script>
+      <!-- 다음지도 끝 -->
     </div>
-    <table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="https://map.naver.com/?mpx=02281118%3A37.7221203%2C126.8477265%3AZ12%3A0.0172776%2C0.0073313&searchCoord=980c3868435e8443818dfb51354c5817e606ab01e34c265b9ea3ca615e9fb50a&query=642V7JaR6rWsIO2GteydvOuhnCAxMjE0IEHrj5k%3D&menu=location&tab=1&lng=621ca24599dc43e094852ed927a47248&mapMode=0&lat=9f391efd30a115112472117d5f57f8b6&dlevel=12&enc=b64" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1525931338938_1421233329" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2018.5.10</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="https://map.naver.com/?mpx=02281118%3A37.7221203%2C126.8477265%3AZ12%3A0.0172776%2C0.0073313&searchCoord=980c3868435e8443818dfb51354c5817e606ab01e34c265b9ea3ca615e9fb50a&query=642V7JaR6rWsIO2GteydvOuhnCAxMjE0IEHrj5k%3D&menu=location&tab=1&lng=621ca24599dc43e094852ed927a47248&mapMode=0&lat=9f391efd30a115112472117d5f57f8b6&dlevel=12&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
   </div>
 </div>
-
-<script>
-// v3 버전 지도 생성
-var map_v3 = new naver.maps.Map('map_v3', {
-center : new naver.maps.LatLng(37.2900533, 127.1036797),
-zoom : 10,
-mapTypeControl : true // 일반, 위성 버튼 보이기 (v3 에서 바뀐 방식)
-});
-</script>

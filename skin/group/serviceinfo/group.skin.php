@@ -1,19 +1,7 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; //개별 페이지 접근 불가
-
-// 헤더 출력
-if(isset($wset['hskin']) && $wset['hskin']) {
-	$header_skin = $wset['hskin'];
-	$header_color = $wset['hcolor'];
-	include_once('./header.php');
-}
-
-// 타이틀 출력
-if(!isset($wset['title']) || (isset($wset['title']) && !$wset['title'])) {
-	echo apms_widget('title', 'group-title-'.$gr_id, '', '', $group_skin_path);
-	echo '<div class="h30"></div>';
-}
 ?>
+
 <!-- 2단 그룹메인 -->
 <?php if(!isset($wset['best']) || (isset($wset['best']) && !$wset['best'])) { // 베스트 ?>
 	<div class="row">
@@ -86,40 +74,58 @@ for ($i=0; $row=sql_fetch_array($result); $i++) { ?>
 <nav id="section-menu">
  <ul></ul>
 </nav>
+<!-- page-title Start -->
+<div class="list-style-none service-infomation page-top-title section-group">
+  <!-- section-title start -->
+  <div class="page-top-title-bg">
+    <div class="at-container">
+			<div class="page-top-title-text">
+	      <h1>서비스안내</h1>
+	      <h5>Service information</h5>
+	    </div>
+	    <div class="page-top-title-subtext">
+	      <h4 class="">최고의 사업 파트너로서 <span class="emphasize font-c01">가치</span>와 <span class="emphasize font-c01">성공</span>을 드리겠습니다.</h4>
+	    </div>
+		</div>
+  </div>
+</div>
+
+<div class="page-title-header-bar">
+	<div class="at-container">
+		<?php
+			// 헤더 출력
+			if(isset($wset['hskin']) && $wset['hskin']) {
+				$header_skin = $wset['hskin'];
+				$header_color = $wset['hcolor'];
+				include_once('./header.php');
+			}
+			// 타이틀 출력
+			if(!isset($wset['title']) || (isset($wset['title']) && !$wset['title'])) {
+				echo apms_widget('title', 'group-title-'.$gr_id, '', '', $group_skin_path);
+				echo '<div class="h30"></div>';
+			}
+		?>
+	</div>
+</div>
 
 <!-- php-include -->
-<div id="section-one" class="widget-box section section-group scroll-item" title="인사말">
-  <?php echo apms_widget('rium-page-include', $wid.'-aboutus01'); ?>
+<div id="section-one" class="widget-box section section-group scroll-item" title="서비스신청안내">
+  <?php echo apms_widget('rium-page-include', $wid.'-serviceinfo01'); ?>
 </div>
 <!-- php-include End-->
 
 <!-- php-include -->
-<div id="section-two" class="widget-box section-group scroll-item" title="브랜드소개">
-  <?php echo apms_widget('rium-page-include', $wid.'-aboutus02'); ?>
+<div id="section-two" class="widget-box section-group scroll-item" title="시공안내">
+  <?php echo apms_widget('rium-page-include', $wid.'-service-pro02'); ?>
 </div>
 <!-- php-include End-->
 
 <!-- php-include -->
-<div id="section-three" class="widget-box section-group section scroll-item" title="사업영역">
-  <?php echo apms_widget('rium-page-include', $wid.'-aboutus03'); ?>
+<div id="section-three" class="widget-box section-group section scroll-item" title="상담신청">
+  <?php echo apms_widget('rium-page-include', $wid.'-service-pro03'); ?>
 </div>
 <!-- php-include End-->
 
-<!-- php-include -->
-<div id="section-four" class="widget-box section-group scroll-item" title="조직도">
-  <?php echo apms_widget('rium-page-include', $wid.'-aboutuspopup01'); ?>
-</div>
-<!-- php-include End-->
-
-<!-- php-include -->
-<div id="section-five" class="widget-box section-group scroll-item" title="오시는길">
-  <?php echo apms_widget('rium-page-include', $wid.'-aboutus04'); ?>
-</div>
-<!-- php-include End-->
-<!-- php-include -->
-<div class="widget-box section-group" >
-  <?php echo apms_widget('rium-page-include', $wid.'-aboutus05'); ?>
-</div>
 <script>
 <!-- php-include End-->
 

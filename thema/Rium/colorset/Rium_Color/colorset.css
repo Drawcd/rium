@@ -832,7 +832,7 @@ popup
 performance
 ********************************************************/
 #section03 { padding:50px 0;}
-
+.performance-title {text-align: center;}
 /********************************************************
 section04
 ********************************************************/
@@ -895,18 +895,19 @@ section05
 /********************************************************
 tail
 ********************************************************/
-#sectiontail .widget-index {padding:25px 0;}
-#sectiontail .tail-contactinfo-wrap { color:#fff; padding: 35px 0;}
-#sectiontail .tail-contactinfo-wrap h2:nth-child(1) { color:#ffcc00; font-size:54px;}
-#sectiontail .tail-contactinfo-wrap h3:nth-child(1n) { color:#fff; font-size:28px; font-weight:200; margin:5px 0;}
-#sectiontail .tail-contactinfo-wrap h3:last-child { color:#ffcc00; font-size:44px; font-weight:200; margin-bottom:20px;}
-#sectiontail .tail-contactinfo-wrap h4 { color:#fff; font-size:22px; font-weight:300; margin-top:40px;}
-#sectiontail .tail-contactinfo-wrap h3:nth-child(1n) b{ color:#8cc63f; font-size:28px; font-weight:500; }
-#sectiontail .row { margin:0px !important;}
+.contactinfo .widget-index {padding:25px 0;}
+.contactinfo { background: #23252B; padding:20px 0 20px !important;}
+.contactinfo .tail-contactinfo-wrap { color:#fff; padding: 35px 0;}
+.contactinfo .tail-contactinfo-wrap h2:nth-child(1) { color:#ffcc00; font-size:54px;}
+.contactinfo .tail-contactinfo-wrap h3:nth-child(1n) { color:#fff; font-size:28px; font-weight:200; margin:5px 0;}
+.contactinfo .tail-contactinfo-wrap h3:last-child { color:#ffcc00; font-size:44px; font-weight:200; margin-bottom:20px;}
+.contactinfo .tail-contactinfo-wrap h4 { color:#fff; font-size:22px; font-weight:300; margin-top:40px;}
+.contactinfo .tail-contactinfo-wrap h3:nth-child(1n) b{ color:#8cc63f; font-size:28px; font-weight:500; }
+.contactinfo .row { margin:0px !important;}
 
 #iyke_form {width:100%; padding:0px;}
 #iyke_form .iyke_form-title { color:#fff;}
-#iyke_form .iyke_form-title h2{ display:inline-block; font-size:28px; color:#ffcc00;}
+#iyke_form .iyke_form-title h2{ display:inline-block; font-size:28px; color:#ffcc00; padding:20px 0 10px;}
 #iyke_form .iyke_form-title h3{ display:inline-block; font-size:18px; }
 #iyke_form .ileft { color:#fff; width:20%; text-align:left; padding:3px 3px 0 0; font-size:11pt;}
 #iyke_form .icenter {float:left; width:100%; margin:0px 0px 6px;}

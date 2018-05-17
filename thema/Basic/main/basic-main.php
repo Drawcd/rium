@@ -83,7 +83,7 @@ $side = ($at_set['side']) ? 'left' : 'right';
 			<div class="widget-box">
 				<?php echo apms_widget('basic-post-gallery', $wid.'-wm3', 'center=1'); ?>
 			</div>
-			<!-- 갤러리 끝 -->	
+			<!-- 갤러리 끝 -->
 
 			<!-- 웹진 시작 -->
 			<div class="div-title-underbar">
@@ -97,15 +97,15 @@ $side = ($at_set['side']) ? 'left' : 'right';
 			<div class="widget-box">
 				<?php echo apms_widget('basic-post-webzine', $wid.'-wm4', 'bold=1 date=1'); ?>
 			</div>
-			<!-- 웹진 끝 -->	
+			<!-- 웹진 끝 -->
 
-			<!-- 이미지 배너 시작 -->	
+			<!-- 이미지 배너 시작 -->
 			<div class="widget-box widget-img">
 				<a href="#배너이동주소">
 					<img src="<?php echo THEMA_URL;?>/assets/img/banner.jpg">
 				</a>
 			</div>
-			<!-- 이미지 배너 끝 -->	
+			<!-- 이미지 배너 끝 -->
 
 			<div class="row">
 				<div class="col-sm-6">
@@ -195,8 +195,8 @@ $side = ($at_set['side']) ? 'left' : 'right';
 			<div class="widget-box">
 				<?php echo apms_widget('basic-post-slider', $wid.'-wm9', 'center=1 nav=1', 'auto=0'); ?>
 			</div>
-			<!-- 배너 끝 -->	
-			
+			<!-- 배너 끝 -->
+
 		</div>
 		<!-- 사이드 영역 -->
 		<div class="col-md-3<?php echo ($side == "left") ? ' pull-left' : '';?> at-col at-side">
@@ -233,7 +233,7 @@ $side = ($at_set['side']) ? 'left' : 'right';
 						<?php echo apms_widget('basic-post-list', $wid.'-ws1', 'icon={아이콘:bell} date=1 strong=1,3'); ?>
 					</div>
 					<!-- 알림 끝 -->
-			
+
 				</div>
 				<div class="col-md-12 col-sm-6">
 
@@ -250,7 +250,7 @@ $side = ($at_set['side']) ? 'left' : 'right';
 						<?php echo apms_widget('basic-post-list', $wid.'-ws2', 'icon={아이콘:comment} comment=1 date=1 strong=1,2'); ?>
 					</div>
 					<!-- 댓글 끝 -->
-		
+
 				</div>
 			</div>
 
@@ -285,7 +285,7 @@ $side = ($at_set['side']) ? 'left' : 'right';
 				</div>
 				<div class="widget-box">
 					<?php echo $is_poll_list; ?>
-				</div>					
+				</div>
 			<?php } ?>
 			<!-- 설문 끝 -->
 
@@ -318,6 +318,6 @@ $side = ($at_set['side']) ? 'left' : 'right';
 			</div>
 			<!-- SNS아이콘 끝 -->
 
-		</div>
+		</div>test
 	</div>
 </div>

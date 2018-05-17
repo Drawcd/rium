@@ -162,7 +162,7 @@ $side = ($at_set['side']) ? 'left' : 'right';
     <div class="section">
       <div class="section-item" >
         <h3 class="section-list-title animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">건설사례 및 예정</h3>
-        <div class="section-group animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.3s" data-offset="100">
+        <div class="section-group animate performance-title" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.3s" data-offset="100">
           <span class="">
             <h3 class="fc-orange section-list-sub">COMPANY</h3>
           </span>

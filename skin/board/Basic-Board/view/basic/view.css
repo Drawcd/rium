@@ -16,7 +16,7 @@
 .view-tag a { color:#888; }
 .view-tag a:hover { color:crimson; }
 .view-cnt { margin-top:4px; }
-.view-img img { display:block; max-width:100%; margin:0 auto 15px; border:0; height:auto; }
+.view-img img { display:block; max-width:100%; margin:0 0 15px; border:0; height:auto; }
 .view-content { padding-bottom:20px; line-height:180%; }
 .view-content img { width:auto; height:auto; max-width:100%; }
 .view-content p { padding:0; margin:0; line-height:180%; }
@@ -31,7 +31,7 @@
 .view-comment { margin: 0px; padding: 0px 0px 5px; text-transform: capitalize; overflow: hidden; border-bottom: 1px solid rgb(51, 51, 51); display: inline-block; position: relative; }
 
 /* Padding */
-.view-padding { padding-left:15px; padding-right:15px; }
+.view-padding { padding-left:0px; padding-right:0px; }
 .is-mobile .view-padding { padding-left:0px; padding-right:0px; }
 .view-author-none { height:1px; border-top:1px solid #eee; margin:12px 0px 20px; }
 
@@ -55,7 +55,7 @@
 .comment-media .cmt-nogood { background: url('../../img/cmt_nogood.gif') no-repeat left center; color:#888; }
 
 .comment-form { padding-top:10px; }
-.comment-box { border:1px solid #ddd; padding:12px 12px 0px; margin-bottom:15px; background:#fbfbfb; }
+.comment-box { border:1px solid #ddd; padding:12px 12px 0px; margin-bottom:15px; background:#fff; }
 .comment-content { display:table; width:100%; table-layout:fixed; }
 .comment-content .comment-cell { display:table-cell; padding:0px; text-align:center; vertical-align:middle; }
 .comment-content .comment-cell.comment-submit { width:80px; height:100%; background:#fafafa; border:1px solid #ccc; border-left:0px; cursor:pointer; }

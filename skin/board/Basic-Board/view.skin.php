@@ -35,7 +35,7 @@ if($view['as_icon']) {
 
 <div class="view-wrap<?php echo (G5_IS_MOBILE) ? ' view-mobile font-14' : '';?><?php echo (APMS_PIM) ? ' view-modal' : '';?>">
 
-	<?php 
+	<?php
 		// 내용스킨
 		if(is_file($view_skin_path.'/view.skin.php')) {
 			include_once($view_skin_path.'/view.skin.php');
@@ -129,7 +129,7 @@ function board_move(href){
 $(function() {
 	$(".view-content a").each(function () {
 		$(this).attr("target", "_blank");
-    }); 
+    });
 
 	$("a.view_image").click(function() {
 		window.open(this.href, "large_image", "location=yes,links=no,toolbar=no,top=10,left=10,width=10,height=10,resizable=yes,scrollbars=no,status=no");
@@ -156,3 +156,24 @@ $(function() {
 	<?php } ?>
 });
 </script>
+
+<?php if($is_admin == 'super') { ?>
+        <div class="tbl_frm01 tbl_wrap">
+            <table>
+                <tbody>
+                <form name="update_date" action="<?php echo $board_skin_url; ?>/update_date.php" method="post" style="padding:0; margin:0;">
+                <input type="hidden" name="bo_table" value="<?php echo $g5['write_prefix'] . $bo_table; ?>">
+                <input type="hidden" name="REQUEST_URI" value="<?php echo $_SERVER['REQUEST_URI']; ?>">
+                <input type="hidden" name="wr_id" value="<?php echo $wr_id; ?>">
+                <tr>
+                    <th scope="row">작성일</th>
+                    <td><input type="text" name="wr_datetime" style="width:120px;" class="frm_input" value="<?php echo $view['wr_datetime']; ?>"></td>
+                    <th scope="row">조회수</th>
+                    <td><input type="text" name="wr_hit" style="width:80px;" class="frm_input" value="<?php echo $view['wr_hit']; ?>"></td>
+                    <th style="text-align:center;"><div class="btn_list"><input type="submit" value=" 저장 " class="btn_list"></div></th>
+                </tr>
+                </form>
+                </tbody>
+            </table>
+        </div>
+        <?php } ?>

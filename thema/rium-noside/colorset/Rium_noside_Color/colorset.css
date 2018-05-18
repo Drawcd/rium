@@ -24,7 +24,8 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 ■ Layout : 레이아웃
 ********************************************************/
 .wrapper { margin:0 auto; background:#fff;  }
-.at-container { padding:0px; position:relative; left:50%; transform: translateX(-50%);}
+/* .at-container { padding:0px; position:relative; left:50%; transform: translateX(-50%);} */
+.at-container { padding:0px; margin: 0px auto;}
 .is-pc .at-body { }
 .at-body .at-container { padding:0px 15px; overflow:hidden; }
 .boxed.wrapper .at-body .at-container { padding:0px 20px; }
@@ -458,7 +459,7 @@ main-popup-intro : 메인페이지 오버 인트로
 /* Panel : Accordions */
 .panel { box-shadow: none; -webkit-box-shadow: none; border-radius: 0px; }
 .panel-group .panel { border-radius: 0px; }
-.panel .panel-heading { border-radius: 0px; }
+.panel .panel-heading { border-radius: 0px; background:#fff; }
 .is-pc .ko .panel .panel-body { font-size:12px; }
 
 /* List Group */
@@ -510,6 +511,7 @@ main-popup-intro : 메인페이지 오버 인트로
 .padding-top-10 { padding-top:10px;}
 .padding-top-15 { padding-top:15px;}
 .padding-top-20 { padding-top:20px;}
+.padding-80 { padding:80px 0px !important;;}
 
 
 /* 공통 */
@@ -901,10 +903,10 @@ tail
 .contactinfo { background: #23252B; padding:20px 0 20px !important;}
 .contactinfo .tail-contactinfo-wrap { color:#fff; padding: 35px 0; text-align: left;}
 .contactinfo .tail-contactinfo-wrap h2:nth-child(1) { color:#ffcc00; font-size:54px;}
-.contactinfo .tail-contactinfo-wrap h3:nth-child(1n) { color:#fff; font-size:28px; font-weight:200; margin:5px 0;}
+.contactinfo .tail-contactinfo-wrap h3:nth-child(1n) { color:#fff; font-size:22px; font-weight:200; margin:5px 0; line-height:28px;}
 .contactinfo .tail-contactinfo-wrap h3:last-child { color:#ffcc00; font-size:44px; font-weight:200; margin-bottom:20px;}
-.contactinfo .tail-contactinfo-wrap h4 { color:#fff; font-size:22px; font-weight:300; margin-top:40px;}
-.contactinfo .tail-contactinfo-wrap h3:nth-child(1n) b{ color:#8cc63f; font-size:28px; font-weight:500; }
+.contactinfo .tail-contactinfo-wrap h4 { color:#fff; font-size:18px; font-weight:300; margin-top:40px; padding-bottom:10px;}
+.contactinfo .tail-contactinfo-wrap h3:nth-child(1n) b{ color:#8cc63f; font-size:21px; font-weight:500; }
 .contactinfo .row { margin:0px !important;}
 
 #iyke_form {width:100%; padding:0px;}
@@ -985,8 +987,8 @@ tail
 .point-color01 { background:#fcfcfc;}
 .point-color02 { background:#7AB7AE;}
 .point-color03 { background:#607d8b;}
-.point-color04 { background:#ffcc00;}
-.point-color05 { background:#cddc39;}
+.point-color04 { background:#cddc39;}
+.point-color05 { background:#ffcc00;}
 .point-color10 { background:#23252B;}
 .bc-white { background-color:#fff;}
 .bc-black { background-color:#393939;}
@@ -1141,10 +1143,13 @@ tail
 .aboutmap-item-button.switch-off .aboutmap-item-button-switch { left:36px;}
 
 /* procedure */
-.procedure { background: rgb(237,237,237); background-image:url("/img/procedure/procedure-bg.png"); background-attachment: fixed;}
-.procedure .section-title {padding-bottom:20px;}
+.procedure { background: rgb(237,237,237); background-image:url("/img/procedure/procedure-bg.png"); background-attachment: fixed; }
+.procedure .section-title {padding-bottom:20px; text-align: left !important;}
+.procedure .section-title h1{display: inline-block;}
+.procedure .section-title h4{font-size:18px; font-weight:350; color:#fff !important; }
+.procedure .section-title h5{ font-weight:350; color:#fff !important; display: inline-block;}
 .procedure-list { position:relative; padding:0px;}
-.procedure-list-item { position:relative; height:350px; transition: background 1.0s,width 0.2s; background-position: center;}
+.procedure-list-item { position:relative; height:350px; transition: background 1.0s,width 0.2s; background-position: center; visibility: hidden;}
 .procedure-list-item:before { content: ""; position: absolute; top:0; left:0; width:100%; height:100%; transition: all 1.0s; opacity: 0;}
 .procedure-list-item:nth-child(1) { background:url("/img/procedure/procedure01.jpg") no-repeat; background-size:100% , cover; background-position: center; }
 .procedure-list-item:nth-child(2) { background:#A7C1DC;}
@@ -1176,16 +1181,87 @@ tail
 .procedure-list-item:hover .procedure-list-item-wrap h5{ color:#fff;}
 
 /* service infomation */
+ .section-title h4{ line-height: 24px; }
 
-.service-infomation { background: rgb(237,237,237); background-image:url("/img/serviceinfo/service-design.jpg"); background-repeat: no-repeat; background-position: center; background-size: cover;}
-.service-infomation .page-top-title-text { padding-left: 0px !important;}
-.service-infomation .page-top-title-text h1 { color:#607d8b; text-align: left; padding-left:20px; }
-.service-infomation .page-top-title-text h5 { color:#7B8CA0; text-align: left; padding-left:20px;}
-.service-infomation .page-top-title-subtext h4 { color:#C1B997; text-align: left; padding-left:20px;}
+/* service infomation Architectural Design */
+.service-design .section-title { padding:60px 0px 10px 0px; text-align: left;}
+.service-design .section-title h1{ display: inline-block;}
+.service-design .section-title h5{ display: inline-block; padding-left:10px;}
+.service-design .section-title h4{ font-weight:350; }
+.service-design-list .service-design-list-item { padding:50px 0 0 0; text-align: left;}
+.service-design-list .service-design-list-item:nth-child(1){ visibility:hidden; overflow: hidden; min-height:450px; width:100%; background:url("/img/serviceinfo/service-design.jpg") no-repeat; background-size:cover;}
+.service-design-list .service-design-list-item:nth-child(1) p{ text-indent: -9999px; }
+.service-design-list .service-design-list-item:nth-child(2) { padding:15px 0 0 0 !important; }
+.service-design-list .service-design-list-item:nth-child(2) h4 { text-align: left; font-size:16px; font-weight: 350; line-height: 24px;}
+.service-design-list-item-title { font-size:18px; font-weight: 400; }
+.service-design-list-item-title-sub { font-size:14px; font-weight: 350; }
+.service-design-list-item-sub-text { font-size:16px; font-weight: 350; padding-right:50px; padding-top:15px; line-height: 24px;}
+.service-design-wrap ul{ padding:0px; }
 
+/* service infomation architecture */
+.service-architecture .section-title { padding:60px 0px 10px 0px; text-align: left;}
+.service-architecture .section-title h1{ display: inline-block;}
+.service-architecture .section-title h5{ display: inline-block; padding-left:10px;}
+.service-architecture .section-title h4{ font-weight:350; }
+.service-architecture-list .service-architecture-list-item { padding:50px 0 0 0; text-align: left;}
+.service-architecture-list .service-architecture-list-item:nth-child(1){ visibility:hidden; overflow: hidden; min-height:450px; width:100%; background:url("/img/serviceinfo/architecture.jpg") no-repeat; background-size:cover;}
+.service-architecture-list .service-architecture-list-item:nth-child(1) p{ text-indent: -9999px; }
+.service-architecture-list .service-architecture-list-item:nth-child(2) { padding:15px 0 0 0 !important; }
+.service-architecture-list .service-architecture-list-item:nth-child(2) h4 { text-align: left; font-size:16px; font-weight: 350; line-height: 24px;}
+.service-architecture-list-item-title { font-size:18px; font-weight: 400; }
+.service-architecture-list-item-title-sub { font-size:14px; font-weight: 350; }
+.service-architecture-list-item-sub-text { font-size:16px; font-weight: 350; padding-right:50px; padding-top:15px; line-height: 24px;}
+.service-architecture-wrap ul{ padding:0px; }
 
-.service-design {  }
+/* service infomation Consulting */
+.service-consulting .section-title { padding:60px 0px 60px 0px; }
+.service-consulting .section-title h1{ display: inline-block;}
+.service-consulting .section-title h5{ display: inline-block; padding-left:10px;}
+.service-consulting .section-title h4{ font-weight:350; }
+.service-consulting-list-item h2{ color:#767676; font-size:42px;}
+.service-consulting-list-item h2:nth-child(2){ color:#aaa; border-bottom: 10px solid #ccc; margin-bottom:20px;}
+.service-consulting-list .service-consulting-list-item { padding:50px 0 0 0; text-align: left;}
+.service-consulting-list .service-consulting-list-item:nth-child(1){ visibility:hidden; overflow: hidden; min-height:450px; background:url("/img/serviceinfo/consulting.jpg") no-repeat; background-size:cover;}
+.service-consulting-list .service-consulting-list-item:nth-child(1) p{ text-indent: -9999px; }
+.service-consulting-list .service-consulting-list-item:nth-child(2) { padding:15px 0 0 15px !important; }
+.service-consulting-list .service-consulting-list-item:nth-child(2) h4 { text-align: left; font-size:16px; font-weight: 350; line-height: 24px;}
+.service-consulting-list-item-title { font-size:18px; font-weight: 400; }
+.service-consulting-list-item-title-sub { font-size:14px; font-weight: 350; }
+.service-consulting-list-item-sub-text { font-size:16px; font-weight: 350; padding-right:50px; padding-top:15px; line-height: 24px;}
+.service-consulting-wrap ul{ padding:0px; }
 
+/* service infomation Joint business */
+.service-joint-business .section-title { padding:60px 0px 60px 0px; }
+.service-joint-business .section-title h1{ display: inline-block;}
+.service-joint-business .section-title h5{ display: inline-block; padding-left:10px;}
+.service-joint-business .section-title h4{ font-weight:350; }
+.service-joint-business-list-item h2{ color:#767676; font-size:42px; font-weight:600;}
+.service-joint-business-list-item h2:nth-child(2){ color:#aaa; border-bottom: 10px solid #ccc; margin-bottom:20px; font-weight:400;}
+.service-joint-business-list-item { padding:50px 0 0 0; text-align: left;}
+.service-joint-business-list-item:nth-child(1){ visibility:hidden; overflow: hidden; min-height:450px; background:url("/img/serviceinfo/Joint-business.jpg") no-repeat; background-size:cover;}
+.service-joint-business-list-item:nth-child(1) p{ text-indent: -9999px; }
+.service-joint-business-list-item:nth-child(2) { padding:15px 0 0 15px !important; }
+.service-joint-business-list-item:nth-child(2) h4 { text-align: left; font-size:16px; font-weight: 350; line-height: 24px;}
+.service-joint-business-list-item:nth-child(3){ visibility:hidden; overflow: hidden; margin-top:15px; min-height:250px; background:url("/img/serviceinfo/Joint-business02.jpg") no-repeat; background-size:cover;}
+.service-joint-business-list-item-title { font-size:18px; font-weight: 400; }
+.service-joint-business-list-item-title-sub { font-size:14px; font-weight: 350; }
+.service-joint-business-list-item-sub-text { font-size:16px; font-weight: 350; padding-right:50px; padding-top:15px; line-height: 24px;}
+.service-joint-business-wrap ul{ padding:0px; }
+
+/* service infomation Project Meniger */
+.service-project-meniger .section-title { padding:60px 0px 10px 0px; text-align: left;}
+.service-project-meniger .section-title h1{ display: inline-block;}
+.service-project-meniger .section-title h5{ display: inline-block; padding-left:10px;}
+.service-project-meniger .section-title h4{ font-weight:350; }
+.service-project-meniger-list .service-project-meniger-list-item { padding:50px 0 0 0; text-align: left;}
+.service-project-meniger-list .service-project-meniger-list-item:nth-child(1){ visibility:hidden; overflow: hidden; min-height:450px; width:100%; background:url("/img/serviceinfo/project-meniger.jpg") no-repeat; background-size:cover;}
+.service-project-meniger-list .service-project-meniger-list-item:nth-child(1) p{ text-indent: -9999px; }
+.service-project-meniger-list .service-project-meniger-list-item:nth-child(2) { padding:15px 0 0 0 !important; }
+.service-project-meniger-list .service-project-meniger-list-item:nth-child(2) h4 { text-align: left; font-size:16px; font-weight: 350; line-height: 24px;}
+.service-project-meniger-list-item-title { font-size:18px; font-weight: 400; }
+.service-project-meniger-list-item-title-sub { font-size:14px; font-weight: 350; }
+.service-project-meniger-list-item-sub-text { font-size:16px; font-weight: 350; padding-right:50px; padding-top:15px; line-height: 24px;}
+.service-project-meniger-wrap ul{ padding:0px; }
 
 
 /* 공통 추가 */
@@ -1197,13 +1273,15 @@ tail
 .button-link-blue:after { font-family: "FontAwesome"; color:#F6F6F6; content:"\f054"; display:inline-block; position:relative; right:0px; bottom:-1px; width:20px; height:30px; margin-left:10px; transition:all .5s;}
 .button-link-blue:hover { background:rgba(55,79,97,0.4); color:#fff; border: 1.5px solid rgba(55,79,97,0.4);}
 .button-link-blue:hover:after { color:rgb(246, 246, 246); transform: rotate(180deg); }
+.inline-block { display: inline-block;}
+
 
 /* page-top-title Start */
 .page-top-title {  }
 .page-top-title.procedure .page-top-title-bg { background: url("/img/title/service_pro.jpg") no-repeat; background-size:cover; width:100%; background-attachment: fixed;}
 .page-top-title-bg { padding: 80px 0px; }
-.page-top-title-text h1{ color:#fff; text-align: left; padding-left:20px; }
-.page-top-title-text h5{ color:#fff; text-align: left; padding-left:20px; letter-spacing: 5px;}
+.page-top-title-text h1{ color:#fff; padding-left:20px; }
+.page-top-title-text h5{ color:#fff; padding-left:20px; letter-spacing: 5px;}
 .page-top-title-subtext { padding:30px 0 0;}
 .page-top-title-subtext h2{  }
 .page-top-title-subtext h3{  }
@@ -1238,21 +1316,6 @@ tail
 
 
 
-
-
-@media all and (max-width:991px) {
-.aboutus { padding:0px 20px 100px 20px; }
-.mobile-img { display:block;}
-.ab-content {background:none;}
-.section-title { padding-top:60px; }
-.businessarea-list li {padding:0px;}
-.businessarea-list li:nth-child(1n+3) {margin-top:0px;}
-.businessarea-list li:nth-child(2n+1)>.businessarea-list-item-wrap:after,.businessarea-list li:nth-child(2n+2)>.businessarea-list-item-wrap:after { content: ""; position:absolute; width:calc( 100% - 10px ) ; left:5px; top:5px; min-height:210px; border:1px solid rgba(57,57,57,0.5); transition: border .5s; box-sizing:border-box; z-index: -1; }
-
-}
-
-
-
 @media all and (max-width:1310px) {
   .aboutus-title-list h2,.aboutus-title-list h3,.aboutus-title-list h4 { background:rgba(237,237,237,0.8); }
   .greeting { height:100%; min-height:100%;}
@@ -1269,7 +1332,19 @@ tail
   .businessarea-list li:nth-child(1n+3) {margin-top:-40px;}
 }
 
+@media all and (max-width:991px) {
+.aboutus { padding:0px 20px 100px 20px; }
+.mobile-img { display:block;}
+.ab-content {background:none;}
+.section-title { padding-top:60px; }
+.businessarea-list li {padding:0px;}
+.businessarea-list li:nth-child(1n+3) {margin-top:0px;}
+.businessarea-list li:nth-child(2n+1)>.businessarea-list-item-wrap:after,.businessarea-list li:nth-child(2n+2)>.businessarea-list-item-wrap:after { content: ""; position:absolute; width:calc( 100% - 10px ) ; left:5px; top:5px; min-height:210px; border:1px solid rgba(57,57,57,0.5); transition: border .5s; box-sizing:border-box; z-index: -1; }
+}
 
+@media all and (max-width:767px) {
+.service-consulting-list .service-consulting-list-item:nth-child(2) { padding:15px 0 0 0px !important; }
+}
 
 
 

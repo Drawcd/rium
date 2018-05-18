@@ -12,14 +12,17 @@
 .list-category .dropdown { margin-bottom:20px; }
 .list-category .active a, .list-category .selected a { color:crimson; font-weight:bold !important; }
 
+.wr_content { min-height:350px;}
 /* List */
 .list-wrap { width:100%; }
 .list-admin { text-align:center; margin:15px 0px; }
 .list-btn .sort-drop { min-width:120px !important; left:auto !important; right:0px !important; }
 .list-btn .sort-drop .sort a { color:crimson !important; font-weight:bold !important; }
 .is-pc .ko .list-btn .sort-drop { font-size: 12px; }
+.list-head { background:#607d8b; border:none;}
 .list-btn .form-group { font-family:"Noto Sans KR", dotum, sans-serif; }
 .list-btn .form-group .btn-group a{ background:#607d8b; border:none; padding: 7px 12px; font-family:"Noto Sans KR", dotum, sans-serif; font-size: 14px; font-weight: 400; transition: all .3s}
+.list-btn .form-group .dropdown-menu a{ background:#fff; color:#607d8b;}
 .list-btn .form-group .btn-group a:nth-child(3){ background:#ff9800; border:none; padding: 7px 12px; font-family:"Noto Sans KR", dotum, sans-serif; font-size: 14px; font-weight: 400; transition: all .3s}
 .list-btn .form-group .btn-group a:hover{ background:#009688; }
 .list-btn .form-group .btn-group a:nth-child(3):hover{ background:#f44336; }

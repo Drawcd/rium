@@ -5,7 +5,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css" media="screen">', 0);
 
 // 헤더 출력
-$header_skin = (isset($boset['header_skin']) && $boset['header_skin']) ? $boset['header_skin'] : ''; 
+$header_skin = (isset($boset['header_skin']) && $boset['header_skin']) ? $boset['header_skin'] : '';
 if($header_skin) {
 	$header_color = $boset['header_color'];
 	include_once('./header.php');
@@ -21,7 +21,7 @@ $btn2 = (isset($boset['btn2']) && $boset['btn2']) ? $boset['btn2'] : 'color';
 
 $is_use_tag = ((!$boset['tag'] && $is_admin) || ($boset['tag'] && $member['mb_level'] >= $boset['tag'])) ? true : false;
 
-if($is_dhtml_editor) { 
+if($is_dhtml_editor) {
 ?>
 <style>
 	#wr_content { border:0; display:none; }

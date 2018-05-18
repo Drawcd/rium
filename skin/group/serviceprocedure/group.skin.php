@@ -88,20 +88,18 @@ for ($i=0; $row=sql_fetch_array($result); $i++) { ?>
 </nav>
 <!-- page-title Start -->
 <div class="list-style-none procedure page-top-title section-group">
-  <!-- section-title start -->
   <div class="page-top-title-bg">
     <div class="at-container">
-			<div class="page-top-title-text">
+			<div class="page-top-title-text animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60">
 	      <h1>서비스절차안내</h1>
 	      <h5>Service Procedure Guide</h5>
 	    </div>
 	    <div class="page-top-title-subtext">
-	      <h4 class="fc-white">최고의 사업 파트너로서 <span class="emphasize font-c01">가치</span>와 <span class="emphasize font-c01">성공</span>을 드리겠습니다.</h4>
+				<h4 class="fc-white animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60">최고의 사업 파트너로서 <span class="emphasize font-c01">가치</span>와 <span class="emphasize font-c01">성공</span>을 드리겠습니다.</h4>
 	    </div>
 		</div>
   </div>
 </div>
-
 <!-- php-include -->
 <div id="section-one" class="widget-box section section-group scroll-item" title="서비스신청안내">
   <?php echo apms_widget('rium-page-include', $wid.'-service-pro01'); ?>

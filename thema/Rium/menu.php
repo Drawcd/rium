@@ -4,7 +4,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 	<div class="nav-visible">
 		<div class="nav-logo">
-			<a href="/"><img src="/img/de-logo.png" alt=""></a>
+			<a href="/"><img src="/img/rium_outline.png" alt=""></a>
 		</div>
 		<div class="at-container text-center">
 			<div class="nav-top nav-float nav-slide">

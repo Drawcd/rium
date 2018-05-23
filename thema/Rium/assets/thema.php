@@ -141,7 +141,7 @@ if($col_name == 'two') {
 }
 
 // 메뉴높이
-$is_menuh = (isset($at_set['mh']) && $at_set['mh'] > 0) ? $at_set['mh'] : 44;
+$is_menuh = (isset($at_set['mh']) && $at_set['mh'] > 0) ? $at_set['mh'] : 60;
 
 // 좌측형 메뉴간격
 $is_menup = (isset($at_set['ms']) && $at_set['ms'] > 0) ? $at_set['ms'] : 25;

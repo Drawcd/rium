@@ -120,116 +120,19 @@ for ($i=0; $row=sql_fetch_array($result); $i++) { ?>
 <div class="widget-box section-group" >
   <?php echo apms_widget('rium-page-include', $wid.'-aboutus05'); ?>
 </div>
-<script>
 <!-- php-include End-->
 
-jQuery(function($) {
 
-  var html = $('html');
-  var viewport = $(window);
-  var viewportHeight = viewport.height();
-
-  var scrollMenu = $('#section-menu');
-  var timeout = null;
-
-  function menuFreeze() {
-    if (timeout !== null) {
-      scrollMenu.removeClass('freeze');
-      clearTimeout(timeout);
-    }
-
-    timeout = setTimeout(function() {
-      scrollMenu.addClass('freeze');
-    }, 2000);
-  }
-  scrollMenu.mouseover(menuFreeze);
-
-  /* ==========================================================================
-	   Build the Scroll Menu based on Sections .scroll-item
-	   ========================================================================== */
-
-  var sectionsHeight = {},
-    viewportheight, i = 0;
-  var scrollItem = $('.scroll-item');
-  var bannerHeight;
-
-  function sectionListen() {
-    viewportHeight = viewport.height();
-    bannerHeight = (viewportHeight);
-    $('.section').addClass('resize');
-    scrollItem.each(function() {
-      sectionsHeight[this.title] = $(this).offset().top;
-    });
-  }
-  sectionListen();
-  viewport.resize(sectionListen);
-  viewport.bind('orientationchange', function() {
-    sectionListen();
-  });
-
-  var count = 0;
-
-  scrollItem.each(function() {
-    var anchor = $(this).attr('id');
-    var title = $(this).attr('title');
-    count++;
-    $('#section-menu ul').append('<li><a id="nav_' + title + '" href="#' + anchor + '"><span>' + count + '</span> ' + title + '</a></li>');
-  });
-
-  function menuListen() {
-    var pos = $(this).scrollTop();
-    pos = pos + viewportHeight * 0.625;
-    for (i in sectionsHeight) {
-      if (sectionsHeight[i] < pos) {
-        $('#section-menu a').removeClass('active');
-        $('#section-menu a#nav_' + i).addClass('active');;
-        var newHash = '#' + $('.scroll-item[title="' + i + '"]').attr('id');
-        if (history.pushState) {
-          history.pushState(null, null, newHash);
-        } else {
-          location.hash = newHash;
-        }
-      } else {
-        $('#section-menu a#nav_' + i).removeClass('active');
-        if (pos < viewportHeight - 72) {
-          history.pushState(null, null, ' ');
-        }
-      }
-    }
-  }
-  scrollMenu.css('margin-top', scrollMenu.height() / 2 * -1);
-
-  /* ==========================================================================
-	   Smooth Scroll for Anchor Links and URL refresh
-	   ========================================================================== */
-
-  scrollMenu.find('a').click(function() {
-    var href = $.attr(this, 'href');
-    $('html').animate({
-      scrollTop: $(href).offset().top
-    }, 500, function() {
-      window.location.hash = href;
-    });
-    return false;
-  });
-
-  /* ==========================================================================
-	   Fire functions on Scroll Event
-	   ========================================================================== */
-
-  function scrollHandler() {
-    menuListen();
-    menuFreeze();
-
-  }
-  scrollHandler();
-  viewport.on('scroll', function() {
-    scrollHandler();
-    //			window.requestAnimationFrame(scrollHandler);
-  });
-});
-</script>
-
+<div class="section-navigator">
+	<ul class="section-navigator-list">
+		<li class="section-navigator-item"><h4>페이지메뉴</h4></li>
+		<li class="section-navigator-item"><a href="#section-one" class="section-navigator-link"><h4>인사말</h4></a></li>
+		<li class="section-navigator-item"><a href="#section-two" class="section-navigator-link"><h4>회사소개</h4></a></li>
+		<li class="section-navigator-item"><a href="#section-three" class="section-navigator-link"><h4>비즈니스영역</h4></a></li>
+		<li class="section-navigator-item"><a href="#section-four" class="section-navigator-link"><h4>조직도</h4></a></li>
+		<li class="section-navigator-item"><a href="#section-five" class="section-navigator-link"><h4>찾아오는길</h4></a></li>
+	</ul>
+</div>
 
 <?php if($setup_href) { ?>
 	<p class="text-center btn-wset">

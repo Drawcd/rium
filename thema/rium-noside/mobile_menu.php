@@ -5,7 +5,7 @@
     <div class="mobile-container mobile-menu-responsive">
       <div class="mobile-menu">
           <ul class="dept1-wrap">
-            <li class="menu-all-btn">
+            <!-- <li class="menu-all-btn">
               <div class="padding-20 menu-a">
                 <ul>
                   <li class="mobile-menu-open-logo">
@@ -13,14 +13,14 @@
                   </li>
                 </ul>
               </div>
-            </li>
-            <!-- <li class="menu-all-btn">
-              <div class="padding-20 bc-orange">
+            </li> -->
+            <li class="menu-all-btn">
+              <div class="padding-20">
                 <a href="javascript:;" class="mobile-menu-close-btn" data-toggle="collapse" data-target="#menu-all"><i class="fa fa-times"> </i>
                   <span class="mobile-menu-close f_nanum font-w700 font-s22">메뉴 닫기</span>
                 </a>
               </div>
-            </li> -->
+            </li>
           <?php
             $az = 0;
             for ($i=1; $i < $menu_cnt; $i++) {
@@ -33,7 +33,7 @@
               }
           ?>
           <li class="dept1-item <?php echo $menu[$i]['on'];?>">
-            <a class="dept1-link menu-a font-s22 " href="<?php echo $menu[$i]['href'];?>"<?php echo $menu[$i]['target'];?>>
+            <a class="dept1-link menu-a font-s22 collapse" href="<?php echo $menu[$i]['href'];?>"<?php echo $menu[$i]['target'];?>>
               <?php echo $menu[$i]['name'];?>
               <?php if($menu[$i]['new'] == "new") { ?>
                 <i class="fa fa-bolt new"></i>
@@ -70,12 +70,7 @@
             </div>
           </li> -->
           <li class="menu-all-bottom-btn ">
-            <div class="">
-              <a href="javascript:;" class="mobile-menu-close-btn menu-a point-color03" data-toggle="collapse" data-target="#menu-all"><i class="fa fa-times"> </i>
-                <span class="mobile-menu-close font-w700 font-s22">메뉴 닫기</span>
-              </a>
-            </div>
-            <div class="">
+            <div class="point-color05">
               <h4 class="font-s16">상담문의 : 031-962-8070</h4>
             </div>
           </li>

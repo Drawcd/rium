@@ -149,7 +149,7 @@ $side = ($at_set['side']) ? 'left' : 'right';
   </div>
 </div>
 
-<div id="section02" class="section">
+<div id="section02" class="section at-container">
   <div class="widget-box">
     <?php echo apms_widget('rium-page-include', $wid.'-main-slider-bottom-image'); ?>
   </div>
@@ -160,18 +160,19 @@ $side = ($at_set['side']) ? 'left' : 'right';
 <div id="section03" class="point-color02 performance">
   <div class="at-container widget-index">
     <div class="section">
-      <div class="section-item" >
-        <h3 class="section-list-title animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100">건설사례 및 예정</h3>
-        <div class="section-group animate performance-title" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.3s" data-offset="100">
+      <div class="section-item">
+        <h3 class="section-list-title animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="30">건설사례 및 예정</h3>
+        <div class="section-group animate performance-title" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.3s" data-offset="30">
           <span class="">
             <h3 class="fc-orange section-list-sub">COMPANY</h3>
           </span>
           <span class="">
             <h3 class="section-list-sub">PERFORMANCE</h3>
           </span>
+          <p>각 업무 영역별 업무실적 및 예정지를 안내해 드립니다.</p>
         </div>
       </div>
-      <div class="widget-box animate main-rium-post-slider" data-animate="fadeIn" data-duration="1.5s" data-delay="0.1s" data-offset="100">
+      <div class="widget-box animate main-rium-post-slider" data-animate="fadeIn" data-duration="1.5s" data-delay="0.1s" data-offset="30">
         <?php echo apms_widget('rium-post-slider', $wid.'-company-performance'); ?>
       </div>
     </div>
@@ -262,7 +263,7 @@ $side = ($at_set['side']) ? 'left' : 'right';
 			</div>
 
       			<!-- 이미지 배너 시작 -->
-			<div class="widget-box widget-img">
+			<div class="widget-box widget-img main-popup02">
 				<a href="#배너이동주소">
 					<img src="<?php echo THEMA_URL;?>/assets/img/banner.jpg">
 				</a>
@@ -272,13 +273,20 @@ $side = ($at_set['side']) ? 'left' : 'right';
 			<!-- 배너 시작 -->
 			<div class="div-title-underbar">
 				<a href="<?php echo G5_BBS_URL;?>/board.php?bo_table=basic">
-					<span class="pull-right lightgray <?php echo $font;?>">+</span>
-					<span class="div-title-underbar-bold border-<?php echo $line;?> <?php echo $font;?>">
-						<b>Banner</b>
-					</span>
+          <span class="div-title-underbar-bold border-<?php echo $line;?> <?php echo $font;?>">
+            <h3>테스트</h3>
+          </span>
 				</a>
+        <a href="<?php echo G5_BBS_URL;?>/board.php?bo_table=basic" class="main-board p-absolute p-right">
+          <span class="lightgray <?php echo $font;?>"><i class="main-board far fa-plus"></i></span>
+        </a>
 			</div>
-			<div class="widget-box">
+
+
+
+
+
+			<div class="widget-box main-bottom-board">
 				<?php echo apms_widget('basic-post-slider', $wid.'-wm9', 'center=1 nav=1', 'auto=0'); ?>
 			</div>
 			<!-- 배너 끝 -->

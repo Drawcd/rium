@@ -213,6 +213,7 @@ if(!$page_background) {
 	.pc-menu .nav-top.nav-float .menu-a { padding:0px <?php echo $is_menup;?>px; }
 	.pc-menu .nav-top.nav-float .sub-1div::before { left: <?php echo $is_menup;?>px; }
 	.pc-menu .subm-w { width:<?php echo $is_subw;?>px; }
+  .at-title { padding: <?php echo $is_menuh;?>px 0px;}
 	@media all and (min-width:1200px) {
 		.responsive .boxed.wrapper { max-width:<?php echo $is_thema_size;?>px; }
 	}

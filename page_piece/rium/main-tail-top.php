@@ -16,7 +16,7 @@ $sns_share_icon .= '</div>';
 
 <div  class="widget-box point-color10">
   <!-- 메인 영역 -->
-  <div class="col-md-12 contactinfo <?php echo ($side == "left") ? ' pull-right' : '';?> at-col at-main">
+  <div class="at-container contactinfo <?php echo ($side == "left") ? ' pull-right' : '';?> at-col at-main">
     <div class="col-sm-6">
       <div class="tail-contactinfo-wrap">
         <div>

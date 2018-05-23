@@ -4,7 +4,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$write_skin_url.'/write.css" media="screen">', 0);
 
-if(!$header_skin) { 
+if(!$header_skin) {
 ?>
 <div class="well">
 	<h2><?php echo $g5['title'] ?></h2>
@@ -104,7 +104,7 @@ if(!$header_skin) {
 	<div class="col-sm-10">
 		<input type="hidden" name="as_icon" value="<?php echo $write['as_icon'];?>" id="picon">
 		<?php
-			$fa_photo = (isset($boset['ficon']) && $boset['ficon']) ? apms_fa($boset['ficon']) : '<i class="fa fa-user"></i>';		
+			$fa_photo = (isset($boset['ficon']) && $boset['ficon']) ? apms_fa($boset['ficon']) : '<i class="fa fa-user"></i>';
 			$myicon = ($w == 'u') ? apms_photo_url($write['mb_id']) : apms_photo_url($member['mb_id']);
 			$myicon = ($myicon) ? '<img src="'.$myicon.'">' : $fa_photo;
 			if($write['as_icon']) {
@@ -115,8 +115,8 @@ if(!$header_skin) {
 			}
 		?>
 		<style>
-			.write-wrap .talker-photo i { 
-				<?php echo (isset($boset['ibg']) && $boset['ibg']) ? 'background:'.apms_color($boset['icolor']).'; color:#fff' : 'color:'.apms_color($boset['icolor']);?>; 
+			.write-wrap .talker-photo i {
+				<?php echo (isset($boset['ibg']) && $boset['ibg']) ? 'background:'.apms_color($boset['icolor']).'; color:#fff' : 'color:'.apms_color($boset['icolor']);?>;
 			}
 		</style>
 		<span id="ticon" class="talker-photo"><?php echo $as_icon;?></span>
@@ -173,7 +173,7 @@ if(!$header_skin) {
 						<div id="autosave_pop">
 							<ul></ul>
 						</div>
-					</div>	
+					</div>
 				</div>
 			</div>
 		</div>
@@ -324,7 +324,7 @@ if(!$header_skin) {
 <?php } ?>
 
 <div class="write-btn pull-center">
-	<button type="submit" id="btn_submit" accesskey="s" class="btn btn-<?php echo $btn2;?> btn-sm"><i class="fa fa-check"></i> <b>작성완료</b></button>
+	<button type="submit" id="btn_submit" accesskey="s" class="btn btn-<?php echo $btn2;?> btn-sm"><i class="fa fa-check"></i> 작성완료</button>
 	<a href="./board.php?bo_table=<?php echo $bo_table ?>" class="btn btn-<?php echo $btn1;?> btn-sm" role="button">취소</a>
 </div>
 

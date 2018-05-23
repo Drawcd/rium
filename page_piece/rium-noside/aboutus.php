@@ -1,22 +1,32 @@
 <div class="list-style-none aboutus section-group">
-  <div class="section-title section-group">
-    <ul class="section-list">
-      <li class="section-list-item">
-        <img src="/img/rium_outline.png" alt="" width="320px;">
-      </li>
-      <li class="section-title-item">
-        <h2 class="font-c02">“부동산 건설시장의 새로운 가치를 만든다”</h2>
-      </li>
-      <li class="section-title-item">
-        <h4 class="font-c02">각 분야별 역량을 한곳에 모아 그동안 해결하지 못했던 문제점을 개선하기위해 <span class="emphasize font-c01">RIUM</span>은 새로운 시스템을 제안합니다.</h4>
-      </li>
-      <li class="section-title-item">
-        <h4 class="font-c02">시행,설계,시공,분양은 부동산시장을 형성하는 일련의 요소들로 성공적인 사업에 있어 연결 지속성이 필요 했습니다. 그래서 RIUM은 서로 신뢰 할 수 있는 전문기업들이 만나 일련의 과정을 하나로 만들어 시행 착오를 줄이고 사업 기간을 단축시켰으며, 성공적인 사업을 위해 분양까지 완벽하게 마무리 할 수 있는 시스템을 갖추었습니다.
-        </h4>
-      </li>
-    </ul>
+  <!-- section-title start -->
+  <div class="section-title section-group text-center">
+    <h1>브랜드비전</h1>
+    <h5>Brand vision</h5>
+    <div class="section-title-subtext">
+      <h3><span>고객감동</span>을 목표로 하는 조직</h3>
+      <h4><span>고객과</span>의 <span>약속</span>을 소중히 지키기 위해 <span>리움</span>의 구성원들은</h4>
+      <h4>언제나 자신의 자리에서 최선을 다하고 있습니다.</h4>
+    </div>
   </div>
-  <div class="section-group padding-tb-80">
+    <!-- section-title End -->
+
+  <ul class="section-list text-center">
+    <!-- <li class="section-list-item">
+      <img src="/img/rium_outline.png" alt="" width="320px;">
+    </li> -->
+    <li class="section-title-item">
+      <h2 class="fc02">“부동산 건설시장의 새로운 가치를 만든다”</h2>
+    </li>
+    <li class="section-title-item">
+      <h4 class="fc02">각 분야별 역량을 한곳에 모아 그동안 해결하지 못했던 문제점을 개선하기위해 <span class="emphasize fc01">RIUM</span>은 새로운 시스템을 제안합니다.</h4>
+    </li>
+    <li class="section-title-item">
+      <h4 class="fc02">시행,설계,시공,분양은 부동산시장을 형성하는 일련의 요소들로 성공적인 사업에 있어 연결 지속성이 필요 했습니다. 그래서 RIUM은 서로 신뢰 할 수 있는 전문기업들이 만나 일련의 과정을 하나로 만들어 시행 착오를 줄이고 사업 기간을 단축시켰으며, 성공적인 사업을 위해 분양까지 완벽하게 마무리 할 수 있는 시스템을 갖추었습니다.
+      </h4>
+    </li>
+  </ul>
+  <div class="section-group padding-tb-80 text-center">
     <h1>Brand vision</h1>
     <ul class="section-list col-md-12 col-xs-12 rium-concept">
       <li class="col-md-4 col-xs-4 rium-concept-list ">

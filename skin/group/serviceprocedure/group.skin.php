@@ -95,7 +95,7 @@ for ($i=0; $row=sql_fetch_array($result); $i++) { ?>
 	      <h5>Service Procedure Guide</h5>
 	    </div>
 	    <div class="page-top-title-subtext">
-				<h4 class="fc-white animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60">최고의 사업 파트너로서 <span class="emphasize font-c01">가치</span>와 <span class="emphasize font-c01">성공</span>을 드리겠습니다.</h4>
+				<h4 class="fc-white animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60">최고의 사업 파트너로서 <span class="emphasize fc01">가치</span>와 <span class="emphasize fc01">성공</span>을 드리겠습니다.</h4>
 	    </div>
 		</div>
   </div>

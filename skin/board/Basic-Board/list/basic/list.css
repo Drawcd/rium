@@ -8,8 +8,6 @@
 .list-board .list-head span,.list-board .list-head span a{ font-size:14px; font-weight:400; color:#fff;}
 
 /* List head */
-.list-head.div-head.border-color { border:none; background:#607d8b; }
-
 .list-board #infscr-loading { background: rgb(0, 0, 0); margin:0px; padding: 10px; border-radius: 10px; left: 50%; width: 200px; margin-left:-110px; text-align: center; bottom: 50px; color: rgb(255, 255, 255); position: fixed; z-index: 100; opacity: 0.8; -webkit-border-radius: 10px; -moz-border-radius: 10px; }
 .list-board .list-more { text-align:center; margin-top:15px; }
 .list-board .list-more a { color:#ddd; font-size:60px; }

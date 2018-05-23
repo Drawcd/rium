@@ -41,24 +41,26 @@ include_once(THEMA_PATH.'/assets/thema.php');
 	</header>
 
 	<!-- Menu -->
-  <div class="at-menu-bg-margin"></div>
-	<nav class="at-menu nav-fixed">
+  <!-- <div class="at-menu-bg-margin"></div> -->
+	<nav class="at-menu">
 		<!-- PC Menu -->
-		<div class="pc-menu bc-white">
+		<div class="pc-menu navigation-bg-color">
 			<!-- Menu Button & Right Icon Menu -->
 			<div class="at-container">
 				<div class="nav-right nav-rw nav-height">
 					<ul>
-						<li>
-							<a href="javascript:;" onclick="sidebar_open('sidebar-search');"<?php echo tooltip('검색');?>>
-								<i class="fa fa-search"></i>
-							</a>
-						</li>
+						<?php if ($is_admin) { ?>
+							<li>
+								<a href="javascript:;" onclick="sidebar_open('sidebar-search');"<?php echo tooltip('검색');?>>
+									<i class="fa fa-search"></i>
+								</a>
+							</li>
 						<li class="menu-all-icon"<?php echo tooltip('전체메뉴');?>>
 							<a href="javascript:;" class="pc-menu-open-btn" data-toggle="collapse" data-target="#menu-all">
 								<i class="fa fa-th"></i>
 							</a>
 						</li>
+						<?php } ?>						
 					</ul>
 					<div class="clearfix"></div>
 				</div>

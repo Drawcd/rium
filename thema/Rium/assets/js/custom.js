@@ -366,9 +366,9 @@ $(window).on("resize.slickVideoPlayer", function(){
 });
 
 // masonry
-$('.section-wrap').masonry({
-  itemSelector: '.size-four-two-one , .size-two-two-one ,.size-three-one-one',
-  columnWidth: 0
+$('.masonry-wrap').masonry({
+  itemSelector: '.masonry-list' ,
+  columnWidth: 0,
 });
 
 // page at-body 높이 계산

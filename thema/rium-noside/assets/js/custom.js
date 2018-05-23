@@ -413,3 +413,21 @@ $(window).on("resize.slickVideoPlayer", function(){
 
 
 // other
+
+
+
+	function scrolling(obj){
+		var speed = 700;
+		if (!obj){
+			$('html, body').stop().animate({scrollTop:0},speed);
+		}else{
+			var posTop = $(obj).offset().top -0;
+			$('html, body').stop().animate({scrollTop:posTop}, speed )
+		}
+	};
+
+	$(".section-navigator-item a").click(function(){
+		var direction = $(this).attr("href");
+		scrolling( direction );
+		return false;
+	});

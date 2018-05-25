@@ -84,7 +84,7 @@ $side = ($at_set['side']) ? 'left' : 'right';
 
 	<div class="item youtube">
     <!-- <span class="loading">Loading...</span> -->
-    <iframe class="embed-player slide-media" width="1920" height="1080" src="https://www.youtube.com/embed/UkY0VLVc3wk?enablejsapi=1&controls=0&fs=0&iv_load_policy=1&rel=0&showinfo=0&loop=1&playlist=tdwbYGe8pv8&start=0" allow="autoplay;" frameborder="0" allowfullscreen></iframe>
+    <iframe class="embed-player slide-media" width="1920" height="1080" src="https://www.youtube.com/embed/UkY0VLVc3wk?enablejsapi=1&controls=0&fs=0&iv_load_policy=1&rel=0&showinfo=0&loop=1&playlist=tdwbYGe8pv8&start=0&autoplay=1&volume=1" loop="1" volume="0.01;" allow="autoplay;" frameborder="0" allowfullscreen></iframe>
     <p class="caption">CEO 인사말</p>
   </div>
 	<div class="item youtube">

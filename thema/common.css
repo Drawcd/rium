@@ -109,6 +109,13 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 ■ PC Menu Top : PC 상단 좌측 메뉴
 ********************************************************/
 
+/* 배분 스타일 */
+.pc-menu .nav-top.nav-both .menu-ul { display:table; width:100%; table-layout:fixed; margin:0px; }
+.pc-menu .nav-top.nav-both .menu-li {display:table-cell;vertical-align:top;}
+.pc-menu .nav-top.nav-both .menu-a { padding:0px; text-align:center; }
+.pc-menu .nav-top.nav-both .sub-1div::before { left: 50%; margin-left:-8px; }
+.pc-menu .nav-top.nav-both .sub-1div { position:relative; }
+
 /* 좌측 스타일 */
 .pc-menu .nav-top.nav-float .menu-ul .sub-1dul li{ font-size: 14px; }
 .pc-menu .nav-top.nav-float .menu-li { float:left; min-width:130px;}

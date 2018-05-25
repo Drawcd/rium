@@ -5,7 +5,7 @@
 .list-category .div-tab.tabs { margin-bottom:0px; }
 
 .list-board { margin-bottom:15px; }
-.list-board .list-head span,.list-board .list-head span a{ font-size:14px; font-weight:400; color:#fff;}
+.list-board .list-head span,.list-board .list-head span a{ font-size:14px; font-weight:400; color:#607d8b;}
 
 /* List head */
 .list-board #infscr-loading { background: rgb(0, 0, 0); margin:0px; padding: 10px; border-radius: 10px; left: 50%; width: 200px; margin-left:-110px; text-align: center; bottom: 50px; color: rgb(255, 255, 255); position: fixed; z-index: 100; opacity: 0.8; -webkit-border-radius: 10px; -moz-border-radius: 10px; }
@@ -46,7 +46,7 @@
 .list-board .wr-hidden { display:none; }
 
 /* List */
-.list-board .list-body { list-style:none; padding:0px; margin:0px; font-size: 14px;}
+.list-board .list-body { list-style:none; padding:0px; margin:0px; font-size: 14px; border-bottom: 4px solid #607d8b;}
 .list-board .list-body li { border-bottom:1px solid #ddd; display:table; width:100%; table-layout:fixed; }
 .list-board .list-body li:hover { color:#000; background-color:#F8F8F8; }
 .list-board .list-body li > div { display:table-cell; height:34px; line-height:28px; padding:6px 0px; text-align:center; color:#666; vertical-align:middle; }

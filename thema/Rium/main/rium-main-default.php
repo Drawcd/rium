@@ -1,5 +1,5 @@
 <!-- main-popup-intro -->
-<!-- <div id="main-popup-intro" class="main-popup-intro">
+<div id="main-popup-intro" class="main-popup-intro">
 	<div class="main-popup-intro-grep">
 		<div class="main-popup-intro-grep-logo">
 			<div class="main-popup-intro-grep-logo-outline">
@@ -46,7 +46,7 @@
 			<p class="">본 사이트는 음성이 포함되어 있으므로 참고 부탁드립니다.</p>
 		</div>
 	</div>
-</div> -->
+</div>
 
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
@@ -82,20 +82,12 @@ $side = ($at_set['side']) ? 'left' : 'right';
 
 <div class="main-slider">
 
-  <div class="item video">
-    <video class="slide-video slide-media" loop muted preload="metadata" poster="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLSXZCakVGZWhOV00">
-      <source src="/video/video01.mp4" type="video/mp4" />
-    </video>
-    <p class="caption">HTML 5 Video</p>
+	<div class="item youtube">
+    <!-- <span class="loading">Loading...</span> -->
+    <iframe class="embed-player slide-media" width="1920" height="1080" src="https://www.youtube.com/embed/UkY0VLVc3wk?enablejsapi=1&controls=0&fs=0&iv_load_policy=1&rel=0&showinfo=0&loop=1&playlist=tdwbYGe8pv8&start=0" allow="autoplay;" frameborder="0" allowfullscreen></iframe>
+    <p class="caption">CEO 인사말</p>
   </div>
-  <div class="item video">
-    <video class="slide-video slide-media" loop muted preload="metadata" poster="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLSXZCakVGZWhOV00">
-      <source src="/video/video02.mp4" type="video/mp4" />
-    </video>
-    <p class="caption">HTML 5 Video</p>
-  </div>
-
-  <div class="item youtube">
+	<div class="item youtube">
     <!-- <span class="loading">Loading...</span> -->
     <iframe class="embed-player slide-media" width="1280" height="720" src="https://www.youtube.com/embed/wav98ohEEm0?enablejsapi=1&controls=0&fs=0&iv_load_policy=1&rel=0&showinfo=0&loop=1&playlist=tdwbYGe8pv8&start=0" frameborder="0" allowfullscreen></iframe>
     <p class="caption">YouTube</p>

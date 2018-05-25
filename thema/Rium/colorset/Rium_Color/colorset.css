@@ -12,7 +12,7 @@
 main-popup-intro : 메인페이지 오버 인트로
 ********************************************************/
 
-.main-popup-intro { position:fixed; width:100%; height:100vh; background:rgba(33,33,33,.7); top:0; z-index:10;}
+.main-popup-intro { position:fixed; width:100%; height:100vh; background:rgba(33,33,33,1); top:0; z-index:10;}
 .main-popup-intro-grep {position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); }
 
 .main-popup-intro-grep-logo-outline { width:320px; height:175px; position:absolute; top:0;}
@@ -362,7 +362,7 @@ section05
 #section05 .section-wrap .section-wrap-item .section-wrap-list .section-wrap-list-text { position:relative;}
 #section05 .section-wrap .section-wrap-item .section-wrap-list .section-wrap-list-text h3{ text-align: center; color:#fff;}
 #section05 .section-wrap .section-wrap-item .section-wrap-list .section-wrap-list-text h3:nth-child(2){ margin-top:10px;}
-#section05 .section-wrap .section-wrap-item .section-wrap-list .section-wrap-list-text p{ white-space:pre-line; font-size:18px; font-weight:300; margin-top:20px; color:#fff;}
+#section05 .section-wrap .section-wrap-item .section-wrap-list .section-wrap-list-text p{ white-space:pre-line; font-size:16px; font-weight:300; margin-top:20px; color:#fff;}
 #section05 .section-wrap-list-text { padding:25px; height:240px;}
 #section05 .section-group {margin: 60px 0;}
 #section05 .section-item .section-group { text-align:center;}

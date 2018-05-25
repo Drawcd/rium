@@ -2,9 +2,9 @@
   <div class="greeting-wrap section-group text-center">
     <!-- section-title start -->
     <div class="section-title">
-      <h1>브랜드소개</h1>
-      <h5>Brand introduction</h5>
-      <div class="section-title-subtext">
+      <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">브랜드소개</h1>
+      <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">Brand introduction</h5>
+      <div class="section-title-subtext animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">
         <h3><span>고객감동</span>을 목표로 하는 조직</h3>
         <h4><span>고객과</span>의 <span>약속</span>을 소중히 지키기 위해 <span>리움</span>의 구성원들은</h4>
         <h4>언제나 자신의 자리에서 최선을 다하고 있습니다.</h4>
@@ -16,10 +16,10 @@
       <div class="col-md-12 mobile-img">
         <img src="/img/aboutus/ceo_title.png" alt="" width="100%">
       </div>
-      <div class="ab-content section-group">
+      <div class="ab-content section-group animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
         <div class="col-md-6">
           <div class="text-left">
-            <h3>대표 인사말</h3>
+            <h3 class="padding-bottom-40">대표 인사말</h3>
             <h3>
               기업의 가치는 "<span class="fc01">믿음</span>"과 "<span class="fc01">신뢰</span>"를 바탕으로 만들어진다.<br />
             </h3>

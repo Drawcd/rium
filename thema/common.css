@@ -401,8 +401,10 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 .padding-top-10 { padding-top:10px;}
 .padding-top-15 { padding-top:15px;}
 .padding-top-20 { padding-top:20px;}
+.padding-top-80 { padding-top:80px !important;}
 .padding-80 { padding:80px 0px !important;}
 .padding-tb-80 {padding:80px 0;}
+.padding-bottom-40 {padding-bottom:80px;}
 
 /* 공통 margin */
 .margin-top80 { margin-top:80px; }
@@ -790,6 +792,11 @@ tail
 /********************************************************
 page style start
 ********************************************************/
+/* Main */
+.main-popup-intro-grep-logo {color:#fff;}
+.main-popup-intro-grep-logo h2{padding-top:25px;}
+.main-popup-intro-grep-logo p{padding-top:15px;}
+
 
 /*  aboutus */
 .aboutus { padding:0px 0px 200px 0px; background: url("/img/aboutus/aboutus.jpg") no-repeat; background-size: cover; background-attachment: fixed;}
@@ -816,12 +823,6 @@ page style start
 .rium-concept-list-title-sub { background: #00bcd4; padding-bottom:12px; font-weight:300;}
 .rium-concept-list-text { background:rgba(237,237,237,0.8); padding:15px 15px 15px 15px; min-height:120px; font-weight:400; font-size:16px;}
 
-@media all and (max-width:991px) {
-  .ab-content {background:none;}
-	.greeting-wrap { padding-bottom:0px;}
-	.greeting h5 span {display: none;}
-}
-
 /* businessarea */
 .businessarea { background: url('/img/aboutus/businessarea.jpg') no-repeat right top; background-size:cover; background-attachment: fixed; }
 .businessarea-list { max-width:1310px; position:relative; left:50%; transform: translateX(-50%); }
@@ -838,10 +839,11 @@ page style start
 .businessarea-list-item-wrap-right h5{ color:#F9C200; font-weight:250; padding:5px 0 10px; letter-spacing:5px;}
 .businessarea-list-item-wrap-right h4{ color:#F6F6F6; font-weight:250; padding:5px 0 ; font-size:14px; white-space:nowrap; overflow: hidden; text-overflow: ellipsis;}
 .businessarea-list-item-wrap-right button{ right:20px;}
-
+.section-wrap-list-text { text-align: center;}
 /* organization */
 .organization-wrap { max-width:830px; margin:0 auto;}
 .organization .section-title { background:#333;}
+.organization .organization-wrap { padding:80px 0 ;}
 
 /* aboutmap */
 .aboutmap .section-title { background:#333;}
@@ -861,7 +863,7 @@ page style start
 .aboutmap-item-button.switch-off .aboutmap-item-button-switch { left:36px;}
 
 /* procedure */
-.procedure { background: rgb(237,237,237); background-image:url("/img/procedure/procedure-bg.png"); background-attachment: fixed; }
+/* .procedure { background: rgb(237,237,237); background-image:url("/img/procedure/procedure-bg.png"); background-attachment: fixed; } */
 .procedure .section-title {padding-bottom:20px; text-align: left !important;}
 .procedure .section-title h1{display: inline-block;}
 .procedure .section-title h4{font-size:18px; font-weight:350; color:#fff !important; }
@@ -901,7 +903,7 @@ page style start
 
 /* service infomation */
 /* service infomation Architectural Design */
-.service-design .section-title { padding:60px 0px 10px 0px; text-align: left;}
+.service-design .section-title { padding:100px 0px 10px 0px; text-align: left;}
 .service-design .section-title h1{ display: inline-block;}
 .service-design .section-title h5{ display: inline-block; padding-left:10px;}
 .service-design .section-title h4{ font-weight:350; }
@@ -916,7 +918,7 @@ page style start
 .service-design-wrap ul{ padding:0px; }
 
 /* service infomation architecture */
-.service-architecture .section-title { padding:60px 0px 10px 0px; text-align: left;}
+.service-architecture .section-title { padding:100px 0px 10px 0px; text-align: left;}
 .service-architecture .section-title h1{ display: inline-block;}
 .service-architecture .section-title h5{ display: inline-block; padding-left:10px;}
 .service-architecture .section-title h4{ font-weight:350; }
@@ -931,7 +933,7 @@ page style start
 .service-architecture-wrap ul{ padding:0px; }
 
 /* service infomation Consulting */
-.service-consulting .section-title { padding:60px 0px 60px 0px; }
+.service-consulting .section-title { padding:100px 0px 10px 0px; }
 .service-consulting .section-title h1{ display: inline-block;}
 .service-consulting .section-title h5{ display: inline-block; padding-left:10px;}
 .service-consulting .section-title h4{ font-weight:350; }
@@ -948,7 +950,7 @@ page style start
 .service-consulting-wrap ul{ padding:0px; }
 
 /* service infomation Joint business */
-.service-joint-business .section-title { padding:60px 0px 60px 0px; }
+.service-joint-business .section-title { padding:100px 0px 10px 0px; }
 .service-joint-business .section-title h1{ display: inline-block;}
 .service-joint-business .section-title h5{ display: inline-block; padding-left:10px;}
 .service-joint-business .section-title h4{ font-weight:350; }
@@ -966,7 +968,7 @@ page style start
 .service-joint-business-wrap ul{ padding:0px; }
 
 /* service infomation Project Meniger */
-.service-project-meniger .section-title { padding:60px 0px 10px 0px; text-align: left;}
+.service-project-meniger .section-title { padding:100px 0px 10px 0px; text-align: left;}
 .service-project-meniger .section-title h1{ display: inline-block;}
 .service-project-meniger .section-title h5{ display: inline-block; padding-left:10px;}
 .service-project-meniger .section-title h4{ font-weight:350; }
@@ -980,13 +982,27 @@ page style start
 .service-project-meniger-list-item-sub-text { font-size:16px; font-weight: 350; padding-right:50px; padding-top:15px; line-height: 24px;}
 .service-project-meniger-wrap ul{ padding:0px; }
 
+.popup01 { padding:80px 0 !important; text-align: center;}
+
+
+@media all and (max-width:991px) {
+.is-mobile .service-design-list .service-design-list-item:nth-child(1){ visibility:visible;}
+.is-mobile .service-architecture-list .service-architecture-list-item:nth-child(1){ visibility:visible;}
+.is-mobile .service-consulting-list .service-consulting-list-item:nth-child(1){ visibility:visible; }
+.is-mobile .service-joint-business-list-item:nth-child(1){ visibility:visible; }
+.is-mobile .service-project-meniger-list .service-project-meniger-list-item:nth-child(1){ visibility:visible; }
+.is-mobile .section-title {padding:25px 0 25px 0;}
+.popup01 h2{ padding:25px 0 20px  !important; text-align: center;}
+.popup01>div { padding-bottom:25px !important; text-align: center;}
+.ab-content {background:none;}
+.greeting-wrap { padding-bottom:0px;}
+.greeting h5 span {display: none;}
+
+}
 
 /********************************************************
 page style End
 ********************************************************/
-
-
-
 
 /* rium color set */
 .navigation-bg-color { background:none;}

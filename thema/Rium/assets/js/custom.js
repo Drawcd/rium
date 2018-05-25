@@ -183,11 +183,11 @@ myFunction();
 
 
 // main-popup-intro-logo
-// new Vivus('logo-outline', {
-//     type: 'delayed',
-//     duration: 320,
-//     animTimingFunction: Vivus.EASE_OUT
-// });
+new Vivus('logo-outline', {
+    type: 'delayed',
+    duration: 320,
+    animTimingFunction: Vivus.EASE_OUT
+});
 
 $(function(){
 	$('.mobile-menu-open-btn, .mobile-menu-close-btn, .pc-menu-open-btn').on("click", function(){

@@ -13,7 +13,7 @@
     <!-- section-title start -->
     <div class="at-container">
       <div class="section-title">
-        <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">서비스진행안내</h1>
+        <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">서비스진행절차</h1>
         <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60">Service Guide</h5>
         <h4 class="padding-top-10 animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60">서비스로 고민하지마십시요 고객님께 알맞는 서비스는 저희가 찾아 드립니다.</h4>
       </div>
@@ -22,7 +22,7 @@
 
   <div class="list-style-none section-group service-pro01 procedure-wrap at-container">
     <ul class="procedure-list section-group col-md-12 ">
-      <li class="procedure-list-item col-lg-3 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.4s" data-offset="60">
+      <li class="procedure-list-item col-lg-6 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
         <div class="procedure-list-item-wrap">
           <div class="procedure-list-item-wrap-bg"></div>
 
@@ -35,7 +35,7 @@
           <button class="button-link-blue">자세히보기</button>
         </div>
       </li>
-      <li class="procedure-list-item col-lg-3 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.42s" data-offset="60">
+      <li class="procedure-list-item col-lg-6 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
         <div class="procedure-list-item-wrap">
           <div class="procedure-list-item-wrap-bg"></div>
 
@@ -48,7 +48,7 @@
           <button class="button-link-blue">자세히보기</button>
         </div>
       </li>
-      <li class="procedure-list-item col-lg-3 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.44s" data-offset="60">
+      <li class="procedure-list-item col-lg-6 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
         <div class="procedure-list-item-wrap">
           <div class="procedure-list-item-wrap-bg"></div>
 
@@ -61,7 +61,7 @@
           <button class="button-link-blue">자세히보기</button>
         </div>
       </li>
-      <li class="procedure-list-item col-lg-3 col-md-8 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.46s" data-offset="60">
+      <li class="procedure-list-item col-lg-6 col-md-8 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
         <div class="procedure-list-item-wrap">
           <div class="procedure-list-item-wrap-bg"></div>
 
@@ -74,7 +74,7 @@
           <button class="button-link-blue">자세히보기</button>
         </div>
       </li>
-      <li class="procedure-list-item col-lg-3 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.48s" data-offset="60">
+      <li class="procedure-list-item col-lg-6 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
         <div class="procedure-list-item-wrap">
           <div class="procedure-list-item-wrap-bg"></div>
 
@@ -87,7 +87,7 @@
           <button class="button-link-blue">자세히보기</button>
         </div>
       </li>
-      <li class="procedure-list-item col-lg-3 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.5s" data-offset="60">
+      <li class="procedure-list-item col-lg-6 col-md-4 col-sm-6 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
         <div class="procedure-list-item-wrap">
           <div class="procedure-list-item-wrap-bg"></div>
 
@@ -100,7 +100,7 @@
           <button class="button-link-blue">자세히보기</button>
         </div>
       </li>
-      <li class="procedure-list-item col-lg-6 col-md-8 col-sm-12 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.52s" data-offset="60">
+      <li class="procedure-list-item col-lg-12 col-md-8 col-sm-12 col-xs-12 animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
         <div class="procedure-list-item-wrap">
           <div class="procedure-list-item-wrap-bg"></div>
 

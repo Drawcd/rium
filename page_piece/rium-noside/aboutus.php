@@ -1,9 +1,9 @@
 <div class="list-style-none aboutus section-group">
   <!-- section-title start -->
   <div class="section-title section-group text-center">
-    <h1>브랜드비전</h1>
-    <h5>Brand vision</h5>
-    <div class="section-title-subtext">
+    <h1 class="animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">브랜드비전</h1>
+    <h5 class="animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">Brand vision</h5>
+    <div class="section-title-subtext animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">
       <h3><span>고객감동</span>을 목표로 하는 조직</h3>
       <h4><span>고객과</span>의 <span>약속</span>을 소중히 지키기 위해 <span>리움</span>의 구성원들은</h4>
       <h4>언제나 자신의 자리에서 최선을 다하고 있습니다.</h4>
@@ -11,12 +11,12 @@
   </div>
     <!-- section-title End -->
 
-  <ul class="section-list text-center">
+  <ul class="section-list text-center animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
     <!-- <li class="section-list-item">
       <img src="/img/rium_outline.png" alt="" width="320px;">
     </li> -->
-    <li class="section-title-item">
-      <h2 class="fc02">“부동산 건설시장의 새로운 가치를 만든다”</h2>
+    <li class="section-title-item padding-top-80">
+      <h2 class="fc02 ">“부동산 건설시장의 새로운 가치를 만든다”</h2>
     </li>
     <li class="section-title-item">
       <h4 class="fc02">각 분야별 역량을 한곳에 모아 그동안 해결하지 못했던 문제점을 개선하기위해 <span class="emphasize fc01">RIUM</span>은 새로운 시스템을 제안합니다.</h4>
@@ -26,7 +26,7 @@
       </h4>
     </li>
   </ul>
-  <div class="section-group padding-tb-80 text-center">
+  <div class="section-group padding-tb-80 text-center animate" data-animate="fadeIn" data-duration="1.0s" data-delay="0.1s" data-offset="60">
     <h1>Brand vision</h1>
     <ul class="section-list col-md-12 col-xs-12 rium-concept">
       <li class="col-md-4 col-xs-4 rium-concept-list ">

@@ -127,8 +127,8 @@ for ($i=0; $row=sql_fetch_array($result); $i++) { ?>
 	<ul class="section-navigator-list">
 		<li class="section-navigator-item"><h4>페이지메뉴</h4></li>
 		<li class="section-navigator-item"><a href="#section-one" class="section-navigator-link"><h4>인사말</h4></a></li>
-		<li class="section-navigator-item"><a href="#section-two" class="section-navigator-link"><h4>회사소개</h4></a></li>
-		<li class="section-navigator-item"><a href="#section-three" class="section-navigator-link"><h4>비즈니스영역</h4></a></li>
+		<li class="section-navigator-item"><a href="#section-two" class="section-navigator-link"><h4>브랜드비전</h4></a></li>
+		<li class="section-navigator-item"><a href="#section-three" class="section-navigator-link"><h4>사업영역</h4></a></li>
 		<li class="section-navigator-item"><a href="#section-four" class="section-navigator-link"><h4>조직도</h4></a></li>
 		<li class="section-navigator-item"><a href="#section-five" class="section-navigator-link"><h4>찾아오는길</h4></a></li>
 	</ul>

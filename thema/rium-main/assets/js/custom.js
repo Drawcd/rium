@@ -251,34 +251,91 @@ $(document).ready(function() {
     }
 
   }
+
+
   navigation_resize();
   $(window).on('resize', function() {
     navigation_resize();
+    $('.wdc-left').height( $('.wdc-right').height() );
   });
+
+
 });
 // 네비게이션 폭 끝
+
+
 
 // 계열사
 $(function(){
   $(".subsidiary-button").data({ 'open' : false }).on('click', function(){
 
     if( $(".section-select").data().open ){
-      $(this).removeClass('select-open');
-      $('.subsidiary-page').css('left' , '100%');
       $(this).data({open : false});
     } else {
-      location.href = '#p-wdc';
-      $(".section-select").addClass('select-open');
-      $('.subsidiary-page').css('left' , '10%' );
       $(this).data({open : true});
       $(document.body).css('overflow-y' , 'hidden' );
     }
   });
   // 계열사 페이지 클릭시
   $(".subsidiary-page").on('click', function(){
-    $('.subsidiary-page').css('left' , '100%');
-    $(".section-select").removeClass('select-open');
+    location.href = '#';
     $(document.body).css('overflow-y' , 'auto' );
     $(".subsidiary-button").data({open : false});
   });
 });
+
+// page_hash 페이지 헤시값 확인
+function resizehash(){
+  $('.c-page-left').height( $('.c-page-left').height() );
+  var page_hash = window.location.hash;
+  if (page_hash == "#p-wdc" || page_hash == "#p-thekenc" || page_hash == "#p-design" || page_hash =="#p-cnc") {
+    $(document.body).css('overflow-y' , 'hidden' );
+  } else {
+    $(document.body).css('overflow-y' , 'auto' );
+  }
+}
+resizehash();
+
+var resize_delta = 300;
+var resize_timer = null;
+$( window ).on( 'resize', function( ) {
+    clearTimeout( resize_timer );
+    resize_timer = setTimeout( resizehash, resize_delta );
+} );
+// resize시 리스너
+window.addEventListener( 'resize', function( ) {
+    clearTimeout( resize_timer );
+    resize_timer = setTimeout( resizehash, resize_delta );
+}, false );
+// hash 값 변경시 리스너
+window.addEventListener( 'hashchange', function( ) {
+    clearTimeout( resize_timer );
+    resize_timer = setTimeout( resizehash, resize_delta );
+}, false );
+
+
+
+
+// $(function(){
+//   $(".subsidiary-button").data({ 'open' : false }).on('click', function(){
+//
+//     if( $(".section-select").data().open ){
+//       $(this).removeClass('select-open');
+//       $('.subsidiary-page').css('left' , '100%');
+//       $(this).data({open : false});
+//     } else {
+//       location.href = '#p-wdc';
+//       $(".section-select").addClass('select-open');
+//       $('.subsidiary-page').css('left' , '10%' );
+//       $(this).data({open : true});
+//       $(document.body).css('overflow-y' , 'hidden' );
+//     }
+//   });
+//   // 계열사 페이지 클릭시
+//   $(".subsidiary-page").on('click', function(){
+//     $('.subsidiary-page').css('left' , '100%');
+//     $(".section-select").removeClass('select-open');
+//     $(document.body).css('overflow-y' , 'auto' );
+//     $(".subsidiary-button").data({open : false});
+//   });
+// });

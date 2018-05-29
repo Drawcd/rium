@@ -1,6 +1,4 @@
-<?php
-add_stylesheet('<link rel="stylesheet" href="'.'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">',0);
- ?>
+<?php // add_stylesheet('<link rel="stylesheet" href="'.'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">',0); ?>
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 

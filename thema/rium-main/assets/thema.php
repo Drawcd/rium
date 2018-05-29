@@ -41,12 +41,13 @@ if($is_demo) {
 }
 
 // 기본값 설정
-$is_thema_size = (isset($at_set['size']) && $at_set['size'] > 0) ? $at_set['size'] : 1200;
+$is_thema_size = (isset($at_set['size']) && $at_set['size'] > 0) ? $at_set['size'] : 1310;
 $is_thema_font = ($at_set['font']) ? $at_set['font'] : 'ko';
 $is_thema_layout = $at_set['layout'];
 $is_content_style = ($at_set['content']) ? '-wide' : '';
 $is_sticky_nav = $at_set['sticky'];
 $is_top_nav = ($at_set['nav']) ? $at_set['nav'] : 'both';
+$pc_menu_ul = ($at_set['pc-menu-ul']) ? $at_set['pc-menu-ul'] : '';
 
 $is_fixed_content = false;
 if(IS_YC && isset($ca_id) && $ca_id && !$pid) {
@@ -196,4 +197,7 @@ if(!$page_background) {
 	@media all and (min-width:1200px) {
 		.responsive .boxed.wrapper { max-width:<?php echo $is_thema_size;?>px; }
 	}
+
+/* lkh 추가사항 */
+.is-pc .nav-logo { height:<?php echo $is_menuh;?>px; }
 </style>

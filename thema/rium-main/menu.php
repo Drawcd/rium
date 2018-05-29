@@ -3,11 +3,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 
 <?php if($is_top_nav == "float"){ // 좌측형 ?>
-
-	<div class="nav-visible">
-		<div class="at-container">
+	<div class="nav-logo">
+		<a href="/"><img src="/img/rium_outline.png" alt=""></a>
+	</div>
+	<div class="nav-visible section-group">
+		<div  class="at-container">
 			<div class="nav-top nav-float nav-slide">
-				<ul class="menu-ul">
+				<ul id="menu-ul" class="menu-ul <?php echo $pc_menu_all_hover;?>">
 				<!-- <li class="menu-li nav-home <?php //echo ($is_index) ? 'on' : 'off';?>">
 					<a class="menu-a nav-height" href="<?php //echo $at_href['main'];?>">
 						<i class="fa fa-home"></i>
@@ -94,13 +96,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div><!-- .nav-visible -->
 
 <?php } else { // 배분형 ?>
-	<div class="nav-logo">
+	<div class="nav-logo at-menu">
 		<a href="/"><img src="/img/rium_outline.png" alt=""></a>
 	</div>
-	<div class="nav-visible">
-		<div class="at-container">
+	<div class="nav-visible section-group">
+		<div class="at-container section-group">
 			<div class="nav-top nav-both nav-slide">
-				<ul class="menu-ul">
+				<ul id="" class="menu-ul">
 				<!-- <li class="menu-li nav-home <?php // echo ($is_index) ? 'on' : 'off';?>">
 					<a class="menu-a nav-height" href="<?php // echo $at_href['main'];?>">
 						<i class="fa fa-home"></i>
@@ -173,10 +175,20 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					</li>
 				<?php } //for ?>
 				<!-- 우측공간 확보용 -->
-				<li class="menu-li nav-rw"><a>&nbsp;</a></li>
+				<!-- <li class="menu-li nav-rw"><a>&nbsp;</a></li> -->
 				</ul>
 			</div><!-- .nav-top -->
 		</div>	<!-- .nav-container -->
+		<!-- pc-menu-all Start -->
+		<div class="pc-menu-all <?php echo $pc_menu_ul;?>">
+			<?php include_once(THEMA_PATH.'/pc-menu-all.php');	// 메뉴 불러오기 ?>
+		</div>
 	</div><!-- .nav-visible -->
+	<div class="clearfix"></div>
+
+	<!-- mobile-menu-all End -->
+
+
+
 
 <?php } ?>

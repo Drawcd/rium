@@ -3,6 +3,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(THEMA_PATH.'/assets/thema.php');
 ?>
 
+<!-- 그룹사 안내 -->
+<?php
+include_once(THEMA_PATH.'/subsidiary.php');
+?>
+
+
+
 <div id="thema_wrapper" class="wrapper <?php echo $is_thema_layout;?> <?php echo $is_thema_font;?>">
 	<!-- Mobile Header -->
 	<header class="m-header">
@@ -32,9 +39,9 @@ include_once(THEMA_PATH.'/assets/thema.php');
 	<!-- Menu -->
 	<nav class="at-menu">
 		<!-- PC Menu -->
-		<div class="pc-menu">
+		<div id="pc-menu-all" class="pc-menu">
 			<!-- Menu Button & Right Icon Menu -->
-			<div class="at-container">
+			<div class="">
 				<div class="nav-right nav-rw nav-height">
 					<ul>
 						<?php if(IS_YC) { //영카트 ?>
@@ -76,11 +83,11 @@ include_once(THEMA_PATH.'/assets/thema.php');
 			<div class="nav-back"></div>
 		</div><!-- .pc-menu -->
 
-		<!-- pc-menu-all -->
-		<div class="mobile-menu">
-			<?php include_once(THEMA_PATH.'/mobile-m.php');	// 메뉴 불러오기 ?>
+		<!-- pc-menu-all Start -->
+		<div class="mobile-menu-all">
+			<?php include_once(THEMA_PATH.'/mobile-menu-all.php');	// 메뉴 불러오기 ?>
 		</div>
-		<!-- pc-menu-all -->
+		<!-- pc-menu-all End -->
 
 		<!-- Mobile Menu -->
 		<div class="m-menu">

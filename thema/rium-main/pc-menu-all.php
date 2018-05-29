@@ -1,6 +1,6 @@
 <!-- PC All Menu -->
-<div class="pc-menu-all">
-  <div id="menu-all" class="collapse">
+<div class="">
+  <div id="pc-menu-all" class="pc-menu-all-grep">
     <div class="at-container table-responsive">
       <table class="table">
       <tr>
@@ -47,12 +47,6 @@
       <?php $az++; } //for ?>
       </tr>
       </table>
-      <div class="menu-all-btn">
-        <div class="btn-group">
-          <a class="btn btn-lightgray" href="<?php echo $at_href['main'];?>"><i class="fa fa-home"></i></a>
-          <a href="javascript:;" class="btn btn-lightgray" data-toggle="collapse" data-target="#menu-all"><i class="fa fa-times"></i></a>
-        </div>
-      </div>
     </div>
   </div>
 </div><!-- .pc-menu-all -->

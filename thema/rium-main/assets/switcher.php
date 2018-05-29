@@ -155,6 +155,7 @@ $tside = apms_file_list('thema/'.THEMA.'/side', 'php');
 										<option value="slide">슬라이더</option>
 										<option value="show"<?php echo get_selected('show', $at_set['subv']);?>>보이기</option>
 										<option value="fade"<?php echo get_selected('fade', $at_set['subv']);?>>페이드</option>
+										<option value="none"<?php echo get_selected('none', $at_set['subv']);?>>없음</option>
 									</select>
 								</div>
 
@@ -267,6 +268,32 @@ $tside = apms_file_list('thema/'.THEMA.'/side', 'php');
 							</div>
 						</div>
 					</div>
+
+
+        <!-- 네비게이션 전체메뉴 설정 -->
+				<div class="panel">
+					<div class="panel-heading" role="tab" id="swHead<?php $toggle++; echo $toggle;?>" aria-expanded="true" aria-controls="swSet<?php echo $toggle;?>">
+						<a data-toggle="collapse" data-parent="#switcherSet" href="#swSet<?php echo $toggle;?>">
+							<i class="fa fa-caret-right"></i> 전체메뉴 설정
+						</a>
+					</div>
+					<div id="swSet<?php echo $toggle;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="swHead<?php echo $toggle;?>">
+						<div class="panel-body">
+							<div class="text-muted ko-11">
+								 하단 표시내용 (체크시 적용)
+							</div>
+							<div class="input-group input-group-sm input-bottom">
+								<span class="form-control">PC전체메뉴 사용</span>
+								<span class="input-group-addon">
+									<input type="checkbox" id="pc-menu-ul" name="at_set[pc-menu-ul]" value="pc-menu-all-use"<?php echo get_checked('pc-menu-all-use', $at_set['pc-menu-ul']);?>>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 네비게이션 전체메뉴 설정 -->
+
+
 
 				</div>
 

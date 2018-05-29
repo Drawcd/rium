@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 		if (div.css("left") === "-206px") {
 			$("#style-switcher").animate({
 				left: "0px"
-			}); 
+			});
 		} else {
 			$("#style-switcher").animate({
 				left: "-206px"
@@ -51,12 +51,24 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	// lkh 추가
+	$("#pc-menu-ul").change(function(){
+		if($(this).is(':checked') == true){
+			$('.pc-menu-all').addClass("pc-menu-all-use");
+		} else{
+			$('.pc-menu-all').removeClass("pc-menu-all-use");
+		}
+	});
+
+
+
+
 	//Layout Style
 	$("#layout-style").change(function(e){
 		if($(this).val() == "boxed"){
 			$(".wrapper").addClass("boxed");
 		} else{
-			$(".wrapper").removeClass("boxed"); 
+			$(".wrapper").removeClass("boxed");
 		}
 	});
 
@@ -88,5 +100,7 @@ jQuery(document).ready(function($) {
 		new_win.focus();
         return false;
     });
+
+
 
 });

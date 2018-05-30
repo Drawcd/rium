@@ -1,5 +1,5 @@
 /* rium common style css */
-body { font-family: dotum; line-height: 22px; font-size: 14px; color: rgb(51, 51, 51); background-color:#fff; background-repeat: no-repeat; background-attachment:fixed; background-size:cover; }
+body { font-family:"Noto Sans KR", dotum, sans-serif; line-height: 22px; font-size: 14px; color: rgb(51, 51, 51); background-color:#fff; background-repeat: no-repeat; background-attachment:fixed; background-size:cover; }
 body.is-pc .ko { font-size:12px; }
 a { color: rgb(51, 51, 51); cursor: pointer; text-decoration: none; transition: color .2s;}
 a:hover, a:focus, a:active { color:#607D8B; text-decoration: none; }
@@ -860,14 +860,14 @@ page style start
 .aboutmap-item-wrap { z-index: 60; pointer-events:auto;}
 .aboutmap-item-button-bg { position: absolute; top:0px; left:0px; height:100%; width:100%; background:rgba(33,33,33,0.5); z-index: 20;}
 .aboutmap-item-wrap h3{ font-size:32px; margin-top:25px; color:#8bc34a;}
-.aboutmap-item-button { font-size:14px; line-height: 23px; color:#fcfcfc; width:60px; height:24px; background:#e91e63; left:50%; transform:translateX(-50%); position: relative; margin-top:15px; border-radius: 12px; cursor:pointer; transition: all .5s;}
-.aboutmap-item-button:after { position:absolute; content: "off"; top:0px; right:10px; transition: all .5s;}
-.aboutmap-item-button:before { position:absolute; content: "on"; top:0px; left:10px; opacity: 0; transition: all .5s;}
-.aboutmap-item-button-switch { position:absolute; width:24px; height:24px; background:#fcfcfc; border-radius: 12px; transition: all .5s; left:0px;}
-.aboutmap-item-button.switch-off { background:#2196f3;}
+.aboutmap-item-button { font-size:14px; line-height: 23px; color:#fcfcfc; width:70px; height:34px; background:#9e9e9e; left:50%; transform:translateX(-50%); position: relative; margin-top:15px; border-radius: 17px; cursor:pointer; transition: all .5s;}
+.aboutmap-item-button:after { position:absolute; content: "OFF"; top:0px; right:12px; transition: all .5s; line-height: 34px;}
+.aboutmap-item-button:before { position:absolute; content: "ON"; top:0px; left:12px; opacity: 0; transition: all .5s; line-height: 34px;}
+.aboutmap-item-button-switch { position:absolute; width:24px; height:24px; top:5px; left:5px; background:#fcfcfc; border-radius: 12px; transition: all .5s; }
+.aboutmap-item-button.switch-off { background:#ff9800;}
 .aboutmap-item-button.switch-off:after { opacity: 0; }
 .aboutmap-item-button.switch-off:before { opacity: 1; }
-.aboutmap-item-button.switch-off .aboutmap-item-button-switch { left:36px;}
+.aboutmap-item-button.switch-off .aboutmap-item-button-switch { left:40px;}
 
 /* procedure */
 /* .procedure { background: rgb(237,237,237); background-image:url("/img/procedure/procedure-bg.png"); background-attachment: fixed; } */

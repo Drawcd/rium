@@ -7,7 +7,10 @@ include_once(THEMA_PATH.'/assets/thema.php');
 <?php
 include_once(THEMA_PATH.'/subsidiary.php');
 ?>
-
+<!-- 사이드메뉴 -->
+<?php
+include_once(G5_PATH.'/page/side_menu_bar.php');
+?>
 
 
 <div id="thema_wrapper" class="wrapper <?php echo $is_thema_layout;?> <?php echo $is_thema_font;?>">

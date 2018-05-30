@@ -112,43 +112,62 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 design-left ">
+                <div class="design-grep">
+                  <div class="col-lg-6 design-left2 ">
+                  <!-- section-title start -->
+                  <div class="at-container">
+                    <div class="section-title">
+                      <div class="section-title-head">
+                        <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">The & Synthesis Architectural Firm</h1>
+                        <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60"></h5>
+                        <div class="section-title-subtext">
+                          <h4 class="fc-white animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">
+                            설계란? 건설·제작·공사 등에 있어서 그 목적에 따라 실제적인 계획을 세우고, 도면 등으로 명시하는 일이라 정의 되어 있습니다. <br>
+                             하지만 시대의 흐름에 따라 설계의 개념은 포괄적인 부분까지 진화한게 현실입니다. 시행사와 시공사의 목적를 방영하여 효율적인 시공과 생산성을 고려하게 되었스며, 공간(Space)의 바라보는 시점에서 공간(Form)을 활용할 사용자의 편의성을 고려대상이 되었고 현대 건축을 바라보는 리움이 추구하는 건축 설계의 가치 입니다.
+                          </h4>
+                        </div>
+                      </div>
+                      <div class="section-text">
+                        <h4 class="service-joint-business-list-item-title inline-block">
+
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 design-right2">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-page" id="cnc">
+            <div class="cnc wrap">
+              <div class="col-lg-4 cnc-left c-page-left">
+              </div>
+              <div class="col-lg-8 cnc-right c-page-right">
                 <!-- section-title start -->
                 <div class="at-container">
                   <div class="section-title">
                     <div class="section-title-head">
-                      <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">The & Synthesis Architectural Firm</h1>
-                      <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60"></h5>
+                      <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">(주)파트너씨앤씨</h1>
+                      <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60">Partner C & C</h5>
                       <div class="section-title-subtext">
-                        <h4 class="fc-white animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">
-                          설계란? 건설·제작·공사 등에 있어서 그 목적에 따라 실제적인 계획을 세우고, 도면 등으로 명시하는 일이라 정의 되어 있습니다. <br>
-                           하지만 시대의 흐름에 따라 설계의 개념은 포괄적인 부분까지 진화한게 현실입니다. 시행사와 시공사의 목적를 방영하여 효율적인 시공과 생산성을 고려하게 되었스며, 공간(Space)의 바라보는 시점에서 공간(Form)을 활용할 사용자의 편의성을 고려대상이 되었고 현대 건축을 바라보는 리움이 추구하는 건축 설계의 가치 입니다.
-                        </h4>
+                        <h4 class="fc-white animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">최고의 분양율을 자랑하는 <span class="emphasize fc01">파트너씨앤씨</span>가 <span class="emphasize fc01">고객님과</span>성공을 함께 하겠습니다.</h4>
                       </div>
                     </div>
+                    <div class="section-img">
+                      <!-- <img src="/img/main/cnc-bg02.jpg" alt=""> -->
+                    </div>
                     <div class="section-text">
-                      <h4 class="service-joint-business-list-item-title inline-block">
-
+                      <h4 class="service-joint-business-list-item-title inline-block">"직영분양" "직대행분양" 및 "대행분양"의 철저하고 완벽한 시스템과 조직을 갖춘 유일한 그룹입니다.</h4>
+                      <h4 class="service-joint-business-list-item-sub-text">
+                      현재 분양시장은 구매자 중심으로의 변화와 정부정책의 잦은 변동 등으로 그 어느때보다 분양시장의 흐름을 과학적으로 분석할 수 있는 정확한 판단력이 필요하며, 다변화적인 분양전략을 구사할 수 있어야 대안 도출과 효율적인 영업활동이 가능합니다. <br>
+                       어렵다고 주저하는 분양현장들부터, 포기하기 쉬운 마지막 잔여세대까지 완벽하게 마무리하기 위해 최고의 노력을 아끼지 아니하며, 항상 최선을 다하는 열정적인 모습을 약속 드리겠습니다.
                       </h4>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 design-right ">
-              </div>
-            </div>
-          </div>
-          <div class="c-page" id="cnc">4</div>
-        </div>
-<!-- 작동 버튼 -->
-        <div class="subsidiary-button">
-          <div class="subsidiary-wrap">
-            <div class="subsidiary-title">
-
-              <a href="#p-wdc" class="c-page-close">
-                <h4>리움</h4>
-                <h4>그룹사</h4>
-              </a>
             </div>
           </div>
         </div>

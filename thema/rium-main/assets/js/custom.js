@@ -249,20 +249,43 @@ $(document).ready(function() {
         }
       }
     }
-
   }
-
-
   navigation_resize();
   $(window).on('resize', function() {
     navigation_resize();
-    $('.wdc-left').height( $('.wdc-right').height() );
   });
 
 
 });
 // 네비게이션 폭 끝
 
+// 상담문의 시작
+$('#consultationbtn').data({ 'open' : false }).on('click', function(){
+  if( $(this).data().open ){
+    location.href = '#';
+    $('#consultation').fadeOut("slow", function() {
+    });
+    $(this).data({open : false});
+  } else {
+    $('#consultation').fadeIn("slow", function() {
+    });
+    $(this).data({open : true});
+  }
+});
+$('#contactinfo-bg , .contactinfo-close').on('click', function(){
+
+  if( $('#consultationbtn').data().open ){
+    location.href = '#';
+    $('#consultation').fadeOut("slow", function() {
+    });
+    $('#consultationbtn').data({open : false});
+  } else {
+    $('#consultation').fadeIn("slow", function() {
+    });
+    $('#consultationbtn').data({open : true});
+  }
+});
+// 상담문의 끝
 
 
 // 계열사
@@ -279,22 +302,29 @@ $(function(){
   // 계열사 페이지 클릭시
   $(".subsidiary-page").on('click', function(){
     location.href = '#';
-    $(document.body).css('overflow-y' , 'auto' );
-    $(".subsidiary-button").data({open : false});
+    // $(document.body).css('overflow-y' , 'auto' );
+    // $(".subsidiary-button").data({open : false});
   });
 });
 
 // page_hash 페이지 헤시값 확인
 function resizehash(){
-  $('.c-page-left').height( $('.c-page-left').height() );
+  $('.wdc-left').height( $('.wdc-right').height() );
+  $('.cnc-left').height( $('.cnc-right').height() );
+  $('.design-right2').height( $('.design-left2').height() );
+
   var page_hash = window.location.hash;
-  if (page_hash == "#p-wdc" || page_hash == "#p-thekenc" || page_hash == "#p-design" || page_hash =="#p-cnc") {
+  if (page_hash == "#p-wdc" || page_hash == "#p-thekenc" || page_hash == "#p-design" || page_hash =="#p-cnc" || page_hash =="#consultation") {
     $(document.body).css('overflow-y' , 'hidden' );
+    if ( page_hash =="#consultation" ){
+      $('#consultationbtn').data({open : true});
+    }
   } else {
     $(document.body).css('overflow-y' , 'auto' );
   }
 }
 resizehash();
+
 
 var resize_delta = 300;
 var resize_timer = null;

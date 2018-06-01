@@ -35,7 +35,7 @@ $wset['rows'] = $img_post_cnt;
 $img = apms_board_rows($wset);
 $img_cnt = count($img);
 for($i=0; $i < $img_cnt; $i++) {
-	$img_arr[$i] = $img[$i]['bo_table'].'-'.$img[$i]['wr_id']; 
+	$img_arr[$i] = $img[$i]['bo_table'].'-'.$img[$i]['wr_id'];
 }
 
 // 리스트글 - 중복글 제외
@@ -46,7 +46,7 @@ $tmp = apms_board_rows($wset);
 $tmp_cnt = count($tmp);
 $z = 0;
 for($i=0; $i < $tmp_cnt; $i++) {
-	
+
 	$chk_wr = $tmp[$i]['bo_table'].'-'.$tmp[$i]['wr_id'];
 
 	if($img_cnt && in_array($chk_wr, $img_arr)) continue;
@@ -71,7 +71,7 @@ if($wset['line'] > 1) $line_height = $line_height + 4;
 $icon = (isset($wset['icon']) && $wset['icon']) ? '<span class="lightgray">'.apms_fa($wset['icon']).'</span>' : '';
 
 // 랭킹
-$rank = apms_rank_offset($wset['rows'], $wset['page']); 
+$rank = apms_rank_offset($wset['rows'], $wset['page']);
 
 // 날짜
 $is_idate = (isset($wset['idate']) && $wset['idate']) ? true : false;
@@ -80,20 +80,20 @@ $is_dtype = (isset($wset['dtype']) && $wset['dtype']) ? $wset['dtype'] : 'm.d';
 $is_dtxt = (isset($wset['dtxt']) && $wset['dtxt']) ? true : false;
 
 // 새글
-$is_new = (isset($wset['new']) && $wset['new']) ? $wset['new'] : 'red'; 
+$is_new = (isset($wset['new']) && $wset['new']) ? $wset['new'] : 'red';
 
 // 글내용 - 줄이 1줄보다 크고
-$is_cont = ($wset['line'] > 1) ? true : false; 
-$is_details = ($is_cont) ? '' : ' no-margin'; 
+$is_cont = ($wset['line'] > 1) ? true : false;
+$is_details = ($is_cont) ? '' : ' no-margin';
 
 // 분류
 $is_cate = (isset($wset['cate']) && $wset['cate']) ? true : false;
 
 // 동영상아이콘
-$is_vicon = (isset($wset['vicon']) && $wset['vicon']) ? '' : '<i class="fa fa-play-circle-o post-vicon"></i>'; 
+$is_vicon = (isset($wset['vicon']) && $wset['vicon']) ? '' : '<i class="fa fa-play-circle-o post-vicon"></i>';
 
 // 스타일
-$is_center = (isset($wset['center']) && $wset['center']) ? ' text-center' : ''; 
+$is_center = (isset($wset['center']) && $wset['center']) ? ' text-center' : '';
 $is_bold = (isset($wset['bold']) && $wset['bold']) ? true : false;
 $is_ticon = (isset($wset['ticon']) && $wset['ticon']) ? true : false;
 
@@ -117,7 +117,7 @@ $shadow_in = '';
 $shadow_out = (isset($wset['shadow']) && $wset['shadow']) ? apms_shadow($wset['shadow']) : '';
 if($shadow_out && isset($wset['inshadow']) && $wset['inshadow']) {
 	$shadow_in = '<div class="in-shadow">'.$shadow_out.'</div>';
-	$shadow_out = '';	
+	$shadow_out = '';
 }
 
 ?>
@@ -131,10 +131,10 @@ if($shadow_out && isset($wset['inshadow']) && $wset['inshadow']) {
 			$is_lock = false;
 			if ($img[$i]['secret'] || $img[$i]['is_lock']) {
 				$is_lock = true;
-				$wr_icon = '<span class="rank-icon en bg-orange en">Lock</span>';	
+				$wr_icon = '<span class="rank-icon en bg-orange en">Lock</span>';
 			} else if($img[$i]['new']) {
-				$wr_icon = '<span class="rank-icon txt-normal en bg-'.$is_new.'">New</span>';	
-			} 
+				$wr_icon = '<span class="rank-icon txt-normal en bg-'.$is_new.'">New</span>';
+			}
 
 			//링크이동
 			$target = '';
@@ -158,7 +158,7 @@ if($shadow_out && isset($wset['inshadow']) && $wset['inshadow']) {
 							<img src="<?php echo $img[$i]['img']['src'];?>" alt="<?php echo $img[$i]['img']['alt'];?>">
 						</div>
 					</div>
-				</a>				
+				</a>
 				<?php echo $shadow_out;?>
 
 				<div class="post-content<?php echo $is_center;?>">
@@ -198,7 +198,7 @@ if($shadow_out && isset($wset['inshadow']) && $wset['inshadow']) {
 	<ul class="post-list">
 	<?php
 	// 리스트
-	for ($i=0; $i < $list_cnt; $i++) { 
+	for ($i=0; $i < $list_cnt; $i++) {
 
 		//아이콘 체크
 		$wr_icon = $icon;
@@ -207,7 +207,7 @@ if($shadow_out && isset($wset['inshadow']) && $wset['inshadow']) {
 			$is_lock = true;
 			$wr_icon = '<span class="wr-icon wr-secret"></span>';
 		} else if ($wset['rank']) {
-			$wr_icon = '<span class="rank-icon en bg-'.$wset['rank'].'">'.$rank.'</span>';	
+			$wr_icon = '<span class="rank-icon en bg-'.$wset['rank'].'">'.$rank.'</span>';
 			$rank++;
 		} else if($list[$i]['new']) {
 			$wr_icon = '<span class="wr-icon wr-new"></span>';
@@ -238,7 +238,7 @@ if($shadow_out && isset($wset['inshadow']) && $wset['inshadow']) {
 	?>
 		<li class="ellipsis">
 			<a href="<?php echo $list[$i]['href'];?>"<?php echo $is_modal_js;?><?php echo $target;?>>
-				<?php if($is_date || $list[$i]['comment']) { ?> 
+				<?php if($is_date || $list[$i]['comment']) { ?>
 					<span class="pull-right gray font-12">
 						<?php if ($list[$i]['comment']) { ?>
 							<span class="count orangered">+<?php echo $list[$i]['comment']; ?></span>
@@ -250,7 +250,7 @@ if($shadow_out && isset($wset['inshadow']) && $wset['inshadow']) {
 				<?php } ?>
 				<?php echo $wr_icon;?>
 				<?php echo $list[$i]['subject'];?>
-			</a> 
+			</a>
 		</li>
 	<?php } ?>
 	</ul>

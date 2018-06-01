@@ -208,8 +208,8 @@ if(!$page_background) {
 	.at-container {max-width:<?php echo $is_thema_size;?>px;}
 	.no-responsive .wrapper, .no-responsive .at-container-wide { min-width:<?php echo $is_thema_size;?>px; }
 	.no-responsive .boxed.wrapper, .no-responsive .at-container { width:<?php echo $is_thema_size;?>px; }
-	.at-menu .nav-height { height:<?php echo $is_menuh;?>px; line-height:<?php echo $is_menuh;?>px !important; }
-	.pc-menu, .pc-menu .nav-full-back, .pc-menu .nav-full-height { height:<?php echo $is_menuh;?>px; }
+  .at-menu .nav-height { min-height:<?php echo $is_menuh;?>px; line-height:<?php echo $is_menuh;?>px !important; }
+	.pc-menu, .pc-menu .nav-full-back, .pc-menu .nav-full-height { min-height:<?php echo $is_menuh;?>px; }
 	.pc-menu .nav-top.nav-float .menu-a { padding:0px <?php echo $is_menup;?>px; }
 	.pc-menu .nav-top.nav-float .sub-1div::before { left: <?php echo $is_menup;?>px; }
 	.pc-menu .subm-w { width:<?php echo $is_subw;?>px; }

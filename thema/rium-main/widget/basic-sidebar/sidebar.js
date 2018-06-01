@@ -15,9 +15,9 @@ function is_sidebar() {
 
 function ani_sidebar(div, type, val) {
 	if(type == "left") {
-		div.animate({ left : val }); 
+		div.animate({ left : val });
 	} else {
-		div.animate({ right : val }); 
+		div.animate({ right : val });
 	}
 }
 
@@ -44,7 +44,7 @@ function sidebar_open(id) {
 	if(id == sidebar_id) {
 		if(is_div === sidebar_size) {
 			is_show = false;
-			ani_sidebar(div, side, '0px'); 
+			ani_sidebar(div, side, '0px');
 			if(side == "left") {
 				sidebar_mask('show');
 			} else {
@@ -52,13 +52,13 @@ function sidebar_open(id) {
 			}
 		} else {
 			is_show = false;
-			ani_sidebar(div, side, sidebar_size); 
+			ani_sidebar(div, side, sidebar_size);
 			sidebar_mask('hide');
 		}
 	} else {
 		if(is_div === sidebar_size) {
 			is_show = true;
-			ani_sidebar(div, side, '0px'); 
+			ani_sidebar(div, side, '0px');
 		} else {
 			is_show = true;
 		}
@@ -185,7 +185,7 @@ $(document).ready(function () {
 	$('.sidebar-close').on('click', function () {
 		var div = $("#sidebar-box");
 		var side = is_sidebar();
-		ani_sidebar(div, side, sidebar_size); 
+		ani_sidebar(div, side, sidebar_size);
 		sidebar_mask('hide');
 		return false;
     });
@@ -212,7 +212,7 @@ $(document).ready(function () {
 
 	// Sidebar Change
 	$(window).resize(function() {
-		var side = is_sidebar(); 
+		var side = is_sidebar();
 		if(side == 'left') {
 			side = 'right';
 		} else {

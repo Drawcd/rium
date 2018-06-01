@@ -1,5 +1,5 @@
 <?php
-if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가 
+if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 ?>
 <div class="sidebar-login">
 	<?php if($is_member) { //Login ?>
@@ -24,7 +24,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<span class="pull-right">
 				Exp <?php echo number_format($member['exp']);?> (<?php echo $member['exp_per'];?>%)
 			</span>
-			레벨 <?php echo $member['level'];?> 
+			레벨 <?php echo $member['level'];?>
 		</div>
 
 		<div class="btn-group btn-group-justified" role="group">
@@ -36,7 +36,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<?php } ?>
 			<a href="<?php echo $at_href['logout'];?>" class="btn btn-navy btn-sm">나가기</a>
 		</div>
-		
+
 		<div class="h15"></div>
 
 		<!-- Service -->
@@ -46,11 +46,6 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 		<ul class="sidebar-list list-links">
 			<li>
-				<a href="<?php echo $at_href['point'];?>" target="_blank" class="win_point no-fa">
-					<span class="pull-right"><?php echo number_format($member['mb_point']);?> 점</span>
-					<?php echo AS_MP;?>
-				</a>
-			</li>
 			<?php if($member['as_date']) { // 기간제 회원 ?>
 				<li>
 					<a class="no-fa">
@@ -59,7 +54,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 							(<?php echo number_format(($member['as_date'] - G5_SERVER_TIME) / 86400);?>일)
 						</span>
 						프리미엄
-					</a>		
+					</a>
 				</li>
 			<?php } ?>
 			<li>
@@ -70,7 +65,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<a href="<?php echo $at_href['response'];?>" target="_blank" class="win_memo">
 				<?php } ?>
 					내글반응
-				</a>		
+				</a>
 			</li>
 			<li>
 				<?php if ($member['memo']) { ?>
@@ -80,35 +75,20 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 					<a href="<?php echo $at_href['memo'];?>" target="_blank" class="win_memo">
 				<?php } ?>
 					쪽지함
-				</a>		
+				</a>
 			</li>
 			<li>
 				<a href="<?php echo $at_href['follow'];?>" target="_blank" class="win_memo">
 					팔로우
-				</a>		
+				</a>
 			</li>
 			<li>
 				<a href="<?php echo $at_href['scrap'];?>" target="_blank" class="win_scrap">
 					스크랩
-				</a>		
+				</a>
 			</li>
 			<?php if(IS_YC) { //영카트 ?>
-				<li>
-					<?php if ($member['as_coupon']) { ?>
-						<a href="<?php echo $at_href['coupon']; ?>" target="_blank" class="win_point no-fa">
-							<span class="pull-right"><?php echo number_format($member['as_coupon']);?> 장</span>
-					<?php } else { ?>
-						<a href="<?php echo $at_href['coupon']; ?>" target="_blank" class="win_point">
-					<?php } ?>
-						마이쿠폰
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo $at_href['shopping']; ?>" target="_blank" class="win_memo">
-						쇼핑리스트
-					</a>
-				</li>
-				<li>
+			<li>
 					<a href="<?php echo $at_href['wishlist']; ?>">
 						위시리스트
 					</a>
@@ -145,21 +125,21 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 		<form id="sidebar_login_form" name="sidebar_login_form" method="post" action="<?php echo $at_href['login_check'];?>" autocomplete="off" role="form" class="form" onsubmit="return sidebar_login(this);">
 		<input type="hidden" name="url" value="<?php echo $urlencode; ?>">
-			<div class="form-group">	
+			<div class="form-group">
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user gray"></i></span>
 					<input type="text" name="mb_id" id="sidebar_mb_id" class="form-control input-sm" placeholder="아이디" tabindex="91">
 				</div>
 			</div>
-			<div class="form-group">	
+			<div class="form-group">
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-lock gray"></i></span>
 					<input type="password" name="mb_password" id="sidebar_mb_password" class="form-control input-sm" placeholder="비밀번호" tabindex="92">
 				</div>
 			</div>
 			<div class="form-group">
-				<button type="submit" class="btn btn-navy btn-block" tabindex="93">Login</button>    
-			</div>	
+				<button type="submit" class="btn btn-navy btn-block" tabindex="93">Login</button>
+			</div>
 
 			<label class="text-muted" style="letter-spacing:-1px;">
 				<input type="checkbox" name="auto_login" value="1" id="sidebar_remember_me" class="remember-me" tabindex="94">
@@ -189,25 +169,28 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 			<li><a href="<?php echo $at_href['reg'];?>">회원가입</a></li>
 			<li><a href="<?php echo $at_href['lost'];?>" class="win_password_lost">아이디/비밀번호 찾기</a></li>
 		</ul>
-		
+
 	<?php } //End ?>
 </div>
 
 <div class="h20"></div>
 
-<!-- Service -->
+<!-- Stats -->
 <div class="div-title-underline-thin en">
-	<b>SERVICE</b>
+	<b>STATS</b>
 </div>
-
-<ul class="sidebar-list list-links">
-	<?php if (IS_YC) { //영카트 ?>
-		<li><a href="<?php echo $at_href['cart']; ?>">장바구니</a></li>
-		<li><a href="<?php echo $at_href['ppay']; ?>">개인결제</a></li>
-		<li><a href="<?php echo $at_href['inquiry']; ?>">주문 및 배송조회</a></li>
-	<?php } ?>
-	<li><a href="<?php echo $at_href['faq'];?>">자주하시는 질문(FAQ)</a></li>
-	<li><a href="<?php echo $at_href['secret'];?>">1:1 문의</a></li>
-	<li><a href="<?php echo $at_href['new'];?>">새글모음</a></li>
-	<li><a href="<?php echo $at_href['connect'];?>">현재접속자</a></li>
+<?php if ($is_admin) { ?>
+<ul style="padding:0px 15px; margin:0; list-style:none;">
+	<li><a href="<?php echo $at_href['connect'];?>">
+		<span class="pull-right"><?php echo number_format($stats['now_total']); ?><?php echo ($stats['now_mb'] > 0) ? '(<b class="orangered">'.number_format($stats['now_mb']).'</b>)' : ''; ?> 명</span>현재 접속자</a>
+	</li>
+	<li><span class="pull-right"><?php echo number_format($stats['visit_today']); ?> 명</span>오늘 방문자</li>
+	<li><span class="pull-right"><?php echo number_format($stats['visit_yesterday']); ?> 명</span>어제 방문자</li>
+	<li><span class="pull-right"><?php echo number_format($stats['visit_max']); ?> 명</span>최대 방문자</li>
+	<li><span class="pull-right"><?php echo number_format($stats['visit_total']); ?> 명</span>전체 방문자</li>
+	<li><span class="pull-right"><?php echo number_format($menu[0]['count_write']); ?> 개</span>전체 게시물</li>
+	<li><span class="pull-right"><?php echo number_format($menu[0]['count_comment']); ?> 개</span>전체 댓글수</li>
+	<li><span class="pull-right sidebar-tip" data-original-title="<nobr>오늘 <?php echo $stats['join_today'];?> 명 / 어제 <?php echo $stats['join_yesterday'];?> 명</nobr>" data-toggle="tooltip" data-placement="top" data-html="true"><?php echo number_format($stats['join_total']); ?> 명</span>전체 회원수
+	</li>
 </ul>
+<?php } ?>

@@ -107,15 +107,3 @@ var menu_subAt = "<?php echo ($m_subsat) ? $m_subsat : 0;?>";
 <?php echo apms_widget('basic-sidebar'); //사이드바 및 모바일 메뉴(UI) ?>
 
 <?php if($is_designer || $is_demo) include_once(THEMA_PATH.'/assets/switcher.php'); //Style Switcher ?>
-
-
-<!-- main-slider  -->
-<script src='http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js'></script>
-<!-- animate Start -->
-<script>
-$('.animate').scrolla({
-  mobile: false,
-  once: false
-});
-</script>
-<!-- animate End -->

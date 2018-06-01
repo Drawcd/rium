@@ -201,62 +201,82 @@ $(document).ready(function() {
 
 });
 
-// 네비게이션 폭 정리 시작
+
+
+//  네비게이션 폭 정리 시작
 $(document).ready(function() {
-  var navigation_width = Number($('.at-container').css('max-width').replace(/[^-\d\.]/g, ''));
-  var navigation_logo_width = Number($('.nav-logo').width());
+  var window_size = $(window).width();
+  var logo_size = Number($('.nav-logo').width());
   var navigation_rw_width = Number($('.nav-rw').width());
-  var menu_ul = Number($('.menu-ul').width());
-  var menu_ul_padding;
+  var at_container_size = window_size - ( logo_size + navigation_rw_width );
+  $('.navigation-size,.pc-menu-all.pc-menu-all-use').css( "max-width" , ( at_container_size - 10)  );
 
   function navigation_resize() {
-
-    // navigation rw
-    menu_ul_padding_right = (navigation_width + (navigation_rw_width)) - $(window).width();
-    if ($(window).width() > (navigation_width + (navigation_rw_width * 2))) {
-      menu_ul_padding_right = 0;
-      $('.menu-ul').css('padding-right', menu_ul_padding_right);
-      $('.table-responsive').css('padding-right', menu_ul_padding_right);
-    } else {
-      if ($(window).width() < navigation_width + (navigation_rw_width * 2)) {
-        menu_ul_padding_right = (navigation_width + (navigation_rw_width * 2)) - $(window).width();
-        if (menu_ul_padding_right > (navigation_rw_width * 2)) {
-          // menu_ul_padding_right = navigation_rw_width;
-          $('.menu-ul').css('padding-right', navigation_rw_width);
-          $('.table-responsive').css('padding-right', navigation_rw_width);
-        } else {
-          $('.menu-ul').css('padding-right', (menu_ul_padding_right / 2));
-          $('.table-responsive').css('padding-right', (menu_ul_padding_right / 2));
-        }
-      }
-    }
-    // navigation logo
-    menu_ul_padding = (navigation_width + (navigation_logo_width)) - $(window).width();
-    if ($(window).width() > (navigation_width + (navigation_logo_width * 2))) {
-      menu_ul_padding = 0;
-      $('.menu-ul').css('padding-left', menu_ul_padding);
-      $('.table-responsive').css('padding-left', menu_ul_padding);
-    } else {
-      if ($(window).width() < navigation_width + (navigation_logo_width * 2)) {
-        menu_ul_padding = (navigation_width + (navigation_logo_width * 2)) - $(window).width();
-        if (menu_ul_padding > (navigation_logo_width * 2)) {
-          // menu_ul_padding = navigation_logo_width;
-          $('.menu-ul').css('padding-left', navigation_logo_width);
-          $('.table-responsive').css('padding-left', navigation_logo_width);
-        } else {
-          $('.menu-ul').css('padding-left', (menu_ul_padding / 2));
-          $('.table-responsive').css('padding-left', (menu_ul_padding / 2));
-        }
-      }
-    }
+    var window_size = $(window).width();
+    var logo_size = Number($('.nav-logo').width());
+    var navigation_rw_width = Number($('.nav-rw').width());
+    var at_container_size = window_size - ( logo_size + navigation_rw_width );
+    $('.navigation-size,.pc-menu-all.pc-menu-all-use').css( "max-width" , ( at_container_size - 10)  );
   }
   navigation_resize();
-  $(window).on('resize', function() {
-    navigation_resize();
-  });
-
-
+    $(window).on('resize', function() {
+      navigation_resize();
+    });
 });
+
+// 네비게이션 폭 정리 시작
+// $(document).ready(function() {
+//   var navigation_width = Number($('.at-container').css('max-width').replace(/[^-\d\.]/g, ''));
+//   var navigation_logo_width = Number($('.nav-logo').width());
+//   var navigation_rw_width = Number($('.nav-rw').width());
+//   var menu_ul = Number($('.menu-ul').width());
+//   var menu_ul_padding;
+//
+//   function navigation_resize() {
+//     // navigation rw
+//     menu_ul_padding_right = (navigation_width + (navigation_rw_width)) - $(window).width();
+//     if ($(window).width() > (navigation_width + (navigation_rw_width * 2))) {
+//       menu_ul_padding_right = 0;
+//       $('.menu-ul').css('padding-right', menu_ul_padding_right);
+//       // $('.table-responsive').css('padding-right', menu_ul_padding_right);
+//     } else {
+//       if ($(window).width() < navigation_width + (navigation_rw_width * 2)) {
+//         menu_ul_padding_right = (navigation_width + (navigation_rw_width * 2)) - $(window).width();
+//         if (menu_ul_padding_right > (navigation_rw_width * 2)) {
+//           // menu_ul_padding_right = navigation_rw_width;
+//           $('.menu-ul').css('padding-right', navigation_rw_width);
+//           // $('.table-responsive').css('padding-right', navigation_rw_width);
+//         } else {
+//           $('.menu-ul').css('padding-right', (menu_ul_padding_right / 2));
+//           // $('.table-responsive').css('padding-right', (menu_ul_padding_right / 2));
+//         }
+//       }
+//     }
+//     // navigation logo
+//     menu_ul_padding = (navigation_width + (navigation_logo_width)) - $(window).width();
+//     if ($(window).width() > (navigation_width + (navigation_logo_width * 2))) {
+//       menu_ul_padding = 0;
+//       $('.menu-ul').css('padding-left', menu_ul_padding);
+//       // $('.table-responsive').css('padding-left', menu_ul_padding);
+//     } else {
+//       if ($(window).width() < navigation_width + (navigation_logo_width * 2)) {
+//         menu_ul_padding = (navigation_width + (navigation_logo_width * 2)) - $(window).width();
+//         if (menu_ul_padding > (navigation_logo_width * 2)) {
+//           // menu_ul_padding = navigation_logo_width;
+//           $('.menu-ul').css('padding-left', navigation_logo_width);
+//           // $('.table-responsive').css('padding-left', navigation_logo_width);
+//         } else {
+//           $('.menu-ul').css('padding-left', (menu_ul_padding / 2));
+//           // $('.table-responsive').css('padding-left', (menu_ul_padding / 2));
+//         }
+//       }
+//     }
+//   }
+//   navigation_resize();
+//   $(window).on('resize', function() {
+//     navigation_resize();
+//   });
+// });
 // 네비게이션 폭 끝
 
 // 상담문의 시작

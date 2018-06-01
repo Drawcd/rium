@@ -8,7 +8,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div>
 	<div class="nav-visible section-group">
 		<div  class="at-container">
-			<div class="nav-top nav-float nav-slide">
+			<div class="nav-top nav-float nav-slide" >
 				<ul id="menu-ul" class="menu-ul <?php echo $pc_menu_all_hover;?>">
 				<!-- <li class="menu-li nav-home <?php //echo ($is_index) ? 'on' : 'off';?>">
 					<a class="menu-a nav-height" href="<?php //echo $at_href['main'];?>">
@@ -99,8 +99,8 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	<div class="nav-logo at-menu">
 		<a href="/"><img src="/img/rium_outline.png" alt=""></a>
 	</div>
-	<div class="nav-visible section-group">
-		<div class="at-container section-group">
+	<div class="nav-visible section-group"  data-toggle="collapse" data-hover="collapse" data-target="#menu-all">
+		<div class="at-container section-group navigation-size">
 			<div class="nav-top nav-both nav-slide">
 				<ul id="" class="menu-ul">
 				<!-- <li class="menu-li nav-home <?php // echo ($is_index) ? 'on' : 'off';?>">
@@ -178,12 +178,13 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 				<!-- <li class="menu-li nav-rw"><a>&nbsp;</a></li> -->
 				</ul>
 			</div><!-- .nav-top -->
+			<!-- pc-menu-all Start -->
+			<div class="pc-menu-all <?php echo $pc_menu_ul;?>">
+				<?php include_once(THEMA_PATH.'/pc-menu-all.php');	// 메뉴 불러오기 ?>
+			</div>
 		</div>	<!-- .nav-container -->
-		<!-- pc-menu-all Start -->
-		<div class="pc-menu-all <?php echo $pc_menu_ul;?>">
-			<?php include_once(THEMA_PATH.'/pc-menu-all.php');	// 메뉴 불러오기 ?>
-		</div>
-	</div><!-- .nav-visible -->
+	</div>
+	<!-- .nav-visible -->
 	<div class="clearfix"></div>
 
 	<!-- mobile-menu-all End -->

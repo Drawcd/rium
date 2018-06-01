@@ -11,7 +11,7 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 .en, h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a,p { font-family: "Noto Sans KR", "Roboto", sans-serif, "FontAwesome"; margin:0;}
 .ko, .ko small { font-family:"Noto Sans KR", dotum, sans-serif; }
 .sns-share-icon img { width:20%; max-width:45px; border-radius:15%; }
-.list-style-none ul{ list-style:none;}
+.list-style-none { list-style:none; padding:0px;}
 .widget-box { margin-bottom:0px !important;}
 
 /********************************************************
@@ -19,7 +19,7 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 ********************************************************/
 .wrapper { margin:0 auto; background:#fff;  }
 .at-container { margin:0px auto; padding:0px; }
-.is-pc .at-body { }
+/* .is-pc .at-body { min-height:600px; } */
 .at-body .at-container { padding:0px 15px; overflow:hidden; }
 .boxed.wrapper .at-body .at-container { padding:0px 20px; }
 .at-content { position:relative; padding:20px 0px 0px;}
@@ -29,9 +29,8 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 .inline-block { display: inline-block;}
 /* .nav-fixed .at-menu { position:fixed; top:0; width:100%; z-index:10; left:0px;} */
 /* .at-menu-bg-margin { position:relative; height:60px; } */
-.at-menu { position:absolute; top:0px; width:100%; z-index:100; }
+.at-menu { position:absolute; top:0px; width:100%; z-index:25; }
 @media all and (max-width:991px) {
-  .at-menu-bg-margin { position:relative; height:45px;}
 	.responsive .at-body .at-container { padding:0px 10px !important; }
 	.responsive .at-body .at-row { margin-left:0px; margin-right:0px; }
 	.responsive .at-body .at-col { padding-left:0px; padding-right:0px; }
@@ -53,9 +52,6 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 @media all and (max-width:991px) {
 	.responsive .at-lnb .at-container { display:none; visibility:visible; }
 }
-
-
-
 
 /********************************************************
 ■ PC Header : PC 헤더
@@ -97,13 +93,17 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 ■ PC Menu : PC 메뉴바 배경설정
 ********************************************************/
 .pc-menu { position:relative; border:0px; z-index:3; transition: all 0.5;}
+.pc-menu .at-container { position:relative; }
 .pc-menu .sub-slide,
 .pc-menu .sub-shows { display:none; visibility:visible; }
 .pc-menu .sub-icon::after { font-family: "FontAwesome"; float: right; position: relative; content: "\f105"; }
 .pc-menu .menu-a { font-size: 15px; font-family: 'Nanum Gothic', sans-serif; font-weight:700;}
 .pc-menu .nav-home .menu-a { font-size: 20px;}
 .pc-menu .nav-right { font-size:16px; }
-
+@media all and (max-width:991px) {
+	.responsive .pc-menu,
+	.responsive .pc-menu-all { display:none; }
+}
 
 /********************************************************
 ■ PC Menu Top : PC 상단 좌측 메뉴
@@ -122,7 +122,7 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 .pc-menu .nav-top.nav-float .sub-1div { position:absolute; }
 
 /* 공통 스타일 */
-.pc-menu .nav-top { z-index:10; width:100%; }
+.pc-menu .nav-top { position:relative; left:0px; top:0px; z-index:10; width:100%; }
 .pc-menu .nav-top .menu-a { display:block; font-weight:bold; transition: all 0.3s; }
 .pc-menu .nav-top .menu-li:hover .menu-a,
 .pc-menu .nav-top .menu-li.on .menu-a { color:#333; font-weight:bold; background:#d2e154;}
@@ -158,12 +158,37 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 .pc-menu .nav-right > ul > li > a { color:#fff; display:block; text-align:center; transition: all 0.3s;}
 .pc-menu .nav-right > ul > li > a:hover { background: #d2e154; }
 .pc-menu .nav-right .label { position: absolute; top: 15%; right: 7px; text-align: center; font-size: 9px; font-weight:300; padding: 2px 3px; line-height: 0.9; border-radius: .25em !important; }
-.pc-menu .nav-rw { width:84px; }
+.pc-menu .nav-rw { width:100%; max-width:170px; }
 
 /********************************************************
 ■ PC All Menu : 전체 메뉴
 ********************************************************/
-.pc-menu-all { position:fixed; top:0; pointer-events: none; width:100%; height:100vh ; overflow: hidden; z-index:25; -webkit-box-shadow: inset 0px -10px 10px -10px rgba(0,0,0,0.2); -moz-box-shadow: inset 0px -10px 10px -10px rgba(0,0,0,0.2); box-shadow: inset 0px -10px 10px -10px rgba(0,0,0,0.2); }
+.pc-menu-all { display: none; position:fixed; top:0; width:100%; overflow: hidden; z-index:25; }
+.pc-menu-all.pc-menu-all-use .menu-a{ display: none;}
+.pc-menu-all.pc-menu-all-use { display: block; }
+.pc-menu-all.pc-menu-all-use .at-container { padding:0px;}
+.pc-menu-all.pc-menu-all-use .table td { border:none; background:none;}
+.pc-menu-all.pc-menu-all-use .sub-1dli .sub-1da { padding:5px 0px 3px 0px; font-size:14px; text-align: center;}
+.pc-menu .nav-visible .pc-menu-all {
+	position:relative;
+	top:0px;
+	overflow: hidden;
+	height:0px;
+	/* transform: scaleY(0); */
+	/* transform: translateY(-100%); */
+	transform-origin: top;
+	-webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+	opacity: 0;
+}
+/* .pc-menu .nav-visible:hover .pc-menu-all { transform: scaleY(1); opacity: 1; height:100%;} */
+.pc-menu .nav-visible:hover .pc-menu-all { opacity: 1; height:236px; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; transition: all .2s ease;}
+/* .pc-menu .nav-visible:hover .pc-menu-all { transform: scaleY(0); opacity: 0; height:100%;} */
+.table-responsive .menu-ul { display: table; width:100%; table-layout: fixed; padding: 0 0 20px;}
+.sub-all-menu.menu-li { display: table-cell;}
+
+
 .pc-menu-all .at-container { padding:0px 0px 0px; }
 /* .pc-menu-all .mobile-menu { margin-bottom:0px !important; height:100vh; position:relative; overflow: auto;} */
 /* .pc-menu-all .mobile-menu td { width:1%; background:#fff; border:1px solid #ddd; padding:0px; line-height:20px; } */
@@ -175,7 +200,7 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 .pc-menu-all .sub-1dul { list-style:none; padding:0px; margin:0px; }
 .pc-menu-all .sub-1dli .sub-1da { display:block; padding:2px 12px; color:#3a3a3a; font-size:15px; text-align:center; padding:12px 12px;  transition: all 0.3s;}
 .pc-menu-all .sub-1dli.on .sub-1da,
-.pc-menu-all .sub-1dli:hover .sub-1da { color:#222; background:#7AB7AE;}
+.pc-menu-all .sub-1dli:hover .sub-1da { color:#222; background:#d2e154;}
 .pc-menu-all .new { color: rgb(140, 195, 70);}
 .pc-menu-all .new-sub1 { color: rgb(140, 195, 70);}
 .pc-menu-all .sub-1line { display:block; color:#000; padding:5px 12px; margin:4px 0px; font-weight:bold; background:#fafafa; }
@@ -417,7 +442,7 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
 .margin-top80 { margin-top:80px; }
 
 /* 공통 */
-.nav-logo { padding: 6px 0 6px 30px; width:150px; float:left;}
+.nav-logo { position:relative; display:inline-block; padding: 6px 0 6px 30px; width:150px; float:left;}
 .nav-logo img{ width:90px; height:50px; }
 .nav-logo-mobile img{ width:67px; height:37px; }
 .nav-visible { position:relative;}
@@ -444,11 +469,7 @@ section 공통
   display: block;
   clear: both;
 }
-
 .section-group { width:100%; display:block; }
-.section-list { padding:0;}
-.section-list-title { text-align:center; display:block; font-weight: 500; font-size:42px; padding-bottom:15px;}
-.section-list-sub { display:inline-block; text-align:center; margin-top:0; font-weight: 300; padding: 0 7px 7px; font-size:27px; }
 
 /* page-top-title Start */
 .page-top-title {  }
@@ -465,12 +486,16 @@ section 공통
 /* page-title-header-bar */
 .page-title-header-bar { background:#fff; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
 .page-title-header-bar  .at-container { border-left: 1px solid #ccc; border-right: 1px solid #ccc; }
+
 /* section-title Start*/
+.section-list { padding:0;}
+.section-list-title { text-align:center; display:block; font-weight: 500; font-size:42px; padding-bottom:15px;}
+.section-list-sub { display:inline-block; text-align:center; margin-top:0; font-weight: 300; padding: 0 7px 7px; font-size:27px; }
 .section-title { padding:80px 0 80px; }
-.section-title h1{ font-size:38px; font-weight:600; color: #af8f66;}
+.section-title h1{ font-size:38px; font-weight:600; color: #767676;}
 .section-title h4{ line-height: 24px; }
-.section-title h5{ letter-spacing:5px; color: #af8f66;}
-.section-title-subtext {color:#fff;}
+.section-title h5{ letter-spacing:5px; color: #767676;}
+.section-title-subtext {color:#aaa;}
 .section-title-subtext h3{ font-size:26px; font-weight:350; line-height: 28px; padding:10px 0 15px; }
 .section-title-subtext h2{ padding-bottom:10px 0 15px; }
 .section-title-subtext h3{ font-size:26px; font-weight:350; line-height: 28px; padding:25px 0 15px; }
@@ -480,14 +505,15 @@ section 공통
 .section-title-subtext {padding-bottom:0px;}
 
 .section-title-left { padding:150px 0 60px; }
-.section-title-left h1{ font-size:38px; font-weight:600; color: #af8f66;}
-.section-title-left h5{ letter-spacing:5px; color: #af8f66;}
+.section-title-left h1{ font-size:38px; font-weight:600; color: #767676;}
+.section-title-left h5{ letter-spacing:5px; color: #767676;}
 .section-title-subtext-left h3{ font-size:26px; font-weight:350; line-height: 28px; padding-bottom:15px;}
 .section-title-subtext-left h3 span{ font-weight:500; }
 .section-title-subtext-left h4{ line-height: 28px; font-weight:350;}
 .section-title-subtext-left h4 span{ font-weight:500; color:#8cc63f;}
 .section-title-subtext-left {padding-bottom:80px;}
 /* section-title End*/
+
 @media all and (max-width:1310px) {
   .aboutus-title-list h2,.aboutus-title-list h3,.aboutus-title-list h4 { background:rgba(237,237,237,0.8); }
   .greeting { height:100%; min-height:100%; }
@@ -499,7 +525,6 @@ section 공통
   .businessarea-list li:nth-child(2n+2)>.businessarea-list-item-wrap:after { content: ""; position:absolute; width:calc( 100% - 5px ); height:calc( 100% - 50px ); left:5px; top:25px; min-height:210px; border:1px solid rgba(57,57,57,0.5); transition: border 0.5s; box-sizing:border-box; z-index: -1; }
   .businessarea-list li:nth-child(2n+2)>.businessarea-list-item-wrap:hover:after { border: 10px solid rgba(249, 194, 0, 0.7);}
   .businessarea-list-item-wrap-left h1::after { content: "background"; position:absolute; top:50%; left:50%; transform: translate(-30% , -50%); background:#333; border-radius: 50%; width:75px; height:75px; text-indent: -999999px; z-index: -1;}
-  /* .businessarea-list-item:nth-child(1n+3) { margin-top:0px; padding:10px 25px 25px 25px;} */
   .businessarea-list li:nth-child(1n+3)>.businessarea-list-item-wrap:after { top:25px; }
   .businessarea-list li:nth-child(1n+3) {margin-top:-40px;}
 }
@@ -532,7 +557,7 @@ section 공통
 
 
 /********************************************************
-tail
+tail 2
 ********************************************************/
 .contactinfo .widget-index {padding:25px 0;}
 .contactinfo { background: #23252B; padding:20px 0 20px !important;}
@@ -799,12 +824,6 @@ tail
 /********************************************************
 page style start
 ********************************************************/
-/* Main */
-.main-popup-intro-grep-logo {color:#fff;}
-.main-popup-intro-grep-logo h2{padding-top:25px;}
-.main-popup-intro-grep-logo p{padding-top:15px;}
-
-
 /*  aboutus */
 .aboutus { padding:0px 0px 200px 0px; background: url("/img/aboutus/aboutus.jpg") no-repeat; background-size: cover; background-attachment: fixed;}
 .aboutus .section-title-item { padding:0px;}
@@ -1017,8 +1036,9 @@ page style End
 .sticky-wrapper.nav-fixed .navigation-bg-color { background:rgba(255,255,255,1); transition: background 0.5s;}
 .sticky-wrapper .navigation-bg-color { background:rgba(51,50,49,0.1); transition: background 0.5s;}
 .sticky-wrapper .navigation-bg-color .menu-li a{ color:#fff;}
-.sticky-wrapper .navigation-bg-color .menu-li .sub-1dul a { color:#333;}
-.sticky-wrapper.nav-fixed .navigation-bg-color .menu-li a{ color:#0f0f22;}
+.sticky-wrapper .navigation-bg-color .menu-li .sub-1dul a { line-height: 28px;}
+.sticky-wrapper .navigation-bg-color .menu-li .sub-1dul:hover > a { color:#333;}
+.sticky-wrapper.nav-fixed .navigation-bg-color .menu-li a{ color:#0f0f22; line-height: 28px;}
 .sticky-wrapper.nav-fixed .navigation-bg-color .nav-right > ul > li > a{ color:#0f0f22;}
 .sticky-wrapper.nav-fixed .pc-menu { box-shadow: 0px 5px 5px -2px rgba(25, 25, 25, 0.15); -webkit-box-shadow: 0px 5px 5px -2px rgba(25, 25, 25, 0.15); -moz-box-shadow: 0px 5px 5px -2px rgba(25, 25, 25, 0.15); }
 

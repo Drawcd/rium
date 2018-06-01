@@ -1,5 +1,5 @@
 <div id="consultation" class="sideMenuBar-modal">
-  <?php include_once(G5_PATH.'/page/consultation.php'); ?>
+  <?php include_once(G5_PATH.'/include/consultation.php'); ?>
 </div>
 <div class="sideMenuBar">
   <div class="inner-box">

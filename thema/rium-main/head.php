@@ -3,46 +3,25 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(THEMA_PATH.'/assets/thema.php');
 ?>
 
+<?php include_once(G5_PATH.'/include/main-logo-intro.php'); ?>
+
 <!-- 그룹사 안내 -->
-<?php
-include_once(THEMA_PATH.'/subsidiary.php');
-?>
+<?php include_once(G5_PATH.'/include/subsidiary.php'); ?>
 <!-- 사이드메뉴 -->
-<?php
-include_once(G5_PATH.'/page/side_menu_bar.php');
-?>
+<?php include_once(G5_PATH.'/include/side_menu_bar.php'); ?>
 
 
 <div id="thema_wrapper" class="wrapper <?php echo $is_thema_layout;?> <?php echo $is_thema_font;?>">
-	<!-- Mobile Header -->
-	<header class="m-header">
-		<div class="at-container">
-			<div class="header-wrap">
-				<div class="header-icon">
-					<a href="javascript:;" onclick="sidebar_open('sidebar-user');">
-						<i class="fa fa-user"></i>
-					</a>
-				</div>
-				<div class="header-logo en">
-					<!-- Mobile Logo -->
-					<a href="<?php echo $at_href['home'];?>">
-						<b>아미나</b>
-					</a>
-				</div>
-				<div class="header-icon">
-					<a href="javascript:;" onclick="sidebar_open('sidebar-search');">
-						<i class="fa fa-search"></i>
-					</a>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</header>
 
+	<!-- Mobile Menu Start 모바일메뉴-->
+	<div class="m-menu">
+		<?php include_once(THEMA_PATH.'/m-menu.php');	// 메뉴 불러오기 ?>
+	</div>
+	<!-- Mobile Menu End -->
 	<!-- Menu -->
 	<nav class="at-menu">
 		<!-- PC Menu -->
-		<div id="pc-menu-all" class="pc-menu">
+		<div id="pc-menu-all" class="pc-menu navigation-bg-color section-group">
 			<!-- Menu Button & Right Icon Menu -->
 			<div class="">
 				<div class="nav-right nav-rw nav-height">
@@ -86,16 +65,6 @@ include_once(G5_PATH.'/page/side_menu_bar.php');
 			<div class="nav-back"></div>
 		</div><!-- .pc-menu -->
 
-		<!-- pc-menu-all Start -->
-		<div class="mobile-menu-all">
-			<?php include_once(THEMA_PATH.'/mobile-menu-all.php');	// 메뉴 불러오기 ?>
-		</div>
-		<!-- pc-menu-all End -->
-
-		<!-- Mobile Menu -->
-		<div class="m-menu">
-			<?php include_once(THEMA_PATH.'/menu-m.php');	// 메뉴 불러오기 ?>
-		</div><!-- .m-menu -->
 	</nav><!-- .at-menu -->
 
 	<div class="clearfix"></div>

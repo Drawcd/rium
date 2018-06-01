@@ -17,9 +17,9 @@ $sns_share_icon .= '</div>';
 <div id="contactinfo-bg" class="section-group">
 </div>
 <!-- 메인 영역 -->
-<div class="row at-container contactinfo consultation-center section-group <?php echo ($side == "left") ? ' pull-right' : '';?> at-col at-main">
+<div class="row at-container contactinfo consultation-center section-group <?php echo ($side == "left") ? ' pull-right' : '';?> at-col at-main" >
   <div class="contactinfo-close">
-    <i class="fa fa-plus"></i>
+    <i class="fa fa-times"></i>
   </div>
   <div class="col-sm-6">
     <div class="tail-contactinfo-wrap">

@@ -8,50 +8,6 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url( ../../../common.css);
 
-/********************************************************
-main-popup-intro : 메인페이지 오버 인트로
-********************************************************/
-
-.main-popup-intro { position:fixed; width:100%; height:100vh; background:rgba(33,33,33,1); top:0; z-index:10;}
-.main-popup-intro-grep {position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); }
-
-.main-popup-intro-grep-logo-outline { width:320px; height:175px; position:absolute; top:0;}
-.main-popup-intro-grep-logo-color { width:320px; height:175px; position:relative; top:0;}
-.logo-outline{ fill:none; stroke:rgb(255,255,255);}
-.logo-color01{fill:#534741;}
-.logo-color02{fill:#8cc63f;}
-#logo-color {
-  fill: #fff;
-  stroke: rgba(255, 255, 255, 1);
-  stroke-width: 3.5px;
-  filter:drop-shadow( 0px 0px 5px #000 );
-  -webkit-filter:drop-shadow( 0px 0px 5px #000 );
-  opacity: 0;
-  -webkit-animation: fadeIn 2s ease;
-  -moz-animation: fadeIn 2s ease;
-  animation: fadeIn 2s ease;
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-#logo-outline {
-  stroke: rgba(255, 255, 255, 1);
-  stroke-width: 1px;
-  -webkit-animation: fadeOut 1s ease;
-  -moz-animation: fadeOut 1s ease;
-  animation: fadeOut 1s ease;
-  -webkit-animation-delay: 2.75s;
-  -moz-animation-delay: 2.75s;
-  animation-delay: 2.75s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
 /* mainslider */
 .slick-slide, .slick-slide::before, .caption {
   -webkit-backface-visibility: hidden;

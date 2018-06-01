@@ -1,5 +1,5 @@
 <?php
-if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가 
+if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 // 위젯 대표아이디 설정
 $wid = 'CSB';
@@ -32,12 +32,12 @@ $line = 'navy';
 			<?php echo apms_widget('basic-outlogin'); //외부로그인 ?>
 		</div>
 		<!-- 로그인 끝 -->
-	</div>	
+	</div>
 
-	<?php 
+	<?php
 	// 카테고리 체크
 	$side_category = apms_widget('basic-category');
-	if($side_category) { 
+	if($side_category) {
 	?>
 		<div class="div-title-underbar">
 			<span class="div-title-underbar-bold border-<?php echo $line;?> <?php echo $font;?>">

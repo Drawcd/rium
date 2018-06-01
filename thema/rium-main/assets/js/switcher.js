@@ -40,8 +40,7 @@ jQuery(document).ready(function($) {
 		$(".thema-colorset" ).attr("href", sw_url + "/colorset/" + new_colorset + "/colorset.css");
 		return false;
 	});
-
-	$("#font-style").click(function(){
+  $("#font-style").click(function(){
 		if($(this).is(":checked")) {
 			$(".wrapper").removeClass("ko");
 			$(".wrapper").addClass("en");
@@ -50,8 +49,7 @@ jQuery(document).ready(function($) {
 			$(".wrapper").addClass("ko");
 		}
 	});
-
-	// lkh 추가
+  // lkh 추가
 	$("#pc-menu-ul").change(function(){
 		if($(this).is(':checked') == true){
 			$('.pc-menu-all').addClass("pc-menu-all-use");
@@ -59,11 +57,7 @@ jQuery(document).ready(function($) {
 			$('.pc-menu-all').removeClass("pc-menu-all-use");
 		}
 	});
-
-
-
-
-	//Layout Style
+  //Layout Style
 	$("#layout-style").change(function(e){
 		if($(this).val() == "boxed"){
 			$(".wrapper").addClass("boxed");
@@ -95,12 +89,85 @@ jQuery(document).ready(function($) {
 		$("body").addClass('body-background-' + $(this).val());
 	});
 
-    $('.switcher-win').click(function() {
+  $('.switcher-win').click(function() {
 		var new_win = window.open(this.href, 'win_switcher', 'left=100,top=100,width=600, height=600, scrollbars=1');
 		new_win.focus();
         return false;
     });
 
+    $("#intro-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-left li:nth-child(1)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-left li:nth-child(1)').removeClass("bottom-li-hide");
+      }
+    });
+    $("#provision-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-left li:nth-child(2)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-left li:nth-child(2)').removeClass("bottom-li-hide");
+      }
+    });
+    $("#privacy-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-left li:nth-child(3)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-left li:nth-child(3)').removeClass("bottom-li-hide");
+      }
+    });
+    $("#noemail-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-left li:nth-child(4)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-left li:nth-child(4)').removeClass("bottom-li-hide");
+      }
+    });
+    $("#disclaimer-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-left li:nth-child(5)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-left li:nth-child(5)').removeClass("bottom-li-hide");
+      }
+    });
+    $("#admin-info-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-left li:nth-child(6)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-left li:nth-child(6)').removeClass("bottom-li-hide");
+      }
+    });
+    $("#qalist-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-right li:nth-child(1)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-right li:nth-child(1)').removeClass("bottom-li-hide");
+      }
+    });
+    $("#tel-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-contact li:nth-child(4)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-contact li:nth-child(4)').removeClass("bottom-li-hide");
+      }
+    });
+    $("#mailbusiness-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-contact li:nth-child(6)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-contact li:nth-child(6)').removeClass("bottom-li-hide");
+      }
+    });
+    $("#contactus-hide").change(function(){
+      if($(this).is(':checked') == true){
+        $('#bottom-openmenu-contact li:nth-child(7)').addClass("bottom-li-hide");
+      } else{
+        $('#bottom-openmenu-contact li:nth-child(7)').removeClass("bottom-li-hide");
+      }
+    });
 
-
+    $(".input-group").on('click',function(){
+      console.log('intro-hide : ' + ($("#intro-hide").is(':checked')));
+      console.log('layout : ' + ($("#layout-style").val()));
+    });
 });

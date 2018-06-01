@@ -1,9 +1,9 @@
 <!-- PC All Menu -->
 <div class="">
   <div id="pc-menu-all" class="pc-menu-all-grep">
-    <div class="at-container table-responsive">
-      <table class="table">
-      <tr>
+    <div class="table-responsive">
+      <ul class="menu-ul">
+
       <?php
         $az = 0;
         for ($i=1; $i < $menu_cnt; $i++) {
@@ -12,10 +12,10 @@
 
           // 줄나눔
           if($az && $az%$is_allm == 0) {
-            echo '</tr><tr>'.PHP_EOL;
+            echo '<li class="sub-all-menu menu-li">'.PHP_EOL;
           }
       ?>
-        <td class="<?php echo $menu[$i]['on'];?>">
+        <li class="sub-all-menu menu-li <?php echo $menu[$i]['on'];?>">
           <a class="menu-a" href="<?php echo $menu[$i]['href'];?>"<?php echo $menu[$i]['target'];?>>
             <?php echo $menu[$i]['name'];?>
             <?php if($menu[$i]['new'] == "new") { ?>
@@ -43,10 +43,10 @@
               </ul>
             </div>
           <?php } ?>
-        </td>
+        </li><!-- </td>  -->
       <?php $az++; } //for ?>
-      </tr>
-      </table>
+    </li> <!-- tr -->
+      </table><!-- </ul> -->
     </div>
   </div>
 </div><!-- .pc-menu-all -->

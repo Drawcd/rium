@@ -44,7 +44,7 @@
                     <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">(주)더블유산업개발</h1>
                     <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60">W Development Company</h5>
                     <div class="section-title-subtext">
-                      <h4 class="fc-white animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">최고의 사업 파트너로서 <span class="emphasize fc01">가치</span>와 <span class="emphasize fc01">성공</span>을 드리겠습니다.</h4>
+                      <h4 class="animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">최고의 사업 파트너로서 <span class="emphasize fc01">가치</span>와 <span class="emphasize fc01">성공</span>을 드리겠습니다.</h4>
                     </div>
                     <div class="section-img">
                       <!-- <img src="/img/main/wdc-bg02.jpg" alt=""> -->
@@ -74,7 +74,7 @@
                       <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">더케이종합건설(주)</h1>
                       <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60">The K Engineering & Construction</h5>
                       <div class="section-title-subtext">
-                        <h4 class="fc-white animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">최고의<span class="emphasize fc01">품질</span>의 건축물로<span class="emphasize fc01">고객님</span>께 보답하겠습니다.</h4>
+                        <h4 class="animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">최고의<span class="emphasize fc01">품질</span>의 건축물로<span class="emphasize fc01">고객님</span>께 보답하겠습니다.</h4>
                       </div>
                     </div>
                     <div class="section-text">
@@ -106,7 +106,7 @@
                       <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">(주)더앤종합건축사사무소</h1>
                       <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60">The & Synthesis Architectural Firm</h5>
                       <div class="section-title-subtext">
-                        <h4 class="fc-white animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;"><span class="emphasize fc01">리움</span>은 형태과 구조를 계획하는 설계에서부터 <br> 기능과 실용성을 더하여<span class="emphasize fc01">획기적인</span>공간을 만들어 갑니다.</h4>
+                        <h4 class="animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;"><span class="emphasize fc01">리움</span>은 형태과 구조를 계획하는 설계에서부터 <br> 기능과 실용성을 더하여<span class="emphasize fc01">획기적인</span>공간을 만들어 갑니다.</h4>
                       </div>
                     </div>
                   </div>
@@ -121,7 +121,7 @@
                         <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">The & Synthesis Architectural Firm</h1>
                         <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60"></h5>
                         <div class="section-title-subtext">
-                          <h4 class="fc-white animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">
+                          <h4 class="animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">
                             설계란? 건설·제작·공사 등에 있어서 그 목적에 따라 실제적인 계획을 세우고, 도면 등으로 명시하는 일이라 정의 되어 있습니다. <br>
                              하지만 시대의 흐름에 따라 설계의 개념은 포괄적인 부분까지 진화한게 현실입니다. 시행사와 시공사의 목적를 방영하여 효율적인 시공과 생산성을 고려하게 되었스며, 공간(Space)의 바라보는 시점에서 공간(Form)을 활용할 사용자의 편의성을 고려대상이 되었고 현대 건축을 바라보는 리움이 추구하는 건축 설계의 가치 입니다.
                           </h4>
@@ -152,7 +152,7 @@
                       <h1 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="60">(주)파트너씨앤씨</h1>
                       <h5 class="animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="1.1s" data-offset="60">Partner C & C</h5>
                       <div class="section-title-subtext">
-                        <h4 class="fc-white animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">최고의 분양율을 자랑하는 <span class="emphasize fc01">파트너씨앤씨</span>가 <span class="emphasize fc01">고객님과</span>성공을 함께 하겠습니다.</h4>
+                        <h4 class="animate fadeIn animated" data-animate="fadeIn" data-duration="1.0s" data-delay="0.2s" data-offset="60" style="animation-duration: 1s; animation-delay: 0.2s; visibility: visible;">최고의 분양율을 자랑하는 <span class="emphasize fc01">파트너씨앤씨</span>가 <span class="emphasize fc01">고객님과</span>성공을 함께 하겠습니다.</h4>
                       </div>
                     </div>
                     <div class="section-img">

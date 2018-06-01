@@ -60,7 +60,7 @@ include_once(THEMA_PATH.'/assets/thema.php');
 								<i class="fa fa-th"></i>
 							</a>
 						</li>
-						<?php } ?>						
+						<?php } ?>
 					</ul>
 					<div class="clearfix"></div>
 				</div>

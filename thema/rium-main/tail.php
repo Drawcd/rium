@@ -1,6 +1,5 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
-
 ?>
 		<?php if($col_name) { ?>
 			<?php if($col_name == "two") { ?>
@@ -17,20 +16,20 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 	</div><!-- .at-body -->
 
 	<?php if(!$is_main_footer) { ?>
-		<footer class="at-footer">
+		<footer class="at-footer point-color05">
 			<nav class="at-links">
 				<div class="at-container">
-					<ul class="pull-left">
-						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=intro">사이트 소개</a></li>
-						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=provision">이용약관</a></li>
-						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=privacy">개인정보처리방침</a></li>
-						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=noemail">이메일 무단수집거부</a></li>
-						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=disclaimer">책임의 한계와 법적고지</a></li>
+					<ul class="pull-left bottom-openmenu-left">
+						<li class="<?php echo $is_hide_intro;?>"><a href="<?php echo G5_BBS_URL;?>/page.php?hid=intro">사이트 소개</a></li>
+						<li class="<?php echo $is_hide_provision;?>"><a href="<?php echo G5_BBS_URL;?>/page.php?hid=provision">이용약관</a></li>
+						<li class="<?php echo $is_hide_privacy;?>"><a href="<?php echo G5_BBS_URL;?>/page.php?hid=privacy">개인정보처리방침</a></li>
+						<li class="<?php echo $is_hide_noemail;?>"><a href="<?php echo G5_BBS_URL;?>/page.php?hid=noemail">이메일 무단수집거부</a></li>
+						<li class="<?php echo $is_hide_disclaimer;?>"><a href="<?php echo G5_BBS_URL;?>/page.php?hid=disclaimer">책임의 한계와 법적고지</a></li>
 					</ul>
-					<ul class="pull-right">
-						<li><a href="<?php echo G5_BBS_URL;?>/page.php?hid=guide">이용안내</a></li>
-						<li><a href="<?php echo $at_href['secret'];?>">문의하기</a></li>
-						<li><a href="<?php echo $as_href['pc_mobile'];?>"><?php echo (G5_IS_MOBILE) ? 'PC' : '모바일';?>버전</a></li>
+					<ul class="pull-right bottom-openmenu-right">
+						<!-- <li class=""><a href="<?php // echo G5_BBS_URL;?>/page.php?hid=guide">이용안내</a></li> -->
+						<!-- <li class=""><a href="<?php // echo $at_href['secret'];?>">문의하기</a></li> -->
+						<?php if ($is_admin) { ?><li class=""><a href="<?php echo $as_href['pc_mobile'];?>"><?php echo (G5_IS_MOBILE) ? 'PC' : '모바일';?>버전</a></li><?php } ?>
 					</ul>
 					<div class="clearfix"></div>
 				</div>
@@ -42,31 +41,27 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 							<div class="pull-right hidden-xs">
 								<!-- 하단 우측 아이콘 -->
 							</div>
-							<div class="pull-left hidden-xs">
+							<!-- <div class="pull-left hidden-xs bottom-logo"> -->
 								<!-- 하단 좌측 로고 -->
-								<i class="fa fa-leaf"></i>
-							</div>
+								<!-- <a href="/"><img src="/img/de-logo.png" alt="" title=""></a> -->
+							<!-- </div> -->
 							<div class="media-body">
-
-								<ul class="at-about hidden-xs">
+								<ul class="at-about hidden-xs bottom-openmenu-contact">
 									<li><b><?php echo $default['de_admin_company_name']; ?></b></li>
 									<li>대표 : <?php echo $default['de_admin_company_owner']; ?></li>
 									<li><?php echo $default['de_admin_company_addr']; ?></li>
-									<li>전화 : <span><?php echo $default['de_admin_company_tel']; ?></span></li>
+									<li class="<?php echo $is_hide_tel;?>">전화 : <span><?php echo $default['de_admin_company_tel']; ?></span></li>
 									<li>사업자등록번호 : <span><?php echo $default['de_admin_company_saupja_no']; ?></span></li>
-									<li><a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank">사업자정보확인</a></li>
-									<li>통신판매업신고 : <span><?php echo $default['de_admin_tongsin_no']; ?></span></li>
+									<li class="<?php echo $is_hide_contactus;?>"><a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank">사업자정보확인</a></li>
+									<li class="<?php echo $is_hide_mailbusiness;?>">통신판매업신고 : <span><?php echo $default['de_admin_tongsin_no']; ?></span></li>
 									<li>개인정보관리책임자 : <?php echo $default['de_admin_info_name']; ?></li>
 									<li>이메일 : <span><?php echo $default['de_admin_info_email']; ?></span></li>
+									<li class="copyright">
+										<strong><?php echo $config['cf_title'];?> <i class="fa fa-copyright"></i></strong>
+										<span>All rights reserved.</span>
+									</li>
 								</ul>
-
-								<div class="clearfix"></div>
-
-								<div class="copyright">
-									<strong><?php echo $config['cf_title'];?> <i class="fa fa-copyright"></i></strong>
-									<span>All rights reserved.</span>
-								</div>
-
+								<!-- <div class="clearfix"></div> -->
 								<div class="clearfix"></div>
 							</div>
 						</div>
@@ -112,3 +107,15 @@ var menu_subAt = "<?php echo ($m_subsat) ? $m_subsat : 0;?>";
 <?php echo apms_widget('basic-sidebar'); //사이드바 및 모바일 메뉴(UI) ?>
 
 <?php if($is_designer || $is_demo) include_once(THEMA_PATH.'/assets/switcher.php'); //Style Switcher ?>
+
+
+<!-- main-slider  -->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js'></script>
+<!-- animate Start -->
+<script>
+$('.animate').scrolla({
+  mobile: false,
+  once: false
+});
+</script>
+<!-- animate End -->

@@ -49,6 +49,19 @@ $is_sticky_nav = $at_set['sticky'];
 $is_top_nav = ($at_set['nav']) ? $at_set['nav'] : 'both';
 $pc_menu_ul = ($at_set['pc-menu-ul']) ? $at_set['pc-menu-ul'] : '';
 
+
+// 하단표시 정보
+$is_hide_intro = ($at_set['intro-hide']) ? $at_set['intro-hide'] : '';
+$is_hide_provision = ($at_set['provision-hide']) ? $at_set['provision-hide'] : '';
+$is_hide_privacy = ($at_set['privacy-hide']) ? $at_set['privacy-hide'] : '';
+$is_hide_noemail = ($at_set['noemail-hide']) ? $at_set['noemail-hide'] : '';
+$is_hide_disclaimer = ($at_set['disclaimer-hide']) ? $at_set['disclaimer-hide'] : '';
+$is_hide_admin_info = ($at_set['admin-info-hide']) ? $at_set['admin-info-hide'] : '';
+$is_hide_qalist = ($at_set['qalist-hide']) ? $at_set['qalist-hide'] : '';
+$is_hide_mailbusiness = ($at_set['mailbusiness-hide']) ? $at_set['mailbusiness-hide'] : '';
+$is_hide_contactus = ($at_set['contactus-hide']) ? $at_set['contactus-hide'] : '';
+$is_hide_tel = ($at_set['tel-hide']) ? $at_set['tel-hide'] : '';
+
 $is_fixed_content = false;
 if(IS_YC && isset($ca_id) && $ca_id && !$pid) {
 	$page_chk = explode(",", $page_list['ca_id']);
@@ -189,8 +202,8 @@ if(!$page_background) {
 	.at-container {max-width:<?php echo $is_thema_size;?>px;}
 	.no-responsive .wrapper, .no-responsive .at-container-wide { min-width:<?php echo $is_thema_size;?>px; }
 	.no-responsive .boxed.wrapper, .no-responsive .at-container { width:<?php echo $is_thema_size;?>px; }
-	.at-menu .nav-height { height:<?php echo $is_menuh;?>px; line-height:<?php echo $is_menuh;?>px !important; }
-	.pc-menu, .pc-menu .nav-full-back, .pc-menu .nav-full-height { height:<?php echo $is_menuh;?>px; }
+	.at-menu .nav-height { min-height:<?php echo $is_menuh;?>px; line-height:<?php echo $is_menuh;?>px !important; }
+	.pc-menu, .pc-menu .nav-full-back, .pc-menu .nav-full-height { min-height:<?php echo $is_menuh;?>px; }
 	.pc-menu .nav-top.nav-float .menu-a { padding:0px <?php echo $is_menup;?>px; }
 	.pc-menu .nav-top.nav-float .sub-1div::before { left: <?php echo $is_menup;?>px; }
 	.pc-menu .subm-w { width:<?php echo $is_subw;?>px; }

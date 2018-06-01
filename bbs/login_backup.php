@@ -30,7 +30,7 @@ $url = $_GET['url'];
 // url 체크
 check_url_host($url);
 
-이미 로그인 중이라면
+// 이미 로그인 중이라면
 if ($is_member) {
     if ($url)
         goto_url($url);

@@ -15,6 +15,14 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 		<?php } ?>
 	</div><!-- .at-body -->
 
+
+	<div id="sectiontail" class="point-color10">
+	  <div class="at-container widget-index">
+	    <?php echo apms_widget('rium-page-include', $wid.'-main-tail-top'); ?>
+	  </div>
+	</div>
+
+
 	<?php if(!$is_main_footer) { ?>
 		<footer class="at-footer point-color05">
 			<nav class="at-links">
@@ -104,7 +112,7 @@ var menu_subAt = "<?php echo ($m_subsat) ? $m_subsat : 0;?>";
 <script src="<?php echo THEMA_URL;?>/assets/js/sticky.js"></script>
 <?php } ?>
 
-<?php echo apms_widget('rium-sidebar'); //사이드바 및 모바일 메뉴(UI) ?>
+<?php echo apms_widget('basic-sidebar'); //사이드바 및 모바일 메뉴(UI) ?>
 
 <?php if($is_designer || $is_demo) include_once(THEMA_PATH.'/assets/switcher.php'); //Style Switcher ?>
 

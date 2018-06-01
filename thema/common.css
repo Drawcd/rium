@@ -181,9 +181,10 @@ blockquote { font-size: 12px; margin:0px 0px 20px; }
   -moz-transition: all .5s ease;
   transition: all .5s ease;
 	opacity: 0;
+	pointer-events:none;
 }
 /* .pc-menu .nav-visible:hover .pc-menu-all { transform: scaleY(1); opacity: 1; height:100%;} */
-.pc-menu .nav-visible:hover .pc-menu-all { opacity: 1; height:236px; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; transition: all .2s ease;}
+.pc-menu .nav-visible:hover .pc-menu-all { opacity: 1; pointer-events:auto; height:100%; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; transition: all .2s ease;}
 /* .pc-menu .nav-visible:hover .pc-menu-all { transform: scaleY(0); opacity: 0; height:100%;} */
 .table-responsive .menu-ul { display: table; width:100%; table-layout: fixed; padding: 0 0 20px;}
 .sub-all-menu.menu-li { display: table-cell;}
@@ -544,7 +545,7 @@ section 공통
 }
 
 /* scroll page section-navigation */
-.section-navigator { position:fixed; top:50%; right:0; z-index:100; transform: translateY(-50%); transition: all 0.5s;}
+.section-navigator { position:fixed; top:50%; left:5px; z-index:100; transform: translateY(-50%); transition: all 0.5s;}
 .section-navigator ul { list-style: none; padding:0px; margin-bottom:0;}
 .section-navigator .section-navigator-item { background:rgba(237,237,237,0.8); transition: all 0.5s;}
 .section-navigator .section-navigator-item h4{ padding:8px 12px; font-size:15px; font-weight:400; text-align: right; color:#333; transition: all 0.5s;}
@@ -824,15 +825,7 @@ tail 2
 /********************************************************
 page style start
 ********************************************************/
-/*  aboutus */
-.aboutus { padding:0px 0px 200px 0px; background: url("/img/aboutus/aboutus.jpg") no-repeat; background-size: cover; background-attachment: fixed;}
-.aboutus .section-title-item { padding:0px;}
-.aboutus  h1 { padding: 0 0 15px;}
-.aboutus .section-title-item h2,.aboutus .section-title-item h3{ display: inline-block;  font-weight: 500; background:rgba(237,237,237,0.5); max-width: 991px; margin:35px auto 0; border-radius: 10px; padding:15px; transition: background .5s;}
-.aboutus .section-title-item h4{ display: inline-block; line-height:1.5em; padding:15px; background:rgba(237,237,237,0.5); border-radius: 10px; max-width: 991px; margin:20px auto 0; font-weight: 350; transition: background .5s;}
-.emphasize { font-size:22px; font-weight:600;}
-/* #section-two */
-.aboutus .section-title { background: #333;}
+
 
 /* greeting */
 .ab-content { max-width:1310px; margin:0 auto; position: relative; padding: 80px 0 50px; background: url("/img/aboutus/ceo.png"); background-size:auto; background-position: bottom right; background-repeat: no-repeat; }
@@ -867,7 +860,7 @@ page style start
 .businessarea-list-item-wrap-right button{ right:20px;}
 .section-wrap-list-text { text-align: center;}
 /* organization */
-.organization-wrap { max-width:830px; margin:0 auto;}
+.organization-wrap { }
 .organization .section-title { background:#333;}
 .organization .organization-wrap { padding:80px 0 ;}
 

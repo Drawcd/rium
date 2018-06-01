@@ -389,3 +389,61 @@ window.addEventListener( 'hashchange', function( ) {
 //     $(".subsidiary-button").data({open : false});
 //   });
 // });
+
+
+// page at-body 높이 계산
+ $(document).ready(function() {
+   var atbodyFixing = $('.at-body').height() ;
+	 var windowHeight = $(window).height();
+	 var pcmenuh = $('.at-menu-bg-margin').height();
+	 var atfooterh = $('.at-footer').height() ;
+	 var navifooterh = pcmenuh + atfooterh;
+	 var atbodyh = $('.at-body').height() ;
+	 var atallbody = navifooterh + atbodyh ;
+		atbody =  atbodyFixing + navifooterh;
+
+	 if (  windowHeight > atbody) {
+			atbodyh = windowHeight - navifooterh;
+		} else {
+			atbodyh = "100%";
+		}
+		$(".resize-height").css({
+ 		 height : atbodyh
+ 	 });
+
+	$(window).resize( function () {
+	windowHeight = $(window).height();
+	pcmenuh = $('.at-menu-bg-margin').height();
+	atfooterh = $('.at-footer').height() ;
+	navifooterh = pcmenuh + atfooterh;
+	atbodyh = $('.at-body').height() ;
+	atallbody = navifooterh + atbodyh ;
+  atbody =  atbodyFixing + navifooterh;
+
+	 if (  windowHeight > atbody) {
+			atbodyh = windowHeight - navifooterh;
+		} else {
+			atbodyh = "100%";
+		}
+		$(".resize-height").css({
+ 		 height : atbodyh
+ 	 });
+	});
+});
+
+// other
+	function scrolling(obj){
+		var speed = 700;
+		if (!obj){
+			$('html, body').stop().animate({scrollTop:0},speed);
+		}else{
+			var posTop = $(obj).offset().top -0;
+			$('html, body').stop().animate({scrollTop:posTop}, speed )
+		}
+	};
+
+	$(".section-navigator-item a").click(function(){
+		var direction = $(this).attr("href");
+		scrolling( direction );
+		return false;
+	});

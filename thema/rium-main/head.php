@@ -23,8 +23,12 @@ include_once(THEMA_PATH.'/assets/thema.php');
 		<!-- PC Menu -->
 		<div id="pc-menu-all" class="pc-menu navigation-bg-color section-group">
 			<!-- Menu Button & Right Icon Menu -->
+
+
 			<div class="">
+
 				<div class="nav-right nav-rw nav-height">
+					<?php if ($is_admin) { ?>
 					<ul>
 						<?php if(IS_YC) { //영카트 ?>
 							<li class="nav-show">
@@ -57,9 +61,12 @@ include_once(THEMA_PATH.'/assets/thema.php');
 							</a>
 						</li>
 					</ul>
+					<?php } ?>
 					<div class="clearfix"></div>
 				</div>
 			</div>
+
+
 			<?php include_once(THEMA_PATH.'/menu.php');	// 메뉴 불러오기 ?>
 			<div class="clearfix"></div>
 			<div class="nav-back"></div>

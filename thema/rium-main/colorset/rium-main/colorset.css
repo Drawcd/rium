@@ -639,3 +639,23 @@ mainslider : 메인슬라이더
 @media all and (max-width:767px) {
   .slick-dots { margin-top:0px; width:100%;}
 }
+
+
+/*  aboutus */
+#BrandGuide .section-title { background:url("") no-repeat center; background-size:cover;}
+#BrandGuide { padding:30px 0px 200px 0px; background: url("/img/aboutus/brandguide_bg01.jpg") no-repeat; background-size: cover; background-attachment: fixed;}
+#BrandGuide .section-title-item { padding:0px; text-align: center;}
+#BrandGuide .group-logo { }
+#BrandGuide .group-logo .group-logo-list { padding:0px;}
+#BrandGuide .group-logo .group-logo-list li{ float:left; padding:5px; border-radius: 5px; text-align: center;}
+/* #BrandGuide .group-logo .group-logo-list li img{ display: block; text-align: center;} */
+#BrandGuide .group-logo .group-logo-list li > h4{ display: inline-block; font-weight: 350; background:rgba(33,33,33,0.2); padding:7px 15px; border-radius: 3px;}
+#BrandGuide  .section-title h1 { color:#F6F6F6; padding: 0 0 15px;}
+#BrandGuide  h3 { color:#F6F6F6; letter-spacing: 1px; padding: 0 0 15px;}
+#BrandGuide  h4 { color:#F6F6F6; letter-spacing: 4px; padding: 0 0 15px;}
+#BrandGuide  h5 { color:#607d8b; letter-spacing: 20px; padding: 0 0 15px;}
+#BrandGuide .section-title-item h2,.BrandGuide .section-title-item h3{ display: inline-block;  font-weight: 500; background:rgba(237,237,237,0.5); max-width: 991px; margin:35px auto 0; border-radius: 10px; padding:15px; transition: background .5s;}
+#BrandGuide .section-title-item h4{ display: inline-block; line-height:1.5em; padding:15px; background:rgba(237,237,237,0.5); border-radius: 10px; max-width: 991px; margin:20px auto 0; font-weight: 350; transition: background .5s;}
+#BrandGuide .group-logo-title { margin:0 auto; text-align: center; color:#fff; padding-bottom:50px; text-shadow: 0 0 3px #333;}
+.emphasize { font-size:36px; color:#ffc107; font-weight:600;}
+/* #section-two */

@@ -104,7 +104,7 @@ var menu_subAt = "<?php echo ($m_subsat) ? $m_subsat : 0;?>";
 <script src="<?php echo THEMA_URL;?>/assets/js/sticky.js"></script>
 <?php } ?>
 
-<?php echo apms_widget('basic-sidebar'); //사이드바 및 모바일 메뉴(UI) ?>
+<?php echo apms_widget('rium-sidebar'); //사이드바 및 모바일 메뉴(UI) ?>
 
 <?php if($is_designer || $is_demo) include_once(THEMA_PATH.'/assets/switcher.php'); //Style Switcher ?>
 
